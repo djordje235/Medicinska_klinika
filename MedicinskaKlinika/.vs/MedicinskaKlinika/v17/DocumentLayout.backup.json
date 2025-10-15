@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|c:\\users\\pc\\desktop\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\mapiranja\\laborantmaper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|solutionrelative:medicinskaklinika\\mapiranja\\laborantmaper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|c:\\users\\pc\\desktop\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\entiteti\\pacijent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|solutionrelative:medicinskaklinika\\entiteti\\pacijent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|c:\\users\\pc\\desktop\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\entiteti\\administrativnoosoblje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|solutionrelative:medicinskaklinika\\entiteti\\administrativnoosoblje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|c:\\users\\pc\\desktop\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\forme\\izmeniadministrativnoosoblje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|solutionrelative:medicinskaklinika\\forme\\izmeniadministrativnoosoblje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|c:\\users\\pc\\desktop\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\forme\\dodajpacijenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|solutionrelative:medicinskaklinika\\forme\\dodajpacijenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|c:\\users\\pc\\desktop\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\medicinskaklinika\\forme\\dodajmedicinskusestru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9556E3B9-2F8B-4B7D-A4F2-387F7FCF8367}|MedicinskaKlinika\\MedicinskaKlinika.csproj|solutionrelative:medicinskaklinika\\forme\\dodajmedicinskusestru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LaborantMaper.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Mapiranja\\LaborantMaper.cs",
+              "RelativeDocumentMoniker": "MedicinskaKlinika\\Mapiranja\\LaborantMaper.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Mapiranja\\LaborantMaper.cs",
+              "RelativeToolTip": "MedicinskaKlinika\\Mapiranja\\LaborantMaper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T20:52:17.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pacijent.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Entiteti\\Pacijent.cs",
+              "RelativeDocumentMoniker": "MedicinskaKlinika\\Entiteti\\Pacijent.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Entiteti\\Pacijent.cs",
+              "RelativeToolTip": "MedicinskaKlinika\\Entiteti\\Pacijent.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T20:52:07.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdministrativnoOsoblje.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Entiteti\\AdministrativnoOsoblje.cs",
+              "RelativeDocumentMoniker": "MedicinskaKlinika\\Entiteti\\AdministrativnoOsoblje.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Entiteti\\AdministrativnoOsoblje.cs",
+              "RelativeToolTip": "MedicinskaKlinika\\Entiteti\\AdministrativnoOsoblje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T20:51:57.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DodajPacijenta.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Forme\\DodajPacijenta.cs",
+              "RelativeDocumentMoniker": "MedicinskaKlinika\\Forme\\DodajPacijenta.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Forme\\DodajPacijenta.cs [Design]",
+              "RelativeToolTip": "MedicinskaKlinika\\Forme\\DodajPacijenta.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T19:47:43.056Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IzmeniAdministrativnoOsoblje.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Forme\\IzmeniAdministrativnoOsoblje.cs",
+              "RelativeDocumentMoniker": "MedicinskaKlinika\\Forme\\IzmeniAdministrativnoOsoblje.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Forme\\IzmeniAdministrativnoOsoblje.cs [Design]",
+              "RelativeToolTip": "MedicinskaKlinika\\Forme\\IzmeniAdministrativnoOsoblje.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T19:09:43.227Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DodajMedicinskuSestru.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Forme\\DodajMedicinskuSestru.cs",
+              "RelativeDocumentMoniker": "MedicinskaKlinika\\Forme\\DodajMedicinskuSestru.cs",
+              "ToolTip": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\Forme\\DodajMedicinskuSestru.cs [Design]",
+              "RelativeToolTip": "MedicinskaKlinika\\Forme\\DodajMedicinskuSestru.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T19:43:29.945Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

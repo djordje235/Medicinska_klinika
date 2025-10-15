@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\AdministrativnoOsoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajLaboranta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajLaboratorijskuAnalizu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajLekaraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajLokaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajMedicinskuSestru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajOdeljenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajPacijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajPlacanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajPrivatnoOsiguranje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajRacun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajRFZO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\DodajTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniAdministrativnoOsoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniLaboranta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniLaboratorijskuAnalizu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniLekara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniLokaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniMedicinskuSestru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniOdeljenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniPacijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniPlacanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniPrivatnoOsiguranje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniRacun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniRFZO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\IzmeniTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
