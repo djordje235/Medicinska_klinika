@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ListViewItem listViewItem1 = new ListViewItem("BrojTelefona");
+            ListViewItem listViewItem2 = new ListViewItem("Email");
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -39,6 +41,8 @@
             Adresa = new ColumnHeader();
             Pol = new ColumnHeader();
             Lekar = new ColumnHeader();
+            listView3 = new ListView();
+            listView2 = new ListView();
             SuspendLayout();
             // 
             // button3
@@ -50,6 +54,7 @@
             button3.TabIndex = 15;
             button3.Text = "Dodaj";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -70,6 +75,7 @@
             button1.TabIndex = 13;
             button1.Text = "Izmeni";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // listView1
             // 
@@ -116,11 +122,31 @@
             Lekar.Text = "Lekar";
             Lekar.Width = 100;
             // 
+            // listView3
+            // 
+            listView3.Items.AddRange(new ListViewItem[] { listViewItem1 });
+            listView3.Location = new Point(547, 530);
+            listView3.Name = "listView3";
+            listView3.Size = new Size(359, 173);
+            listView3.TabIndex = 17;
+            listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView2
+            // 
+            listView2.Items.AddRange(new ListViewItem[] { listViewItem2 });
+            listView2.Location = new Point(25, 530);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(402, 173);
+            listView2.TabIndex = 16;
+            listView2.UseCompatibleStateImageBehavior = false;
+            // 
             // IzmeniPacijenta
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1059, 736);
+            Controls.Add(listView3);
+            Controls.Add(listView2);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -143,5 +169,7 @@
         private ColumnHeader Adresa;
         private ColumnHeader Pol;
         private ColumnHeader Lekar;
+        private ListView listView3;
+        private ListView listView2;
     }
 }

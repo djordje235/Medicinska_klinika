@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ListViewItem listViewItem1 = new ListViewItem("Email");
+            ListViewItem listViewItem2 = new ListViewItem("BrojTelefona");
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -43,22 +45,25 @@
             Smena = new ColumnHeader();
             Specijalizacija = new ColumnHeader();
             BrLicence = new ColumnHeader();
+            listView2 = new ListView();
+            listView3 = new ListView();
             SuspendLayout();
             // 
             // button3
             // 
             button3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(713, 432);
+            button3.Location = new Point(713, 409);
             button3.Name = "button3";
             button3.Size = new Size(257, 80);
             button3.TabIndex = 11;
             button3.Text = "Dodaj";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
             button2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(365, 432);
+            button2.Location = new Point(365, 409);
             button2.Name = "button2";
             button2.Size = new Size(257, 80);
             button2.TabIndex = 10;
@@ -68,12 +73,13 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(25, 432);
+            button1.Location = new Point(25, 409);
             button1.Name = "button1";
             button1.Size = new Size(257, 80);
             button1.TabIndex = 9;
             button1.Text = "Izmeni";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // listView1
             // 
@@ -140,17 +146,38 @@
             BrLicence.Text = "BrLicence";
             BrLicence.Width = 100;
             // 
+            // listView2
+            // 
+            listView2.Items.AddRange(new ListViewItem[] { listViewItem1 });
+            listView2.Location = new Point(25, 536);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(402, 173);
+            listView2.TabIndex = 12;
+            listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView3
+            // 
+            listView3.Items.AddRange(new ListViewItem[] { listViewItem2 });
+            listView3.Location = new Point(547, 536);
+            listView3.Name = "listView3";
+            listView3.Size = new Size(359, 173);
+            listView3.TabIndex = 13;
+            listView3.UseCompatibleStateImageBehavior = false;
+            // 
             // IzmeniLekara
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1059, 736);
+            Controls.Add(listView3);
+            Controls.Add(listView2);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(listView1);
             Name = "IzmeniLekara";
             Text = "IzmeniLekara";
+            Load += IzmeniLekara_Load;
             ResumeLayout(false);
         }
 
@@ -171,5 +198,7 @@
         private ColumnHeader Smena;
         private ColumnHeader Specijalizacija;
         private ColumnHeader BrLicence;
+        private ListView listView2;
+        private ListView listView3;
     }
 }

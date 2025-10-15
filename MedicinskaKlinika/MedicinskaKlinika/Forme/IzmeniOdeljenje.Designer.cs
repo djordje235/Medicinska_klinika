@@ -47,6 +47,7 @@
             button3.TabIndex = 23;
             button3.Text = "Dodaj";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -67,6 +68,7 @@
             button1.TabIndex = 21;
             button1.Text = "Izmeni";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // listView1
             // 

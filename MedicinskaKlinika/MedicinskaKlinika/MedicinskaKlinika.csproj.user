@@ -47,6 +47,21 @@
     <Compile Update="Forme\DodajTermin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forme\FormaFinansije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaKlinika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaUsluga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaZaAdministraciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\FormaZaposleni.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forme\IzmeniAdministrativnoOsoblje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +102,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forme\IzmeniTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\ZaposlenBrTel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forme\ZaposlenEmail.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

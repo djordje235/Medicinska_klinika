@@ -30,6 +30,8 @@ namespace MedicinskaKlinika.Forme
         /// </summary>
         private void InitializeComponent()
         {
+            ListViewItem listViewItem5 = new ListViewItem("BrojTelefona");
+            ListViewItem listViewItem6 = new ListViewItem("Email");
             listView1 = new ListView();
             JMBG = new ColumnHeader();
             DatumZaposlenja = new ColumnHeader();
@@ -43,6 +45,8 @@ namespace MedicinskaKlinika.Forme
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            listView3 = new ListView();
+            listView2 = new ListView();
             SuspendLayout();
             // 
             // listView1
@@ -109,6 +113,7 @@ namespace MedicinskaKlinika.Forme
             button1.TabIndex = 1;
             button1.Text = "Izmeni";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -129,12 +134,33 @@ namespace MedicinskaKlinika.Forme
             button3.TabIndex = 3;
             button3.Text = "Dodaj";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // listView3
+            // 
+            listView3.Items.AddRange(new ListViewItem[] { listViewItem5 });
+            listView3.Location = new Point(550, 551);
+            listView3.Name = "listView3";
+            listView3.Size = new Size(359, 173);
+            listView3.TabIndex = 17;
+            listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView2
+            // 
+            listView2.Items.AddRange(new ListViewItem[] { listViewItem6 });
+            listView2.Location = new Point(28, 551);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(402, 173);
+            listView2.TabIndex = 16;
+            listView2.UseCompatibleStateImageBehavior = false;
             // 
             // IzmeniAdministrativnoOsoblje
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1059, 736);
+            Controls.Add(listView3);
+            Controls.Add(listView2);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -159,5 +185,7 @@ namespace MedicinskaKlinika.Forme
         private Button button1;
         private Button button2;
         private Button button3;
+        private ListView listView3;
+        private ListView listView2;
     }
 }

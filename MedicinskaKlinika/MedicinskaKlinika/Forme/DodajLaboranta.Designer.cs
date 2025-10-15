@@ -36,7 +36,6 @@
             textBox7 = new TextBox();
             label6 = new Label();
             label5 = new Label();
-            textBox6 = new TextBox();
             label4 = new Label();
             textBox5 = new TextBox();
             label3 = new Label();
@@ -53,6 +52,9 @@
             label8 = new Label();
             dateTimePicker2 = new DateTimePicker();
             datumzaposlenjalabel = new Label();
+            button4 = new Button();
+            button3 = new Button();
+            comboBox1 = new ComboBox();
             numericUpDown1 = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
@@ -131,18 +133,11 @@
             label5.TabIndex = 61;
             label5.Text = "Smena:";
             // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(30, 822);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(432, 31);
-            textBox6.TabIndex = 60;
-            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(30, 781);
+            label4.Location = new Point(30, 785);
             label4.Name = "label4";
             label4.Size = new Size(209, 38);
             label4.TabIndex = 59;
@@ -277,11 +272,45 @@
             datumzaposlenjalabel.TabIndex = 72;
             datumzaposlenjalabel.Text = "Datum rodjenja:";
             // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.Location = new Point(525, 818);
+            button4.Name = "button4";
+            button4.Size = new Size(235, 93);
+            button4.TabIndex = 81;
+            button4.Text = "Dodaj kontakt telefon";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Location = new Point(525, 955);
+            button3.Name = "button3";
+            button3.Size = new Size(235, 52);
+            button3.TabIndex = 80;
+            button3.Text = "Dodaj Email";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(30, 826);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(432, 33);
+            comboBox1.TabIndex = 82;
+            // 
             // DodajLaboranta
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(791, 1213);
+            AutoScroll = true;
+            ClientSize = new Size(791, 1050);
+            Controls.Add(comboBox1);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Controls.Add(dateTimePicker2);
             Controls.Add(datumzaposlenjalabel);
             Controls.Add(dateTimePicker1);
@@ -294,7 +323,6 @@
             Controls.Add(label6);
             Controls.Add(numericUpDown1);
             Controls.Add(label5);
-            Controls.Add(textBox6);
             Controls.Add(label4);
             Controls.Add(textBox5);
             Controls.Add(label3);
@@ -323,7 +351,6 @@
         private TextBox textBox7;
         private Label label6;
         private Label label5;
-        private TextBox textBox6;
         private Label label4;
         private TextBox textBox5;
         private Label label3;
@@ -340,5 +367,8 @@
         private Label label8;
         private DateTimePicker dateTimePicker2;
         private Label datumzaposlenjalabel;
+        private Button button4;
+        private Button button3;
+        private ComboBox comboBox1;
     }
 }

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             textBox2 = new TextBox();
@@ -38,16 +36,11 @@
             datumzaposlenjalabel = new Label();
             jmbglabel = new Label();
             dodajlekaralabel = new Label();
-            textBox7 = new TextBox();
             label5 = new Label();
-            textBox8 = new TextBox();
             label6 = new Label();
-            textBox9 = new TextBox();
             label7 = new Label();
             textBox10 = new TextBox();
             label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
             button2 = new Button();
             button1 = new Button();
             dateTimePicker1 = new DateTimePicker();
@@ -55,31 +48,13 @@
             textBox13 = new TextBox();
             textBox1 = new TextBox();
             textBox3 = new TextBox();
-            dateTimePicker3 = new DateTimePicker();
-            dateTimePicker4 = new DateTimePicker();
-            dateTimePicker5 = new DateTimePicker();
-            dateTimePicker6 = new DateTimePicker();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
+            button3 = new Button();
+            comboBox4 = new ComboBox();
+            label3 = new Label();
             SuspendLayout();
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(48, 890);
-            label4.Name = "label4";
-            label4.Size = new Size(206, 38);
-            label4.TabIndex = 51;
-            label4.Text = "Vreme termina:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(48, 797);
-            label3.Name = "label3";
-            label3.Size = new Size(209, 38);
-            label3.TabIndex = 49;
-            label3.Text = "Datum termina:";
             // 
             // label2
             // 
@@ -160,60 +135,39 @@
             dodajlekaralabel.TabIndex = 36;
             dodajlekaralabel.Text = "Dodaj Pregled";
             // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(48, 1514);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(432, 31);
-            textBox7.TabIndex = 64;
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(48, 1473);
+            label5.Location = new Point(48, 1161);
             label5.Name = "label5";
-            label5.Size = new Size(212, 38);
+            label5.Size = new Size(142, 38);
             label5.TabIndex = 63;
-            label5.Text = "Naziv odeljenja:";
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(48, 1421);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(432, 31);
-            textBox8.TabIndex = 62;
+            label5.Text = "Odeljenje:";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(48, 1380);
+            label6.Location = new Point(48, 1068);
             label6.Name = "label6";
-            label6.Size = new Size(169, 38);
+            label6.Size = new Size(89, 38);
             label6.TabIndex = 61;
-            label6.Text = "JmbgLekara:";
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(48, 1328);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(432, 31);
-            textBox9.TabIndex = 60;
+            label6.Text = "Lekar:";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(48, 1287);
+            label7.Location = new Point(48, 975);
             label7.Name = "label7";
-            label7.Size = new Size(141, 38);
+            label7.Size = new Size(119, 38);
             label7.TabIndex = 59;
-            label7.Text = "IdKartona:";
+            label7.Text = "Pacijent:";
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(48, 1228);
+            textBox10.Location = new Point(48, 846);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(432, 31);
             textBox10.TabIndex = 58;
@@ -222,36 +176,16 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(48, 1187);
+            label8.Location = new Point(48, 805);
             label8.Name = "label8";
             label8.Size = new Size(201, 38);
             label8.TabIndex = 57;
             label8.Text = "Vrsta pregleda:";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(48, 1088);
-            label9.Name = "label9";
-            label9.Size = new Size(347, 38);
-            label9.TabIndex = 55;
-            label9.Text = "Vreme dodatnog pregleda:";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(48, 996);
-            label10.Name = "label10";
-            label10.Size = new Size(350, 38);
-            label10.TabIndex = 53;
-            label10.Text = "Datum dodatnog pregleda:";
-            // 
             // button2
             // 
             button2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(544, 1514);
+            button2.Location = new Point(521, 1039);
             button2.Name = "button2";
             button2.Size = new Size(235, 52);
             button2.TabIndex = 66;
@@ -261,7 +195,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(544, 1421);
+            button1.Location = new Point(521, 946);
             button1.Name = "button1";
             button1.Size = new Size(235, 52);
             button1.TabIndex = 65;
@@ -309,43 +243,71 @@
             textBox3.Size = new Size(731, 78);
             textBox3.TabIndex = 76;
             // 
-            // dateTimePicker3
+            // comboBox1
             // 
-            dateTimePicker3.Location = new Point(48, 931);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(432, 31);
-            dateTimePicker3.TabIndex = 77;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(48, 1016);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(432, 33);
+            comboBox1.TabIndex = 81;
             // 
-            // dateTimePicker4
+            // comboBox2
             // 
-            dateTimePicker4.Location = new Point(48, 838);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(432, 31);
-            dateTimePicker4.TabIndex = 78;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(48, 1109);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(432, 33);
+            comboBox2.TabIndex = 82;
             // 
-            // dateTimePicker5
+            // comboBox3
             // 
-            dateTimePicker5.Location = new Point(48, 1037);
-            dateTimePicker5.Name = "dateTimePicker5";
-            dateTimePicker5.Size = new Size(432, 31);
-            dateTimePicker5.TabIndex = 79;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(48, 1202);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(432, 33);
+            comboBox3.TabIndex = 83;
             // 
-            // dateTimePicker6
+            // button3
             // 
-            dateTimePicker6.Location = new Point(48, 1129);
-            dateTimePicker6.Name = "dateTimePicker6";
-            dateTimePicker6.Size = new Size(432, 31);
-            dateTimePicker6.TabIndex = 80;
+            button3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Location = new Point(521, 846);
+            button3.Name = "button3";
+            button3.Size = new Size(235, 52);
+            button3.TabIndex = 84;
+            button3.Text = "Dodatni pregled";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(48, 939);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(432, 33);
+            comboBox4.TabIndex = 86;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(48, 898);
+            label3.Name = "label3";
+            label3.Size = new Size(107, 38);
+            label3.TabIndex = 85;
+            label3.Text = "Termin:";
             // 
             // DodajPregled
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(791, 1590);
-            Controls.Add(dateTimePicker6);
-            Controls.Add(dateTimePicker5);
-            Controls.Add(dateTimePicker4);
-            Controls.Add(dateTimePicker3);
+            AutoScroll = true;
+            ClientSize = new Size(821, 1050);
+            Controls.Add(comboBox4);
+            Controls.Add(label3);
+            Controls.Add(button3);
+            Controls.Add(comboBox3);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(textBox3);
             Controls.Add(textBox1);
             Controls.Add(textBox13);
@@ -353,18 +315,11 @@
             Controls.Add(dateTimePicker1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox7);
             Controls.Add(label5);
-            Controls.Add(textBox8);
             Controls.Add(label6);
-            Controls.Add(textBox9);
             Controls.Add(label7);
             Controls.Add(textBox10);
             Controls.Add(label8);
-            Controls.Add(label9);
-            Controls.Add(label10);
-            Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBox2);
@@ -381,8 +336,6 @@
         }
 
         #endregion
-        private Label label4;
-        private Label label3;
         private Label label2;
         private Label label1;
         private TextBox textBox2;
@@ -391,16 +344,11 @@
         private Label datumzaposlenjalabel;
         private Label jmbglabel;
         private Label dodajlekaralabel;
-        private TextBox textBox7;
         private Label label5;
-        private TextBox textBox8;
         private Label label6;
-        private TextBox textBox9;
         private Label label7;
         private TextBox textBox10;
         private Label label8;
-        private Label label9;
-        private Label label10;
         private Button button2;
         private Button button1;
         private DateTimePicker dateTimePicker1;
@@ -408,9 +356,11 @@
         private TextBox textBox13;
         private TextBox textBox1;
         private TextBox textBox3;
-        private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker4;
-        private DateTimePicker dateTimePicker5;
-        private DateTimePicker dateTimePicker6;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
+        private Button button3;
+        private ComboBox comboBox4;
+        private Label label3;
     }
 }

@@ -41,11 +41,13 @@
             radioButton1 = new RadioButton();
             label2 = new Label();
             radioButton2 = new RadioButton();
-            textBox4 = new TextBox();
             label3 = new Label();
             button2 = new Button();
             button1 = new Button();
             dateTimePicker1 = new DateTimePicker();
+            comboBox1 = new ComboBox();
+            button4 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -124,7 +126,7 @@
             jmbglabel.Name = "jmbglabel";
             jmbglabel.Size = new Size(141, 38);
             jmbglabel.TabIndex = 32;
-            jmbglabel.Text = "IdKarotna:";
+            jmbglabel.Text = "IdKartona:";
             // 
             // dodajlekaralabel
             // 
@@ -168,22 +170,15 @@
             radioButton2.Text = "Zenski";
             radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(50, 774);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(432, 31);
-            textBox4.TabIndex = 46;
-            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(50, 733);
             label3.Name = "label3";
-            label3.Size = new Size(169, 38);
+            label3.Size = new Size(89, 38);
             label3.TabIndex = 45;
-            label3.Text = "JmbgLekara:";
+            label3.Text = "Lekar:";
             // 
             // button2
             // 
@@ -212,15 +207,47 @@
             dateTimePicker1.Size = new Size(432, 31);
             dateTimePicker1.TabIndex = 72;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(50, 774);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(432, 33);
+            comboBox1.TabIndex = 73;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.Location = new Point(544, 558);
+            button4.Name = "button4";
+            button4.Size = new Size(235, 93);
+            button4.TabIndex = 81;
+            button4.Text = "Dodaj kontakt telefon";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Location = new Point(544, 695);
+            button3.Name = "button3";
+            button3.Size = new Size(235, 52);
+            button3.TabIndex = 80;
+            button3.Text = "Dodaj Email";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // DodajPacijenta
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(791, 961);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(comboBox1);
             Controls.Add(dateTimePicker1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox4);
             Controls.Add(label3);
             Controls.Add(radioButton2);
             Controls.Add(label2);
@@ -255,10 +282,12 @@
         private RadioButton radioButton1;
         private Label label2;
         private RadioButton radioButton2;
-        private TextBox textBox4;
         private Label label3;
         private Button button2;
         private Button button1;
         private DateTimePicker dateTimePicker1;
+        private ComboBox comboBox1;
+        private Button button4;
+        private Button button3;
     }
 }

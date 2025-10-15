@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj": {}
+    "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj": {
+    "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
         "projectName": "MedicinskaKlinika",
-        "projectPath": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

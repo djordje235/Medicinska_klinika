@@ -30,11 +30,11 @@
         {
             button2 = new Button();
             button1 = new Button();
-            datzaptextBox = new TextBox();
             datumzaposlenjalabel = new Label();
             jmbgtextBox = new TextBox();
             jmbglabel = new Label();
             dodajlekaralabel = new Label();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // button2
@@ -57,22 +57,15 @@
             button1.Text = "Sacuvaj";
             button1.UseVisualStyleBackColor = true;
             // 
-            // datzaptextBox
-            // 
-            datzaptextBox.Location = new Point(48, 249);
-            datzaptextBox.Name = "datzaptextBox";
-            datzaptextBox.Size = new Size(432, 31);
-            datzaptextBox.TabIndex = 49;
-            // 
             // datumzaposlenjalabel
             // 
             datumzaposlenjalabel.AutoSize = true;
             datumzaposlenjalabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             datumzaposlenjalabel.Location = new Point(48, 208);
             datumzaposlenjalabel.Name = "datumzaposlenjalabel";
-            datumzaposlenjalabel.Size = new Size(251, 38);
+            datumzaposlenjalabel.Size = new Size(119, 38);
             datumzaposlenjalabel.TabIndex = 48;
-            datumzaposlenjalabel.Text = "IdKartonaPacijenta:";
+            datumzaposlenjalabel.Text = "Pacijent:";
             // 
             // jmbgtextBox
             // 
@@ -101,14 +94,22 @@
             dodajlekaralabel.TabIndex = 45;
             dodajlekaralabel.Text = "Dodaj RFZO";
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(48, 249);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(432, 33);
+            comboBox1.TabIndex = 52;
+            // 
             // DodajRFZO
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(791, 486);
+            Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(datzaptextBox);
             Controls.Add(datumzaposlenjalabel);
             Controls.Add(jmbgtextBox);
             Controls.Add(jmbglabel);
@@ -123,10 +124,10 @@
 
         private Button button2;
         private Button button1;
-        private TextBox datzaptextBox;
         private Label datumzaposlenjalabel;
         private TextBox jmbgtextBox;
         private Label jmbglabel;
         private Label dodajlekaralabel;
+        private ComboBox comboBox1;
     }
 }

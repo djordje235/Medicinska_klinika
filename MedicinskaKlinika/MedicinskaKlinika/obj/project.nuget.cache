@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FeIkxgI/Zwo=",
+  "dgSpecHash": "MzOzKs3KScA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\antlr3.runtime\\3.5.1\\antlr3.runtime.3.5.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\fluentnhibernate\\3.4.1\\fluentnhibernate.3.4.1.nupkg.sha512",

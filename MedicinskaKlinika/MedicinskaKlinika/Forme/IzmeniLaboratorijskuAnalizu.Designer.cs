@@ -33,8 +33,6 @@
             button1 = new Button();
             listView1 = new ListView();
             Pacijent = new ColumnHeader();
-            DatumPregleda = new ColumnHeader();
-            VremePregleda = new ColumnHeader();
             VrstaAnalize = new ColumnHeader();
             DatumUzorkovanja = new ColumnHeader();
             Rezultat = new ColumnHeader();
@@ -53,6 +51,7 @@
             button3.TabIndex = 15;
             button3.Text = "Dodaj";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -73,10 +72,11 @@
             button1.TabIndex = 13;
             button1.Text = "Izmeni";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { Pacijent, DatumPregleda, VremePregleda, VrstaAnalize, DatumUzorkovanja, Rezultat, ReferentnaVr, Vreme, Komentar, Laborant });
+            listView1.Columns.AddRange(new ColumnHeader[] { Pacijent, VrstaAnalize, DatumUzorkovanja, Rezultat, ReferentnaVr, Vreme, Komentar, Laborant });
             listView1.Location = new Point(12, 68);
             listView1.Name = "listView1";
             listView1.Size = new Size(1013, 325);
@@ -88,16 +88,6 @@
             // 
             Pacijent.Text = "Pacijent";
             Pacijent.Width = 100;
-            // 
-            // DatumPregleda
-            // 
-            DatumPregleda.Text = "DatumPregleda";
-            DatumPregleda.Width = 100;
-            // 
-            // VremePregleda
-            // 
-            VremePregleda.Text = "VremePregleda";
-            VremePregleda.Width = 100;
             // 
             // VrstaAnalize
             // 
@@ -155,8 +145,6 @@
         private Button button1;
         private ListView listView1;
         private ColumnHeader Pacijent;
-        private ColumnHeader DatumPregleda;
-        private ColumnHeader VremePregleda;
         private ColumnHeader VrstaAnalize;
         private ColumnHeader DatumUzorkovanja;
         private ColumnHeader Rezultat;

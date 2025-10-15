@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox3 = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
             datumrodjenjalabel = new Label();
-            textBox1 = new TextBox();
             pozicijalabel = new Label();
             datumzaposlenjalabel = new Label();
             jmbglabel = new Label();
@@ -41,14 +38,10 @@
             button1 = new Button();
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
             SuspendLayout();
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(53, 556);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(432, 31);
-            textBox3.TabIndex = 40;
             // 
             // label1
             // 
@@ -56,16 +49,9 @@
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(53, 515);
             label1.Name = "label1";
-            label1.Size = new Size(169, 38);
+            label1.Size = new Size(89, 38);
             label1.TabIndex = 39;
-            label1.Text = "JmbgLekara:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(53, 463);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(432, 31);
-            textBox2.TabIndex = 38;
+            label1.Text = "Lekar:";
             // 
             // datumrodjenjalabel
             // 
@@ -73,16 +59,9 @@
             datumrodjenjalabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             datumrodjenjalabel.Location = new Point(53, 422);
             datumrodjenjalabel.Name = "datumrodjenjalabel";
-            datumrodjenjalabel.Size = new Size(212, 38);
+            datumrodjenjalabel.Size = new Size(142, 38);
             datumrodjenjalabel.TabIndex = 37;
-            datumrodjenjalabel.Text = "Naziv odeljenja:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(53, 363);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(432, 31);
-            textBox1.TabIndex = 36;
+            datumrodjenjalabel.Text = "Odeljenje:";
             // 
             // pozicijalabel
             // 
@@ -90,9 +69,9 @@
             pozicijalabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             pozicijalabel.Location = new Point(53, 322);
             pozicijalabel.Name = "pozicijalabel";
-            pozicijalabel.Size = new Size(141, 38);
+            pozicijalabel.Size = new Size(119, 38);
             pozicijalabel.TabIndex = 35;
-            pozicijalabel.Text = "IdKartona:";
+            pozicijalabel.Text = "Pacijent:";
             // 
             // datumzaposlenjalabel
             // 
@@ -158,20 +137,44 @@
             dateTimePicker2.Size = new Size(432, 31);
             dateTimePicker2.TabIndex = 74;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(53, 363);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(432, 33);
+            comboBox1.TabIndex = 77;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(53, 463);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(432, 33);
+            comboBox2.TabIndex = 78;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(53, 556);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(432, 33);
+            comboBox3.TabIndex = 79;
+            // 
             // DodajTermin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(791, 751);
+            Controls.Add(comboBox3);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox3);
             Controls.Add(label1);
-            Controls.Add(textBox2);
             Controls.Add(datumrodjenjalabel);
-            Controls.Add(textBox1);
             Controls.Add(pozicijalabel);
             Controls.Add(datumzaposlenjalabel);
             Controls.Add(jmbglabel);
@@ -183,12 +186,8 @@
         }
 
         #endregion
-
-        private TextBox textBox3;
         private Label label1;
-        private TextBox textBox2;
         private Label datumrodjenjalabel;
-        private TextBox textBox1;
         private Label pozicijalabel;
         private Label datumzaposlenjalabel;
         private Label jmbglabel;
@@ -197,5 +196,8 @@
         private Button button1;
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
     }
 }

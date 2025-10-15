@@ -21,5 +21,10 @@ namespace MedicinskaKlinika.Forme
         {
 
         }
+
+        private void DodajLaboratorijskuAnalizu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,5 +21,17 @@ namespace MedicinskaKlinika.Forme
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DodajPregled forma = new DodajPregled();
+            forma.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DodajPregled forma = new DodajPregled();
+            forma.ShowDialog();
+        }
     }
 }

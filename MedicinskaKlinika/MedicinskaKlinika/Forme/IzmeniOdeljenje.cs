@@ -16,5 +16,17 @@ namespace MedicinskaKlinika.Forme
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DodajOdeljenje forma = new DodajOdeljenje();
+            forma.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DodajOdeljenje forma = new DodajOdeljenje();
+            forma.ShowDialog();
+        }
     }
 }

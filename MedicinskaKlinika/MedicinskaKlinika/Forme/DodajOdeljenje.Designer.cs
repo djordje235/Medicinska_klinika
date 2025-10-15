@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox2 = new TextBox();
             datumrodjenjalabel = new Label();
             textBox1 = new TextBox();
             pozicijalabel = new Label();
@@ -39,28 +38,24 @@
             dodajlekaralabel = new Label();
             button1 = new Button();
             button2 = new Button();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
+            comboBox2 = new ComboBox();
             SuspendLayout();
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(44, 468);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(432, 31);
-            textBox2.TabIndex = 37;
             // 
             // datumrodjenjalabel
             // 
             datumrodjenjalabel.AutoSize = true;
             datumrodjenjalabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            datumrodjenjalabel.Location = new Point(44, 427);
+            datumrodjenjalabel.Location = new Point(44, 402);
             datumrodjenjalabel.Name = "datumrodjenjalabel";
-            datumrodjenjalabel.Size = new Size(341, 38);
+            datumrodjenjalabel.Size = new Size(167, 38);
             datumrodjenjalabel.TabIndex = 36;
-            datumrodjenjalabel.Text = "JmbgOdogovornogLekara:";
+            datumrodjenjalabel.Text = "Glavni lekar:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(44, 368);
+            textBox1.Location = new Point(44, 343);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(432, 31);
             textBox1.TabIndex = 35;
@@ -69,7 +64,7 @@
             // 
             pozicijalabel.AutoSize = true;
             pozicijalabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            pozicijalabel.Location = new Point(44, 327);
+            pozicijalabel.Location = new Point(44, 302);
             pozicijalabel.Name = "pozicijalabel";
             pozicijalabel.Size = new Size(190, 38);
             pozicijalabel.TabIndex = 34;
@@ -77,7 +72,7 @@
             // 
             // datzaptextBox
             // 
-            datzaptextBox.Location = new Point(44, 269);
+            datzaptextBox.Location = new Point(44, 244);
             datzaptextBox.Name = "datzaptextBox";
             datzaptextBox.Size = new Size(432, 31);
             datzaptextBox.TabIndex = 33;
@@ -86,7 +81,7 @@
             // 
             datumzaposlenjalabel.AutoSize = true;
             datumzaposlenjalabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            datumzaposlenjalabel.Location = new Point(44, 228);
+            datumzaposlenjalabel.Location = new Point(44, 203);
             datumzaposlenjalabel.Name = "datumzaposlenjalabel";
             datumzaposlenjalabel.Size = new Size(197, 38);
             datumzaposlenjalabel.TabIndex = 32;
@@ -94,7 +89,7 @@
             // 
             // jmbgtextBox
             // 
-            jmbgtextBox.Location = new Point(44, 177);
+            jmbgtextBox.Location = new Point(44, 152);
             jmbgtextBox.Name = "jmbgtextBox";
             jmbgtextBox.Size = new Size(432, 31);
             jmbgtextBox.TabIndex = 31;
@@ -103,7 +98,7 @@
             // 
             jmbglabel.AutoSize = true;
             jmbglabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            jmbglabel.Location = new Point(44, 136);
+            jmbglabel.Location = new Point(44, 111);
             jmbglabel.Name = "jmbglabel";
             jmbglabel.Size = new Size(91, 38);
             jmbglabel.TabIndex = 30;
@@ -113,7 +108,7 @@
             // 
             dodajlekaralabel.AutoSize = true;
             dodajlekaralabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dodajlekaralabel.Location = new Point(44, 53);
+            dodajlekaralabel.Location = new Point(44, 28);
             dodajlekaralabel.Name = "dodajlekaralabel";
             dodajlekaralabel.Size = new Size(369, 65);
             dodajlekaralabel.TabIndex = 29;
@@ -122,7 +117,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(44, 550);
+            button1.Location = new Point(44, 614);
             button1.Name = "button1";
             button1.Size = new Size(235, 52);
             button1.TabIndex = 43;
@@ -132,21 +127,49 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(321, 550);
+            button2.Location = new Point(325, 614);
             button2.Name = "button2";
             button2.Size = new Size(235, 52);
             button2.TabIndex = 44;
             button2.Text = "Otkazi";
             button2.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(44, 551);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(432, 33);
+            comboBox1.TabIndex = 45;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(44, 510);
+            label1.Name = "label1";
+            label1.Size = new Size(121, 38);
+            label1.TabIndex = 46;
+            label1.Text = "Lokacija:";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(44, 443);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(432, 33);
+            comboBox2.TabIndex = 47;
+            // 
             // DodajOdeljenje
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(791, 679);
+            ClientSize = new Size(791, 698);
+            Controls.Add(comboBox2);
+            Controls.Add(label1);
+            Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox2);
             Controls.Add(datumrodjenjalabel);
             Controls.Add(textBox1);
             Controls.Add(pozicijalabel);
@@ -162,8 +185,6 @@
         }
 
         #endregion
-
-        private TextBox textBox2;
         private Label datumrodjenjalabel;
         private TextBox textBox1;
         private Label pozicijalabel;
@@ -174,5 +195,8 @@
         private Label dodajlekaralabel;
         private Button button1;
         private Button button2;
+        private ComboBox comboBox1;
+        private Label label1;
+        private ComboBox comboBox2;
     }
 }

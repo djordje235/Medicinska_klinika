@@ -39,13 +39,10 @@
             Dijagnoza = new ColumnHeader();
             Terapija = new ColumnHeader();
             PreporukaZaLecenje = new ColumnHeader();
-            DatumTermina = new ColumnHeader();
-            VremeTermina = new ColumnHeader();
-            DatumDodTermina = new ColumnHeader();
-            VremeDodTermina = new ColumnHeader();
             Lekar = new ColumnHeader();
             Odeljenje = new ColumnHeader();
             VrstaPregleda = new ColumnHeader();
+            Termin = new ColumnHeader();
             SuspendLayout();
             // 
             // button3
@@ -57,6 +54,7 @@
             button3.TabIndex = 23;
             button3.Text = "Dodaj";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -77,10 +75,11 @@
             button1.TabIndex = 21;
             button1.Text = "Izmeni";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { Pacijent, Datum, Vreme, OpisTegoba, Dijagnoza, Terapija, PreporukaZaLecenje, DatumTermina, VremeTermina, DatumDodTermina, VremeDodTermina, Lekar, Odeljenje, VrstaPregleda });
+            listView1.Columns.AddRange(new ColumnHeader[] { Pacijent, Datum, Vreme, OpisTegoba, Dijagnoza, Terapija, PreporukaZaLecenje, Lekar, Odeljenje, VrstaPregleda, Termin });
             listView1.Location = new Point(12, 41);
             listView1.Name = "listView1";
             listView1.Size = new Size(1013, 325);
@@ -124,26 +123,6 @@
             PreporukaZaLecenje.Text = "PreporukaZaLecenje";
             PreporukaZaLecenje.Width = 100;
             // 
-            // DatumTermina
-            // 
-            DatumTermina.Text = "DatumTermina";
-            DatumTermina.Width = 100;
-            // 
-            // VremeTermina
-            // 
-            VremeTermina.Text = "VremeTermina";
-            VremeTermina.Width = 100;
-            // 
-            // DatumDodTermina
-            // 
-            DatumDodTermina.Text = "DatumDodTermina";
-            DatumDodTermina.Width = 100;
-            // 
-            // VremeDodTermina
-            // 
-            VremeDodTermina.Text = "VremeDodTermina";
-            VremeDodTermina.Width = 100;
-            // 
             // Lekar
             // 
             Lekar.Text = "Lekar";
@@ -186,12 +165,9 @@
         private ColumnHeader Dijagnoza;
         private ColumnHeader Terapija;
         private ColumnHeader PreporukaZaLecenje;
-        private ColumnHeader DatumTermina;
-        private ColumnHeader VremeTermina;
-        private ColumnHeader DatumDodTermina;
-        private ColumnHeader VremeDodTermina;
         private ColumnHeader Lekar;
         private ColumnHeader Odeljenje;
         private ColumnHeader VrstaPregleda;
+        private ColumnHeader Termin;
     }
 }

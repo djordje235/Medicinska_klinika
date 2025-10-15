@@ -16,5 +16,22 @@ namespace MedicinskaKlinika.Forme
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            ZaposlenEmail forma = new ZaposlenEmail();
+            forma.ShowDialog();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            ZaposlenBrTel forma = new ZaposlenBrTel();
+            forma.ShowDialog();
+        }
     }
 }

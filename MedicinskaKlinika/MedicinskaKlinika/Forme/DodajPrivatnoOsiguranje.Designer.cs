@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
             pozicijalabel = new Label();
             datumzaposlenjalabel = new Label();
             jmbgtextBox = new TextBox();
@@ -36,15 +35,9 @@
             dodajlekaralabel = new Label();
             button2 = new Button();
             button1 = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            comboBox1 = new ComboBox();
+            textBox1 = new TextBox();
             SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(45, 354);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(432, 31);
-            textBox1.TabIndex = 32;
             // 
             // pozicijalabel
             // 
@@ -52,9 +45,9 @@
             pozicijalabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             pozicijalabel.Location = new Point(45, 313);
             pozicijalabel.Name = "pozicijalabel";
-            pozicijalabel.Size = new Size(115, 38);
+            pozicijalabel.Size = new Size(119, 38);
             pozicijalabel.TabIndex = 31;
-            pozicijalabel.Text = "Pozicija:";
+            pozicijalabel.Text = "Pacijent:";
             // 
             // datumzaposlenjalabel
             // 
@@ -62,9 +55,9 @@
             datumzaposlenjalabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             datumzaposlenjalabel.Location = new Point(45, 214);
             datumzaposlenjalabel.Name = "datumzaposlenjalabel";
-            datumzaposlenjalabel.Size = new Size(244, 38);
+            datumzaposlenjalabel.Size = new Size(261, 38);
             datumzaposlenjalabel.TabIndex = 29;
-            datumzaposlenjalabel.Text = "Datum zaposlenja:";
+            datumzaposlenjalabel.Text = "Osiguravajuca kuca:";
             // 
             // jmbgtextBox
             // 
@@ -79,9 +72,9 @@
             jmbglabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             jmbglabel.Location = new Point(45, 122);
             jmbglabel.Name = "jmbglabel";
-            jmbglabel.Size = new Size(93, 38);
+            jmbglabel.Size = new Size(153, 38);
             jmbglabel.TabIndex = 27;
-            jmbglabel.Text = "JMBG:";
+            jmbglabel.Text = "Broj polise:";
             // 
             // dodajlekaralabel
             // 
@@ -113,22 +106,30 @@
             button1.Text = "Sacuvaj";
             button1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // comboBox1
             // 
-            dateTimePicker1.Location = new Point(45, 255);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(432, 31);
-            dateTimePicker1.TabIndex = 73;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(45, 354);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(432, 33);
+            comboBox1.TabIndex = 74;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(45, 255);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(432, 31);
+            textBox1.TabIndex = 75;
             // 
             // DodajPrivatnoOsiguranje
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(791, 585);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(textBox1);
+            Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox1);
             Controls.Add(pozicijalabel);
             Controls.Add(datumzaposlenjalabel);
             Controls.Add(jmbgtextBox);
@@ -141,8 +142,6 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
         private Label pozicijalabel;
         private Label datumzaposlenjalabel;
         private TextBox jmbgtextBox;
@@ -150,6 +149,7 @@
         private Label dodajlekaralabel;
         private Button button2;
         private Button button1;
-        private DateTimePicker dateTimePicker1;
+        private ComboBox comboBox1;
+        private TextBox textBox1;
     }
 }
