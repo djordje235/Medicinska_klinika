@@ -1,0 +1,48 @@
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Medicinska klinika 3.0.exe.config
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Medicinska klinika 3.0.exe
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Medicinska klinika 3.0.pdb
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Antlr3.Runtime.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\FluentNHibernate.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Iesi.Collections.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\NHibernate.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Remotion.Linq.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Remotion.Linq.EagerFetching.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Antlr3.Runtime.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\FluentNHibernate.pdb
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\FluentNHibernate.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Iesi.Collections.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\NHibernate.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Remotion.Linq.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Remotion.Linq.EagerFetching.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.csproj.AssemblyReference.cache
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.Form1.resources
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.Properties.Resources.resources
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.csproj.GenerateResource.cache
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.csproj.CoreCompileInputs.cache
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicins.01FF96EC.Up2Date
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.exe
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.pdb
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Buffers.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Formats.Asn1.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Memory.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Text.Json.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.ValueTuple.dll
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Buffers.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Formats.Asn1.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Memory.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Text.Json.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\bin\Debug\System.ValueTuple.xml
+C:\Users\milan\OneDrive\Радна површина\Medicinska klinika\MedicinskaKlinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.exe.config
