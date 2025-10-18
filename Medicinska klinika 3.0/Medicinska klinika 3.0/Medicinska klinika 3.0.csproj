@@ -132,6 +132,84 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDodaj\DodajAdministrativnoOsoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajAdministrativnoOsoblje.Designer.cs">
+      <DependentUpon>DodajAdministrativnoOsoblje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajLaboratorijsku Analizu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajLaboratorijsku Analizu.Designer.cs">
+      <DependentUpon>DodajLaboratorijsku Analizu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajLekaraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajLekaraForma.Designer.cs">
+      <DependentUpon>DodajLekaraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajLokaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajLokaciju.Designer.cs">
+      <DependentUpon>DodajLokaciju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajMedicinskuSestru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajMedicinskuSestru.Designer.cs">
+      <DependentUpon>DodajMedicinskuSestru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajOdeljenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajOdeljenje.Designer.cs">
+      <DependentUpon>DodajOdeljenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajPacijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajPacijenta.Designer.cs">
+      <DependentUpon>DodajPacijenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajPlacanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajPlacanje.Designer.cs">
+      <DependentUpon>DodajPlacanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajPregled.Designer.cs">
+      <DependentUpon>DodajPregled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajPrivatnoOsiguranje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajPrivatnoOsiguranje.Designer.cs">
+      <DependentUpon>DodajPrivatnoOsiguranje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajRacun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajRacun.Designer.cs">
+      <DependentUpon>DodajRacun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajRFZO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajRFZO.Designer.cs">
+      <DependentUpon>DodajRFZO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDodaj\DodajTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodaj\DodajTermin.Designer.cs">
+      <DependentUpon>DodajTermin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maperanja\AdministrativnoOsobljeMaper.cs" />
     <Compile Include="Maperanja\BrTelefonaPacijentaMaper.cs" />
     <Compile Include="Maperanja\BrTelefonaZaposlenogMaper.cs" />
@@ -155,6 +233,45 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajAdministrativnoOsoblje.resx">
+      <DependentUpon>DodajAdministrativnoOsoblje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajLaboratorijsku Analizu.resx">
+      <DependentUpon>DodajLaboratorijsku Analizu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajLekaraForma.resx">
+      <DependentUpon>DodajLekaraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajLokaciju.resx">
+      <DependentUpon>DodajLokaciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajMedicinskuSestru.resx">
+      <DependentUpon>DodajMedicinskuSestru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajOdeljenje.resx">
+      <DependentUpon>DodajOdeljenje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajPacijenta.resx">
+      <DependentUpon>DodajPacijenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajPlacanje.resx">
+      <DependentUpon>DodajPlacanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajPregled.resx">
+      <DependentUpon>DodajPregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajPrivatnoOsiguranje.resx">
+      <DependentUpon>DodajPrivatnoOsiguranje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajRacun.resx">
+      <DependentUpon>DodajRacun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajRFZO.resx">
+      <DependentUpon>DodajRFZO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDodaj\DodajTermin.resx">
+      <DependentUpon>DodajTermin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
