@@ -41,9 +41,10 @@
             // button3
             // 
             button3.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(713, 414);
+            button3.Location = new Point(570, 331);
+            button3.Margin = new Padding(2, 2, 2, 2);
             button3.Name = "button3";
-            button3.Size = new Size(257, 80);
+            button3.Size = new Size(206, 64);
             button3.TabIndex = 23;
             button3.Text = "Dodaj";
             button3.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(365, 414);
+            button2.Location = new Point(292, 331);
+            button2.Margin = new Padding(2, 2, 2, 2);
             button2.Name = "button2";
-            button2.Size = new Size(257, 80);
+            button2.Size = new Size(206, 64);
             button2.TabIndex = 22;
             button2.Text = "Obrisi";
             button2.UseVisualStyleBackColor = true;
@@ -62,9 +64,10 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(25, 414);
+            button1.Location = new Point(20, 331);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(257, 80);
+            button1.Size = new Size(206, 64);
             button1.TabIndex = 21;
             button1.Text = "Izmeni";
             button1.UseVisualStyleBackColor = true;
@@ -73,12 +76,14 @@
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { Naziv, RadnoVreme, BrProstorija, Lekar });
-            listView1.Location = new Point(12, 24);
+            listView1.Location = new Point(10, 19);
+            listView1.Margin = new Padding(2, 2, 2, 2);
             listView1.Name = "listView1";
-            listView1.Size = new Size(1013, 325);
+            listView1.Size = new Size(811, 261);
             listView1.TabIndex = 20;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // Naziv
             // 
@@ -102,13 +107,14 @@
             // 
             // IzmeniOdeljenje
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1059, 736);
+            ClientSize = new Size(847, 589);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(listView1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "IzmeniOdeljenje";
             Text = "IzmeniOdeljenje";
             ResumeLayout(false);

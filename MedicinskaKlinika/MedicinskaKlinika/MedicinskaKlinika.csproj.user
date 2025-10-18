@@ -104,6 +104,9 @@
     <Compile Update="Forme\IzmeniTermin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forme\OdeljenjeZaposlenForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forme\ZaposlenBrTel.cs">
       <SubType>Form</SubType>
     </Compile>

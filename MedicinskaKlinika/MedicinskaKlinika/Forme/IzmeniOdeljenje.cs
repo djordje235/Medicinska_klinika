@@ -28,5 +28,10 @@ namespace MedicinskaKlinika.Forme
             DodajOdeljenje forma = new DodajOdeljenje();
             forma.ShowDialog();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

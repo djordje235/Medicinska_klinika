@@ -12,6 +12,8 @@ namespace MedicinskaKlinika.Forme
 {
     public partial class ZaposlenEmail : Form
     {
+        public string email { get; private set; }
+
         public ZaposlenEmail()
         {
             InitializeComponent();
@@ -19,7 +21,19 @@ namespace MedicinskaKlinika.Forme
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            email = textBox1.Text;
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void ZaposlenEmail_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

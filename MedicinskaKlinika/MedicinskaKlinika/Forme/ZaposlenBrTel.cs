@@ -12,9 +12,17 @@ namespace MedicinskaKlinika.Forme
 {
     public partial class ZaposlenBrTel : Form
     {
+        public string Telefon { get; private set; }
         public ZaposlenBrTel()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Telefon = textBox1.Text;
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

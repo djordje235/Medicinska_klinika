@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj": {}
+    "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj": {
+    "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
+        "projectUniqueName": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
         "projectName": "MedicinskaKlinika",
-        "projectPath": "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\Medicinska_klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\obj\\",
+        "projectPath": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\MedicinskaKlinika.csproj",
+        "packagesPath": "C:\\Users\\milan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\MedicinskaKlinika\\MedicinskaKlinika\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\milan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
