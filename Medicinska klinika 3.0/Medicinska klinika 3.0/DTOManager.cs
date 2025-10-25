@@ -161,5 +161,10 @@ namespace MedicinskaKlinika
             }
         }
 
+        public static void funkcija2()
+        {
+            int suma = 5 + 7;
+        }
+
     }
 }
