@@ -210,6 +210,90 @@
     <Compile Include="FormDodaj\DodajTermin.Designer.cs">
       <DependentUpon>DodajTermin.cs</DependentUpon>
     </Compile>
+    <Compile Include="IzmeniForme\IzmeniAdministrativnoOsoblje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniAdministrativnoOsoblje.Designer.cs">
+      <DependentUpon>IzmeniAdministrativnoOsoblje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniLaboranta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniLaboranta.Designer.cs">
+      <DependentUpon>IzmeniLaboranta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniLaboratorijskuAnalizu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniLaboratorijskuAnalizu.Designer.cs">
+      <DependentUpon>IzmeniLaboratorijskuAnalizu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniLekara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniLekara.Designer.cs">
+      <DependentUpon>IzmeniLekara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniLokaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniLokaciju.Designer.cs">
+      <DependentUpon>IzmeniLokaciju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniMedicinskaSestra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniMedicinskaSestra.Designer.cs">
+      <DependentUpon>IzmeniMedicinskaSestra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniOdeljenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniOdeljenje.Designer.cs">
+      <DependentUpon>IzmeniOdeljenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniPacijnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniPacijnet.Designer.cs">
+      <DependentUpon>IzmeniPacijnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniPlacanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniPlacanje.Designer.cs">
+      <DependentUpon>IzmeniPlacanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniPregled.Designer.cs">
+      <DependentUpon>IzmeniPregled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniPrivatnoOsiguranje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniPrivatnoOsiguranje.Designer.cs">
+      <DependentUpon>IzmeniPrivatnoOsiguranje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniRacun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniRacun.Designer.cs">
+      <DependentUpon>IzmeniRacun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniRFZO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniRFZO.Designer.cs">
+      <DependentUpon>IzmeniRFZO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzmeniForme\IzmeniTermin.Designer.cs">
+      <DependentUpon>IzmeniTermin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maperanja\AdministrativnoOsobljeMaper.cs" />
     <Compile Include="Maperanja\BrTelefonaPacijentaMaper.cs" />
     <Compile Include="Maperanja\BrTelefonaZaposlenogMaper.cs" />
@@ -272,6 +356,48 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDodaj\DodajTermin.resx">
       <DependentUpon>DodajTermin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniAdministrativnoOsoblje.resx">
+      <DependentUpon>IzmeniAdministrativnoOsoblje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniLaboranta.resx">
+      <DependentUpon>IzmeniLaboranta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniLaboratorijskuAnalizu.resx">
+      <DependentUpon>IzmeniLaboratorijskuAnalizu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniLekara.resx">
+      <DependentUpon>IzmeniLekara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniLokaciju.resx">
+      <DependentUpon>IzmeniLokaciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniMedicinskaSestra.resx">
+      <DependentUpon>IzmeniMedicinskaSestra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniOdeljenje.resx">
+      <DependentUpon>IzmeniOdeljenje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniPacijnet.resx">
+      <DependentUpon>IzmeniPacijnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniPlacanje.resx">
+      <DependentUpon>IzmeniPlacanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniPregled.resx">
+      <DependentUpon>IzmeniPregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniPrivatnoOsiguranje.resx">
+      <DependentUpon>IzmeniPrivatnoOsiguranje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniRacun.resx">
+      <DependentUpon>IzmeniRacun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniRFZO.resx">
+      <DependentUpon>IzmeniRFZO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzmeniForme\IzmeniTermin.resx">
+      <DependentUpon>IzmeniTermin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

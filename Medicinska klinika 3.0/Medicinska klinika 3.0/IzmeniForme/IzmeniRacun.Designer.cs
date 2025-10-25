@@ -1,0 +1,156 @@
+﻿namespace Medicinska_klinika_3._0.FormeIzmeni
+{
+    partial class IzmeniRacun
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Popust = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.VrstaUsluge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Datum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Cena = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Lekar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Pacijent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Id,
+            this.Popust,
+            this.VrstaUsluge,
+            this.Datum,
+            this.Cena,
+            this.Lekar,
+            this.Pacijent});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(21, 30);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(1479, 488);
+            this.listView1.TabIndex = 21;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Id
+            // 
+            this.Id.Text = "Id";
+            this.Id.Width = 100;
+            // 
+            // Popust
+            // 
+            this.Popust.Text = "Popust";
+            this.Popust.Width = 100;
+            // 
+            // VrstaUsluge
+            // 
+            this.VrstaUsluge.Text = "VrstaUsluge";
+            this.VrstaUsluge.Width = 100;
+            // 
+            // Datum
+            // 
+            this.Datum.Text = "Datum";
+            this.Datum.Width = 100;
+            // 
+            // Cena
+            // 
+            this.Cena.Text = "Cena";
+            this.Cena.Width = 100;
+            // 
+            // Lekar
+            // 
+            this.Lekar.Text = "Lekar";
+            this.Lekar.Width = 100;
+            // 
+            // Pacijent
+            // 
+            this.Pacijent.Text = "Pacijent";
+            this.Pacijent.Width = 100;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1114, 572);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(386, 120);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "Dodaj";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(576, 572);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(386, 120);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Obrisi";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(21, 572);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(386, 120);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Izmeni";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // IzmeniRacun
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1546, 873);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listView1);
+            this.Name = "IzmeniRacun";
+            this.Text = "IzmeniRacun";
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Id;
+        private System.Windows.Forms.ColumnHeader Popust;
+        private System.Windows.Forms.ColumnHeader VrstaUsluge;
+        private System.Windows.Forms.ColumnHeader Datum;
+        private System.Windows.Forms.ColumnHeader Cena;
+        private System.Windows.Forms.ColumnHeader Lekar;
+        private System.Windows.Forms.ColumnHeader Pacijent;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+    }
+}
