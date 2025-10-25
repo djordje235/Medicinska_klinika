@@ -313,6 +313,48 @@
     <Compile Include="Maperanja\RFZOMaper.cs" />
     <Compile Include="Maperanja\TerminMaper.cs" />
     <Compile Include="Maperanja\ZaposlenMaper.cs" />
+    <Compile Include="PomocneForme\FormaFinansije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\FormaFinansije.Designer.cs">
+      <DependentUpon>FormaFinansije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PomocneForme\FormaKlinika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\FormaKlinika.Designer.cs">
+      <DependentUpon>FormaKlinika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PomocneForme\FormaUsluge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\FormaUsluge.Designer.cs">
+      <DependentUpon>FormaUsluge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PomocneForme\FormaZaAdministraciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\FormaZaAdministraciju.Designer.cs">
+      <DependentUpon>FormaZaAdministraciju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PomocneForme\FormaZaposleni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\FormaZaposleni.Designer.cs">
+      <DependentUpon>FormaZaposleni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PomocneForme\ZaposleniBrTel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\ZaposleniBrTel.Designer.cs">
+      <DependentUpon>ZaposleniBrTel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PomocneForme\ZaposleniEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\ZaposleniEmail.Designer.cs">
+      <DependentUpon>ZaposleniEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -398,6 +440,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IzmeniForme\IzmeniTermin.resx">
       <DependentUpon>IzmeniTermin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\FormaFinansije.resx">
+      <DependentUpon>FormaFinansije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\FormaKlinika.resx">
+      <DependentUpon>FormaKlinika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\FormaUsluge.resx">
+      <DependentUpon>FormaUsluge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\FormaZaAdministraciju.resx">
+      <DependentUpon>FormaZaAdministraciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\FormaZaposleni.resx">
+      <DependentUpon>FormaZaposleni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\ZaposleniBrTel.resx">
+      <DependentUpon>ZaposleniBrTel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\ZaposleniEmail.resx">
+      <DependentUpon>ZaposleniEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
