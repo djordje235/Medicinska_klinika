@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MedicinskaKlinika
 {
@@ -61,7 +62,7 @@ namespace MedicinskaKlinika
             s.Close();
         }
 
-        public static List<OdeljenjePogled> citajOdeljenja()
+        public static List<OdeljenjePogled> vratipogledodaljenja()
         {
             List<OdeljenjePogled> odeljenja = new List<OdeljenjePogled>();
 
@@ -95,5 +96,70 @@ namespace MedicinskaKlinika
             {
             }
         }
+
+        public static List<PacijentPogled> vratipogledpacijenta()
+        {
+            List<PacijentPogled> pacijenti = new List<PacijentPogled>();
+            ISession s = DataLayer.GetSession();
+            var p = s.Query<Pacijent>().ToList();
+            foreach (Pacijent pacijent in p)
+            {
+                pacijenti.Add(new PacijentPogled(pacijent.IdKartona,pacijent.Ime, pacijent.Prezime));
+            }
+            s.Close();
+            return pacijenti;
+        }
+
+        public static List<ZaposlenPogled> vratipogledlekara()
+        {
+            List<ZaposlenPogled> lekari = new List<ZaposlenPogled>();
+            ISession s = DataLayer.GetSession();
+            var p = s.Query<Lekar>().ToList();
+            foreach (Lekar lekar in p)
+            {
+                lekari.Add(new ZaposlenPogled(lekar.JMBG, lekar.Ime, lekar.Prezime));
+            }
+            s.Close();
+            return lekari;
+        }
+
+        public static void dodajTermin(DateTime datum, DateTime vreme, int idKartona, string nazivOdeljenja, int jmbgLekara)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    
+                    Pacijent p = s.Query<Pacijent>()
+                                  .FirstOrDefault(x => x.IdKartona == idKartona);
+
+                    
+                    Lekar lekar = s.Query<Lekar>()
+                                   .FirstOrDefault(x => x.JMBG == jmbgLekara);
+
+                    
+                    Odeljenje odeljenje = s.Query<Odeljenje>()
+                                           .FirstOrDefault(x => x.Naziv == nazivOdeljenja);
+
+                    
+                    Termin termin = new Termin
+                    {
+                        Datum = datum,
+                        Vreme = vreme,
+                        Pacijent = p,
+                        Lekar = lekar,
+                        Odeljenje = odeljenje
+                    };
+
+                    s.SaveOrUpdate(termin);
+                    s.Flush();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
     }
 }

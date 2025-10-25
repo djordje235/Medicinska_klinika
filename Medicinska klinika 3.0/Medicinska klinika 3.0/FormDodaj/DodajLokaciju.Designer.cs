@@ -43,6 +43,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(433, 22);
             this.textBox1.TabIndex = 37;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -50,7 +51,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label2.Location = new System.Drawing.Point(18, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 40);
+            this.label2.Size = new System.Drawing.Size(91, 32);
             this.label2.TabIndex = 36;
             this.label2.Text = "Adresa:";
             // 
@@ -60,7 +61,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F);
             this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 68);
+            this.label1.Size = new System.Drawing.Size(282, 54);
             this.label1.TabIndex = 35;
             this.label1.Text = "Dodaj Lokaciju";
             // 
@@ -89,6 +90,7 @@
             this.button1.TabIndex = 44;
             this.button1.Text = "Otkazi";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -98,6 +100,7 @@
             this.button5.TabIndex = 48;
             this.button5.Text = "Sacuvaj";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // DodajLokaciju
             // 
@@ -113,6 +116,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajLokaciju";
             this.Text = "DodajLokaciju";
+            this.Load += new System.EventHandler(this.DodajLokaciju_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -58,6 +58,23 @@ namespace MedicinskaKlinika
         }
     }
 
+    public class ZaposlenPogled
+    {
+        public virtual int JMBG { get; set; }
+        public virtual String Ime { get; set; }
+
+        public virtual String Prezime { get; set; }
+
+        public string PunoIme => Ime + " " + Prezime;
+
+        public ZaposlenPogled(int jMBG, string ime, string prezime)
+        {
+            JMBG = jMBG;
+            Ime = ime;
+            Prezime = prezime;
+        }
+    }
+
     public class AdministrativnoOsobljeBasic : ZaposlenBasic
     {
         public AdministrativnoOsobljeBasic(IList<Odeljenje> Odeljenja, IList<BrTelefonaZaposlenog> Telefon, IList<EmailZaposlenog> Emails) : base(Odeljenja,Telefon,Emails)
@@ -170,6 +187,7 @@ namespace MedicinskaKlinika
 
         }
     }
+
 
     public class BrTelefonaPacijentaBasic {
         public virtual int Id { get; set; }
@@ -429,6 +447,24 @@ namespace MedicinskaKlinika
         }
     }
 
+    public class PacijentPogled
+    {
+        public virtual int IdKartona { get; set; }
+
+        public virtual String Ime { get; set; }
+
+        public virtual String Prezime { get; set; }
+
+        public string PunoIme => Ime + " " + Prezime;
+
+        public PacijentPogled(int idKartona, string ime, string prezime)
+        {
+            IdKartona = idKartona;
+            Ime = ime;
+            Prezime = prezime;
+        }
+    }
+
     public class TerminBasic
     {
         public virtual int IdTermina { get; set; }
@@ -459,6 +495,7 @@ namespace MedicinskaKlinika
             this.Pregled = pregled;
         }
     }
+
 
     public class RFZOBasic
     {
