@@ -91,11 +91,20 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\Form1.cs",
+              "RelativeDocumentMoniker": "Medicinska klinika 3.0\\Form1.cs",
+              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\Form1.cs",
+              "RelativeToolTip": "Medicinska klinika 3.0\\Form1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+=======
               "Title": "DodajAdministrativnoOsoblje.cs [Design]",
               "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajAdministrativnoOsoblje.cs",
               "RelativeDocumentMoniker": "Medicinska klinika 3.0\\FormDodaj\\DodajAdministrativnoOsoblje.cs",
               "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajAdministrativnoOsoblje.cs [Design]",
               "RelativeToolTip": "Medicinska klinika 3.0\\FormDodaj\\DodajAdministrativnoOsoblje.cs [Design]",
+>>>>>>> 0aa7e91505ac8432953069446ebb8df8c42a92d0
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T15:27:20.198Z",
               "EditorCaption": " [Design]"
@@ -103,11 +112,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\Form1.cs",
+              "RelativeDocumentMoniker": "Medicinska klinika 3.0\\Form1.cs",
+              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\Form1.cs [Design]",
+              "RelativeToolTip": "Medicinska klinika 3.0\\Form1.cs [Design]",
+=======
               "Title": "DodajLaboratorijsku Analizu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajLaboratorijsku Analizu.cs",
               "RelativeDocumentMoniker": "Medicinska klinika 3.0\\FormDodaj\\DodajLaboratorijsku Analizu.cs",
               "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajLaboratorijsku Analizu.cs [Design]",
               "RelativeToolTip": "Medicinska klinika 3.0\\FormDodaj\\DodajLaboratorijsku Analizu.cs [Design]",
+>>>>>>> 0aa7e91505ac8432953069446ebb8df8c42a92d0
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T15:27:15.788Z"
             },
