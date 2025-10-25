@@ -60,69 +60,79 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(18, 957);
+            this.textBox4.Location = new System.Drawing.Point(20, 1196);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox4.Size = new System.Drawing.Size(436, 89);
+            this.textBox4.Size = new System.Drawing.Size(490, 110);
             this.textBox4.TabIndex = 70;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(14, 821);
+            this.textBox3.Location = new System.Drawing.Point(16, 1026);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox3.Size = new System.Drawing.Size(436, 89);
+            this.textBox3.Size = new System.Drawing.Size(490, 110);
             this.textBox3.TabIndex = 69;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 680);
+            this.textBox1.Location = new System.Drawing.Point(11, 850);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(436, 89);
+            this.textBox1.Size = new System.Drawing.Size(490, 110);
             this.textBox1.TabIndex = 68;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(11, 112);
+            this.comboBox2.Location = new System.Drawing.Point(12, 140);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(436, 24);
+            this.comboBox2.Size = new System.Drawing.Size(490, 28);
             this.comboBox2.TabIndex = 67;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(18, 487);
+            this.dateTimePicker2.Location = new System.Drawing.Point(20, 609);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(436, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(490, 26);
             this.dateTimePicker2.TabIndex = 63;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(18, 408);
+            this.dateTimePicker1.CustomFormat = "\"HH:mm\"";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(20, 510);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(436, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(490, 26);
             this.dateTimePicker1.TabIndex = 62;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(10, 553);
+            this.textBox2.Location = new System.Drawing.Point(11, 691);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(436, 89);
+            this.textBox2.Size = new System.Drawing.Size(490, 110);
             this.textBox2.TabIndex = 61;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label9.Location = new System.Drawing.Point(20, 452);
+            this.label9.Location = new System.Drawing.Point(22, 565);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 32);
+            this.label9.Size = new System.Drawing.Size(106, 38);
             this.label9.TabIndex = 59;
             this.label9.Text = "Datum:";
             // 
@@ -130,9 +140,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label8.Location = new System.Drawing.Point(16, 512);
+            this.label8.Location = new System.Drawing.Point(18, 640);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(149, 32);
+            this.label8.Size = new System.Drawing.Size(173, 38);
             this.label8.TabIndex = 58;
             this.label8.Text = "Opis tegoba:";
             // 
@@ -140,9 +150,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label7.Location = new System.Drawing.Point(20, 645);
+            this.label7.Location = new System.Drawing.Point(22, 806);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 32);
+            this.label7.Size = new System.Drawing.Size(146, 38);
             this.label7.TabIndex = 57;
             this.label7.Text = "Dijagnoza:";
             // 
@@ -150,9 +160,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label4.Location = new System.Drawing.Point(16, 553);
+            this.label4.Location = new System.Drawing.Point(18, 691);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 32);
+            this.label4.Size = new System.Drawing.Size(103, 38);
             this.label4.TabIndex = 55;
             this.label4.Text = "Vreme:";
             // 
@@ -160,9 +170,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label2.Location = new System.Drawing.Point(12, 65);
+            this.label2.Location = new System.Drawing.Point(14, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 32);
+            this.label2.Size = new System.Drawing.Size(119, 38);
             this.label2.TabIndex = 53;
             this.label2.Text = "Pacijent:";
             // 
@@ -170,63 +180,66 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.label1.Location = new System.Drawing.Point(4, 11);
+            this.label1.Location = new System.Drawing.Point(4, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 54);
+            this.label1.Size = new System.Drawing.Size(329, 65);
             this.label1.TabIndex = 52;
             this.label1.Text = "Dodaj Pregled";
             // 
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(11, 194);
+            this.comboBox3.Location = new System.Drawing.Point(12, 242);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(436, 24);
+            this.comboBox3.Size = new System.Drawing.Size(490, 28);
             this.comboBox3.TabIndex = 72;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label5.Location = new System.Drawing.Point(12, 191);
+            this.label5.Location = new System.Drawing.Point(14, 239);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 32);
+            this.label5.Size = new System.Drawing.Size(107, 38);
             this.label5.TabIndex = 71;
             this.label5.Text = "Termin:";
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(11, 265);
+            this.comboBox4.Location = new System.Drawing.Point(12, 331);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(436, 24);
+            this.comboBox4.Size = new System.Drawing.Size(490, 28);
             this.comboBox4.TabIndex = 74;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label11.Location = new System.Drawing.Point(10, 156);
+            this.label11.Location = new System.Drawing.Point(11, 195);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 32);
+            this.label11.Size = new System.Drawing.Size(89, 38);
             this.label11.TabIndex = 73;
             this.label11.Text = "Lekar:";
             // 
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(11, 336);
+            this.comboBox5.Location = new System.Drawing.Point(12, 420);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(436, 24);
+            this.comboBox5.Size = new System.Drawing.Size(490, 28);
             this.comboBox5.TabIndex = 76;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label12.Location = new System.Drawing.Point(15, 368);
+            this.label12.Location = new System.Drawing.Point(17, 460);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 32);
+            this.label12.Size = new System.Drawing.Size(103, 38);
             this.label12.TabIndex = 75;
             this.label12.Text = "Vreme:";
             // 
@@ -234,9 +247,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label6.Location = new System.Drawing.Point(20, 922);
+            this.label6.Location = new System.Drawing.Point(22, 1152);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 32);
+            this.label6.Size = new System.Drawing.Size(118, 38);
             this.label6.TabIndex = 77;
             this.label6.Text = "Terapija:";
             // 
@@ -244,26 +257,27 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label10.Location = new System.Drawing.Point(19, 786);
+            this.label10.Location = new System.Drawing.Point(21, 982);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(240, 32);
+            this.label10.Size = new System.Drawing.Size(281, 38);
             this.label10.TabIndex = 78;
             this.label10.Text = "Preporuka za lecenje:";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(20, 1094);
+            this.textBox5.Location = new System.Drawing.Point(22, 1368);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(426, 22);
+            this.textBox5.Size = new System.Drawing.Size(479, 26);
             this.textBox5.TabIndex = 80;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label14.Location = new System.Drawing.Point(12, 301);
+            this.label14.Location = new System.Drawing.Point(14, 376);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(122, 32);
+            this.label14.Size = new System.Drawing.Size(142, 38);
             this.label14.TabIndex = 82;
             this.label14.Text = "Odeljenje:";
             // 
@@ -271,9 +285,9 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label15.Location = new System.Drawing.Point(12, 230);
+            this.label15.Location = new System.Drawing.Point(14, 288);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 32);
+            this.label15.Size = new System.Drawing.Size(101, 38);
             this.label15.TabIndex = 83;
             this.label15.Text = "Termin";
             // 
@@ -281,17 +295,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label3.Location = new System.Drawing.Point(16, 1049);
+            this.label3.Location = new System.Drawing.Point(18, 1311);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 32);
+            this.label3.Size = new System.Drawing.Size(201, 38);
             this.label3.TabIndex = 84;
             this.label3.Text = "Vrsta pregleda:";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(472, 866);
+            this.button5.Location = new System.Drawing.Point(531, 1082);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 58);
+            this.button5.Size = new System.Drawing.Size(174, 72);
             this.button5.TabIndex = 85;
             this.button5.Text = "Dodatni pregled";
             this.button5.UseVisualStyleBackColor = true;
@@ -299,28 +314,32 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(472, 957);
+            this.button1.Location = new System.Drawing.Point(531, 1196);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 58);
+            this.button1.Size = new System.Drawing.Size(174, 72);
             this.button1.TabIndex = 86;
             this.button1.Text = "Sacuvaj";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(472, 1058);
+            this.button2.Location = new System.Drawing.Point(531, 1322);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 58);
+            this.button2.Size = new System.Drawing.Size(174, 72);
             this.button2.TabIndex = 87;
             this.button2.Text = "Otkazi";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DodajPregled
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(667, 1090);
+            this.ClientSize = new System.Drawing.Size(750, 1362);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
@@ -349,8 +368,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DodajPregled";
             this.Text = "DodajPregled";
+            this.Load += new System.EventHandler(this.DodajPregled_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

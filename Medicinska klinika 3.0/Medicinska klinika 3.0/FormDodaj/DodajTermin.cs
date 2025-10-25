@@ -65,5 +65,9 @@ namespace Medicinska_klinika_3._0.FormDodaj
             MessageBox.Show("Termin je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

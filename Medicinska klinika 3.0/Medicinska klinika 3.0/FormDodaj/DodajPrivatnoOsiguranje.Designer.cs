@@ -48,6 +48,7 @@
             this.button5.TabIndex = 55;
             this.button5.Text = "Sacuvaj";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -58,6 +59,7 @@
             this.button1.TabIndex = 54;
             this.button1.Text = "Otkazi";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -142,6 +144,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DodajPrivatnoOsiguranje";
             this.Text = "DodajPrivatnoOsiguranje";
+            this.Load += new System.EventHandler(this.DodajPrivatnoOsiguranje_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

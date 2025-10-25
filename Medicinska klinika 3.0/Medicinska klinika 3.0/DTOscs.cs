@@ -188,7 +188,6 @@ namespace MedicinskaKlinika
         }
     }
 
-
     public class BrTelefonaPacijentaBasic {
         public virtual int Id { get; set; }
         public virtual Pacijent Pacijent { get; set; }
@@ -507,6 +506,21 @@ namespace MedicinskaKlinika
         }
     }
 
+    public class TerminPogled
+    {
+        public virtual int IdTermina { get; set; }
+        public virtual DateTime Datum { get; set; }
+        public virtual DateTime Vreme { get; set; }
+
+        public DateTime PunDatum => Datum.Date + Vreme.TimeOfDay;
+
+        public TerminPogled(int IdTermina, DateTime Datum, DateTime Vreme)
+        {
+            this.IdTermina = IdTermina;
+            this.Datum = Datum;
+            this.Vreme = Vreme;
+        }
+    }
 
     public class RFZOBasic
     {
