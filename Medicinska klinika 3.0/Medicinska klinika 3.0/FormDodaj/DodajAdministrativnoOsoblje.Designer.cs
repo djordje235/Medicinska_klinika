@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F);
             this.label1.Location = new System.Drawing.Point(51, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(708, 68);
+            this.label1.Size = new System.Drawing.Size(566, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dodaj Administrativno Osoblje";
             // 
@@ -254,6 +254,7 @@
             this.button4.TabIndex = 22;
             this.button4.Text = "Dodaj Email";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -295,6 +296,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajAdministrativnoOsoblje";
             this.Text = "DodajAdministrativnoOsoblje";
+            this.Load += new System.EventHandler(this.DodajAdministrativnoOsoblje_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

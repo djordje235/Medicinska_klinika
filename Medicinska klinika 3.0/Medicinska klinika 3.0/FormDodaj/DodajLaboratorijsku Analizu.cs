@@ -26,5 +26,10 @@ namespace Medicinska_klinika_3._0.FormDodaj
         {
 
         }
+
+        private void DodajLaboratorijsku_Analizu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

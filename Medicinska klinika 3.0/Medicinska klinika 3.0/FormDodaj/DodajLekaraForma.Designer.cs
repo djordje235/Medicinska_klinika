@@ -74,6 +74,7 @@
             this.button4.TabIndex = 46;
             this.button4.Text = "Dodaj Email";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -83,6 +84,7 @@
             this.button3.TabIndex = 45;
             this.button3.Text = "Dodaj kontakt telefon";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -253,7 +255,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F);
             this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 68);
+            this.label1.Size = new System.Drawing.Size(253, 54);
             this.label1.TabIndex = 24;
             this.label1.Text = "Dodaj Lekara";
             // 
@@ -277,7 +279,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label11.Location = new System.Drawing.Point(17, 746);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(205, 40);
+            this.label11.Size = new System.Drawing.Size(164, 32);
             this.label11.TabIndex = 49;
             this.label11.Text = "Specijalizacija:";
             // 
@@ -287,7 +289,7 @@
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label12.Location = new System.Drawing.Point(16, 830);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(178, 40);
+            this.label12.Size = new System.Drawing.Size(142, 32);
             this.label12.TabIndex = 48;
             this.label12.Text = "Broj licence:";
             // 

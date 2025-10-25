@@ -64,7 +64,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label6.Location = new System.Drawing.Point(1, 494);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 40);
+            this.label6.Size = new System.Drawing.Size(75, 32);
             this.label6.TabIndex = 73;
             this.label6.Text = "Lekar:";
             // 
@@ -74,7 +74,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label5.Location = new System.Drawing.Point(0, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 40);
+            this.label5.Size = new System.Drawing.Size(104, 32);
             this.label5.TabIndex = 72;
             this.label5.Text = "Prezime:";
             // 
@@ -91,7 +91,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label4.Location = new System.Drawing.Point(0, 206);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 40);
+            this.label4.Size = new System.Drawing.Size(59, 32);
             this.label4.TabIndex = 70;
             this.label4.Text = "Ime:";
             // 
@@ -126,7 +126,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label3.Location = new System.Drawing.Point(0, 135);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 40);
+            this.label3.Size = new System.Drawing.Size(91, 32);
             this.label3.TabIndex = 66;
             this.label3.Text = "Adresa:";
             // 
@@ -143,7 +143,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label2.Location = new System.Drawing.Point(0, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 40);
+            this.label2.Size = new System.Drawing.Size(121, 32);
             this.label2.TabIndex = 64;
             this.label2.Text = "IdKartona:";
             // 
@@ -170,7 +170,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label7.Location = new System.Drawing.Point(5, 416);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 40);
+            this.label7.Size = new System.Drawing.Size(51, 32);
             this.label7.TabIndex = 77;
             this.label7.Text = "Pol:";
             // 
@@ -180,7 +180,7 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label8.Location = new System.Drawing.Point(5, 347);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(231, 40);
+            this.label8.Size = new System.Drawing.Size(185, 32);
             this.label8.TabIndex = 78;
             this.label8.Text = "Datum rodjenja:";
             // 
@@ -221,6 +221,7 @@
             this.button2.TabIndex = 82;
             this.button2.Text = "Dodaj Email";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -230,6 +231,7 @@
             this.button3.TabIndex = 83;
             this.button3.Text = "Dodaj kontakt telefon";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // DodajPacijenta
             // 

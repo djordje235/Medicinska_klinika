@@ -78,7 +78,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label11.Location = new System.Drawing.Point(6, 752);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(175, 40);
+            this.label11.Size = new System.Drawing.Size(140, 32);
             this.label11.TabIndex = 76;
             this.label11.Text = "Oblast rada:";
             // 
@@ -88,7 +88,7 @@
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label12.Location = new System.Drawing.Point(8, 818);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 40);
+            this.label12.Size = new System.Drawing.Size(113, 32);
             this.label12.TabIndex = 75;
             this.label12.Text = "Sertifikat:";
             // 
@@ -109,6 +109,7 @@
             this.button4.TabIndex = 73;
             this.button4.Text = "Dodaj Email";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -118,6 +119,7 @@
             this.button3.TabIndex = 72;
             this.button3.Text = "Dodaj kontakt telefon";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -296,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 896);
+            this.ClientSize = new System.Drawing.Size(642, 914);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label11);

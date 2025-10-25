@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Medicinska_klinika_3._0.FormDodaj;
+using MedicinskaKlinika.Entiteti;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,14 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DodajAdministrativnoOsoblje forma = new DodajAdministrativnoOsoblje();
+            forma.ShowDialog();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DodajAdministrativnoOsoblje forma = new DodajAdministrativnoOsoblje();
+            forma.ShowDialog();
         }
     }
 }

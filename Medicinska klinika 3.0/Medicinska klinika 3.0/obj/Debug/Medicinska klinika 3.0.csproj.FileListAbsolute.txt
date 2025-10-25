@@ -107,3 +107,25 @@ C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\
 C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicins.01FF96EC.Up2Date
 C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.exe
 C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.pdb
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormDodaj.DodajLaboranta.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniAdministrativnoOsoblje.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniLaboranta.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniLaboratorijskuAnalizu.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniLekara.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniLokaciju.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniMedicinskaSestra.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniOdeljenje.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniPacijnet.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniPlacanje.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniPregled.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniPrivatnoOsiguranje.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniRacun.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniRFZO.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.FormeIzmeni.IzmeniTermin.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.FormaFinansije.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.FormaKlinika.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.FormaUsluge.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.FormaZaAdministraciju.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.FormaZaposleni.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.ZaposleniBrTel.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.ZaposleniEmail.resources

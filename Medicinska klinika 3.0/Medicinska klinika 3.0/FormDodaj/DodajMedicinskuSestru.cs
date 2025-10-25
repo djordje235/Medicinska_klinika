@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Medicinska_klinika_3._0.PomocneForme;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,18 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ZaposleniBrTel forma = new ZaposleniBrTel();
+            forma.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ZaposleniEmail forma = new ZaposleniEmail();
+            forma.ShowDialog();
         }
     }
 }

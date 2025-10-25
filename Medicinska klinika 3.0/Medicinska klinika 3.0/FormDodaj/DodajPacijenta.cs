@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Medicinska_klinika_3._0.PomocneForme;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace Medicinska_klinika_3._0.FormDodaj
         public DodajPacijenta()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ZaposleniBrTel forma = new ZaposleniBrTel();
+            forma.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ZaposleniEmail forma = new ZaposleniEmail();
+            forma.ShowDialog();
         }
     }
 }

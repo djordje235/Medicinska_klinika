@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Medicinska_klinika_3._0.FormDodaj;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,18 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
         private void IzmeniRFZO_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DodajRFZO forma = new DodajRFZO();
+            forma.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DodajRFZO forma = new DodajRFZO();
+            forma.ShowDialog();
         }
     }
 }
