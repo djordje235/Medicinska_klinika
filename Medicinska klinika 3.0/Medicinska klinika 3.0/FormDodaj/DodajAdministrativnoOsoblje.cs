@@ -125,5 +125,10 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

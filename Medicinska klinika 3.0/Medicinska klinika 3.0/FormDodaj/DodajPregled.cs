@@ -88,7 +88,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             p.VrstaPregleda = textBox5.Text;
 
             DTOManager.dodajPregled(p);
-            MessageBox.Show("Racun je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //ako zatreba
