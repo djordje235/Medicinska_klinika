@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+<<<<<<< HEAD
 using System.Resources;
+=======
+>>>>>>> 6705aa9b4da508af441eff00fcd494763cb57693
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -189,6 +192,7 @@ namespace MedicinskaKlinika
             return lekar;
         }
 
+<<<<<<< HEAD
         public static Termin nadjiTermin(int idTermina)
         {
             ISession s = DataLayer.GetSession();
@@ -198,12 +202,23 @@ namespace MedicinskaKlinika
         }
 
         public static void dodajRFZO(RFZOBasic r)
+=======
+        public static Lokacija nadjiLokaciju(string Adresa)
+        {
+            ISession s = DataLayer.GetSession();
+            Lokacija lokacija = s.Query<Lokacija>().FirstOrDefault(x => x.Adresa == Adresa);
+            s.Close();
+            return lokacija;
+        }
+        public static void dodajAdministrativnoOsoblje(AdministrativnoOsobljeBasic a)
+>>>>>>> 6705aa9b4da508af441eff00fcd494763cb57693
         {
             try
             {
                 using (ISession s = DataLayer.GetSession())
                 {
 
+<<<<<<< HEAD
                     RFZO rfzo = new RFZO
                     {
                         IdOsiguranja = r.IdOsiguranja,
@@ -211,6 +226,25 @@ namespace MedicinskaKlinika
                     };
 
                     s.SaveOrUpdate(rfzo);
+=======
+                    AdministrativnoOsoblje admin = new AdministrativnoOsoblje();
+
+                    admin.Adresa = a.Adresa;
+                    admin.Pozicija = a.Pozicija;
+                    admin.DatumZaposlenja = a.DatumZaposlenja;
+                    admin.AdresaLokacije = a.AdresaLokacije;
+                    admin.Emails = a.Emails;
+                    admin.DatumRodjenja = a.DatumRodjenja;
+                    admin.Odeljenja = a.Odeljenja;
+                    admin.Ime = a.Ime;
+                    admin.Prezime = a.Prezime;
+                    admin.JMBG = a.JMBG;
+                    admin.Smena = a.Smena;
+                    admin.Telefons = a.Telefons;
+                    
+
+                    s.SaveOrUpdate(admin);
+>>>>>>> 6705aa9b4da508af441eff00fcd494763cb57693
                     s.Flush();
                     s.Close();
                 }
@@ -221,6 +255,7 @@ namespace MedicinskaKlinika
             }
         }
 
+<<<<<<< HEAD
         public static void dodajRacun(RacunBasic r)
         {
             try
@@ -275,5 +310,9 @@ namespace MedicinskaKlinika
         }
 
        
+=======
+
+>>>>>>> 6705aa9b4da508af441eff00fcd494763cb57693
     }
 }
+
