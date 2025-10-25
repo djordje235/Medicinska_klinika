@@ -216,7 +216,16 @@ namespace MedicinskaKlinika
                     admin.JMBG = a.JMBG;
                     admin.Smena = a.Smena;
                     admin.Telefons = a.Telefons;
-                    
+
+                    foreach (var email in admin.Emails)
+                    {
+                        email.Zaposlen = admin;
+                    }
+
+                    foreach (var broj in admin.Telefons)
+                    {
+                        broj.Zaposlen = admin;
+                    }
 
                     s.SaveOrUpdate(admin);
                     s.Flush();

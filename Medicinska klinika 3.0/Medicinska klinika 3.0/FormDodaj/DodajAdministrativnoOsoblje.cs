@@ -19,6 +19,10 @@ namespace Medicinska_klinika_3._0.FormDodaj
     {
         private List<EmailZaposlenog> emailovi = new List<EmailZaposlenog>();
         private List<BrTelefonaZaposlenog> brojevi = new List<BrTelefonaZaposlenog>();
+        private List<Odeljenje> od = new List<Odeljenje>();
+        private List<OdeljenjePogled> odeljenja;
+
+
         public DodajAdministrativnoOsoblje()
         {
             InitializeComponent();
@@ -32,18 +36,32 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private void button3_Click(object sender, EventArgs e)
         {
             ZaposleniBrTel forma = new ZaposleniBrTel();
-            forma.ShowDialog();
+            if (forma.ShowDialog() == DialogResult.OK)
+            {
+                BrTelefonaZaposlenog novi = forma.telefon;
+                
+                brojevi.Add(novi);
+
+                listView2.Items.Add(novi.BrojTelefona);
+            }
         }
 
         private void DodajAdministrativnoOsoblje_Load(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
 
             List<LokacijaPogled> lokacija = DTOManager.vratiPogledLokacija();
 
             comboBox1.DataSource = lokacija;
             comboBox1.DisplayMember = "Adresa";
             comboBox1.ValueMember = "Adresa";
+
+            odeljenja = DTOManager.vratipogledodaljenja();
+
+            comboBox2.DataSource = odeljenja;
+            comboBox2.DisplayMember = "Naziv";
+            comboBox2.ValueMember = "Naziv";
 
 
         }
@@ -73,10 +91,38 @@ namespace Medicinska_klinika_3._0.FormDodaj
             a.Smena = int.Parse(textBox6.Text);
             a.Emails = emailovi;
             a.Telefons = brojevi;
+            a.Odeljenja = od;
+
+            DTOManager.dodajAdministrativnoOsoblje(a);
+            MessageBox.Show("Zaposlen je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void listView3_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Odeljenje odeljenje = DTOManager.nadjiOdeljenje(comboBox2.SelectedValue.ToString());
+            od.Add(odeljenje);
+            listView3.Items.Add(odeljenje.Naziv);
+            var selektovano = comboBox2.SelectedItem as OdeljenjePogled;
+            if (selektovano != null)
+            {
+                odeljenja.Remove(selektovano);
+                comboBox2.DataSource = null;
+                comboBox2.DataSource = odeljenja;
+                comboBox2.DisplayMember = "Naziv";
+                comboBox2.ValueMember = "Naziv";
+            }
+
 
         }
     }
