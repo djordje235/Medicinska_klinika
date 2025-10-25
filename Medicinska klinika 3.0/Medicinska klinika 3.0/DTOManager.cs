@@ -161,9 +161,15 @@ namespace MedicinskaKlinika
             }
         }
 
+<<<<<<< HEAD
         public static void NekaFunkiciaj()
         {
             int a = 7 + 8;
+=======
+        public static void funkcija2()
+        {
+            int suma = 5 + 7;
+>>>>>>> f07be8dd193687ea4190db7cc9e220ce73f26a72
         }
 
     }
