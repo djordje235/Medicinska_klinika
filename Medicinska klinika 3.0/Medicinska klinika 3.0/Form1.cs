@@ -26,7 +26,7 @@ namespace Medicinska_klinika_3._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormaKlinika forma = new FormaKlinika();
+            FormaZaAdministraciju forma = new FormaZaAdministraciju();
             forma.ShowDialog();
         }
 
