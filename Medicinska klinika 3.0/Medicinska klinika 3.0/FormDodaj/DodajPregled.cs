@@ -27,5 +27,15 @@ namespace Medicinska_klinika_3._0.FormDodaj
             DodajPregled forma = new DodajPregled();
             forma.ShowDialog();
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

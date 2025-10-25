@@ -76,6 +76,7 @@
             this.button1.TabIndex = 63;
             this.button1.Text = "Otkazi";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -120,6 +121,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DodajRFZO";
             this.Text = "DodajRFZO";
+            this.Load += new System.EventHandler(this.DodajRFZO_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

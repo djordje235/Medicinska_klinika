@@ -1,11 +1,13 @@
-﻿using MedicinskaKlinika.Entiteti;
-using NHibernate;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Resources;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MedicinskaKlinika.Entiteti;
+using NHibernate;
 
 namespace MedicinskaKlinika
 {
@@ -186,5 +188,92 @@ namespace MedicinskaKlinika
             s.Close();
             return lekar;
         }
+
+        public static Termin nadjiTermin(int idTermina)
+        {
+            ISession s = DataLayer.GetSession();
+            Termin termin = s.Query<Termin>().FirstOrDefault(x=> x.IdTermina == idTermina);
+            s.Close();
+            return termin;
+        }
+
+        public static void dodajRFZO(RFZOBasic r)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+
+                    RFZO rfzo = new RFZO
+                    {
+                        IdOsiguranja = r.IdOsiguranja,
+                        Pacijent = r.Pacijent,
+                    };
+
+                    s.SaveOrUpdate(rfzo);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+        public static void dodajRacun(RacunBasic r)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+
+                    Racun racun = new Racun
+                    {
+                        Popust = r.Popust,
+                        VrstaUsluge = r.VrstaUsluge,
+                        Datum = r.Datum,
+                        Cena = r.Cena,
+                        Lekar = r.Lekar,
+                        Pacijent = r.Pacijent
+                    };
+
+                    s.SaveOrUpdate(racun);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+        public static void dodajPrivatnoOsiguranje(PrivatnoOsiguranjeBasic p)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+
+                    PrivatnoOsiguranje priv = new PrivatnoOsiguranje
+                    {
+                        BrPolise = p.BrPolise,
+                        OsiguravajucaKuca = p.OsiguravajucaKuca,
+                        Pacijent = p.Pacijent,
+                    };
+
+                    s.SaveOrUpdate(priv);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+       
     }
 }
