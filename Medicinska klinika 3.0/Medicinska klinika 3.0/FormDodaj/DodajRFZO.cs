@@ -16,5 +16,10 @@ namespace Medicinska_klinika_3._0.FormDodaj
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

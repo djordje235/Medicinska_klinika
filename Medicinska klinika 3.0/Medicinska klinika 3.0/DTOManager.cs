@@ -161,5 +161,10 @@ namespace MedicinskaKlinika
             }
         }
 
+        public static void NekaFunkiciaj()
+        {
+            int a = 7 + 8;
+        }
+
     }
 }

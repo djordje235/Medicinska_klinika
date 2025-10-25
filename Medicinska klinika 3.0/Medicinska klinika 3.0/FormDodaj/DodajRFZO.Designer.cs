@@ -40,53 +40,58 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(31, 241);
+            this.comboBox1.Location = new System.Drawing.Point(35, 301);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(427, 24);
+            this.comboBox1.Size = new System.Drawing.Size(480, 28);
             this.comboBox1.TabIndex = 66;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label4.Location = new System.Drawing.Point(24, 187);
+            this.label4.Location = new System.Drawing.Point(27, 234);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 32);
+            this.label4.Size = new System.Drawing.Size(119, 38);
             this.label4.TabIndex = 65;
             this.label4.Text = "Pacijent:";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(303, 296);
+            this.button5.Location = new System.Drawing.Point(341, 370);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 58);
+            this.button5.Size = new System.Drawing.Size(174, 72);
             this.button5.TabIndex = 64;
             this.button5.Text = "Sacuvaj";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(31, 296);
+            this.button1.Location = new System.Drawing.Point(35, 370);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 58);
+            this.button1.Size = new System.Drawing.Size(174, 72);
             this.button1.TabIndex = 63;
             this.button1.Text = "Otkazi";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 141);
+            this.textBox1.Location = new System.Drawing.Point(27, 176);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 22);
+            this.textBox1.Size = new System.Drawing.Size(487, 26);
             this.textBox1.TabIndex = 60;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.label2.Location = new System.Drawing.Point(24, 97);
+            this.label2.Location = new System.Drawing.Point(27, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 40);
+            this.label2.Size = new System.Drawing.Size(179, 38);
             this.label2.TabIndex = 59;
             this.label2.Text = "IdOsiguranja:";
             // 
@@ -94,17 +99,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(295, 68);
+            this.label1.Size = new System.Drawing.Size(282, 65);
             this.label1.TabIndex = 58;
             this.label1.Text = "Dodaj RFZO";
             // 
             // DodajRFZO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 368);
+            this.ClientSize = new System.Drawing.Size(546, 460);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button5);
@@ -112,6 +117,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DodajRFZO";
             this.Text = "DodajRFZO";
             this.ResumeLayout(false);
