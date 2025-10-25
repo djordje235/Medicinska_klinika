@@ -161,15 +161,17 @@ namespace MedicinskaKlinika
             }
         }
 
-<<<<<<< HEAD
-        public static void NekaFunkiciaj()
+        public static List<LokacijaPogled> vratiPogledLokacija()
         {
-            int a = 7 + 8;
-=======
-        public static void funkcija2()
-        {
-            int suma = 5 + 7;
->>>>>>> f07be8dd193687ea4190db7cc9e220ce73f26a72
+            List<LokacijaPogled> lokacije = new List<LokacijaPogled>();
+            ISession s = DataLayer.GetSession();
+            var p = s.Query<Lokacija>().ToList();
+            foreach (Lokacija lokacija in p)
+            {
+                lokacije.Add(new LokacijaPogled(lokacija.Adresa));
+            }
+            s.Close();
+            return lokacije;
         }
 
     }

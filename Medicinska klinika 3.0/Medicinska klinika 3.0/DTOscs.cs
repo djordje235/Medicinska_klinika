@@ -335,6 +335,17 @@ namespace MedicinskaKlinika
         }
     }
 
+    public class LokacijaPogled
+    {
+        public virtual String Adresa { get; set; }
+
+        public LokacijaPogled(String Adresa)
+        {
+            this.Adresa = Adresa;
+        }
+
+    }
+
     public class OdeljenjeBasic
     {
         public virtual String Naziv { get; set; }
