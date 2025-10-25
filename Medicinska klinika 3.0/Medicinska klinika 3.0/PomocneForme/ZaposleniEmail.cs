@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MedicinskaKlinika;
+using MedicinskaKlinika.Entiteti;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,24 @@ namespace Medicinska_klinika_3._0.PomocneForme
 {
     public partial class ZaposleniEmail : Form
     {
+        public EmailZaposlenog email { get; private set; }
         public ZaposleniEmail()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            email = new EmailZaposlenog();
+            email.Email = textBox1.Text;
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -3,6 +3,7 @@ using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -186,5 +187,49 @@ namespace MedicinskaKlinika
             s.Close();
             return lekar;
         }
+
+        public static Lokacija nadjiLokaciju(string Adresa)
+        {
+            ISession s = DataLayer.GetSession();
+            Lokacija lokacija = s.Query<Lokacija>().FirstOrDefault(x => x.Adresa == Adresa);
+            s.Close();
+            return lokacija;
+        }
+        public static void dodajAdministrativnoOsoblje(AdministrativnoOsobljeBasic a)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+
+                    AdministrativnoOsoblje admin = new AdministrativnoOsoblje();
+
+                    admin.Adresa = a.Adresa;
+                    admin.Pozicija = a.Pozicija;
+                    admin.DatumZaposlenja = a.DatumZaposlenja;
+                    admin.AdresaLokacije = a.AdresaLokacije;
+                    admin.Emails = a.Emails;
+                    admin.DatumRodjenja = a.DatumRodjenja;
+                    admin.Odeljenja = a.Odeljenja;
+                    admin.Ime = a.Ime;
+                    admin.Prezime = a.Prezime;
+                    admin.JMBG = a.JMBG;
+                    admin.Smena = a.Smena;
+                    admin.Telefons = a.Telefons;
+                    
+
+                    s.SaveOrUpdate(admin);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+
     }
 }
+

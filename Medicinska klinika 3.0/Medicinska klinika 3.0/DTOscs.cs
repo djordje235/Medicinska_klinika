@@ -24,7 +24,7 @@ namespace MedicinskaKlinika
 
         public virtual int Smena { get; set; }
 
-        public virtual string AdresaLokacije { get; set; }
+        public virtual Lokacija AdresaLokacije { get; set; }
 
         public virtual IList<Odeljenje> Odeljenja { get; set; }
 
@@ -39,7 +39,7 @@ namespace MedicinskaKlinika
             this.Emails = new List<EmailZaposlenog>();
         }
 
-        public ZaposlenBasic(int jMBG, DateTime datumZaposlenja, string pozicija, DateTime datumRodjenja, string ime, string prezime, string adresa, int smena, string adresaLokacije)
+        public ZaposlenBasic(int jMBG, DateTime datumZaposlenja, string pozicija, DateTime datumRodjenja, string ime, string prezime, string adresa, int smena, Lokacija adresaLokacije)
         {
             this.JMBG = jMBG;
             this.DatumZaposlenja = datumZaposlenja;
@@ -83,7 +83,7 @@ namespace MedicinskaKlinika
         }
 
         public AdministrativnoOsobljeBasic(int JMBG, DateTime DatumZaposlenja, String Pozicija, DateTime DatumRodjenja, String Ime, String Prezime, String Adresa,
-            int Smena, string AdresaLokacije)
+            int Smena, Lokacija AdresaLokacije)
             : base(JMBG,DatumZaposlenja,Pozicija,DatumRodjenja,Ime,Prezime,Adresa,
            Smena,AdresaLokacije)
         {
@@ -108,7 +108,7 @@ namespace MedicinskaKlinika
         }
 
         public MedicinskaSestraBasic(int JMBG, DateTime DatumZaposlenja, String Pozicija, DateTime DatumRodjenja, String Ime, String Prezime, String Adresa,
-            int Smena, string AdresaLokacije, String OblastRada, String Sertifikat)
+            int Smena, Lokacija AdresaLokacije, String OblastRada, String Sertifikat)
             : base(JMBG, DatumZaposlenja, Pozicija, DatumRodjenja, Ime, Prezime, Adresa,
            Smena, AdresaLokacije)
         {
@@ -135,7 +135,7 @@ namespace MedicinskaKlinika
         }
 
         public LaborantBasic(int JMBG, DateTime DatumZaposlenja, String Pozicija, DateTime DatumRodjenja, String Ime, String Prezime, String Adresa,
-            int Smena, string AdresaLokacije, String OblastRada, String Sertifikat)
+            int Smena, Lokacija AdresaLokacije, String OblastRada, String Sertifikat)
             : base(JMBG, DatumZaposlenja, Pozicija, DatumRodjenja, Ime, Prezime, Adresa,
            Smena, AdresaLokacije)
         {
@@ -173,7 +173,7 @@ namespace MedicinskaKlinika
         }
 
         public LekarBasic(int JMBG, DateTime DatumZaposlenja, String Pozicija, DateTime DatumRodjenja, String Ime, String Prezime, String Adresa,
-            int Smena, string AdresaLokacije, String Specijalizacija, int BrLicence, Odeljenje Odeljenje)
+            int Smena, Lokacija AdresaLokacije, String Specijalizacija, int BrLicence, Odeljenje Odeljenje)
             : base(JMBG, DatumZaposlenja, Pozicija, DatumRodjenja, Ime, Prezime, Adresa,
            Smena, AdresaLokacije)
         {

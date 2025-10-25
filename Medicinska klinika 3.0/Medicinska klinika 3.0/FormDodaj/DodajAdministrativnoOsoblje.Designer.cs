@@ -52,6 +52,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.BrojTelefona = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -229,7 +237,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(548, 305);
+            this.button2.Location = new System.Drawing.Point(1445, 749);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(155, 58);
             this.button2.TabIndex = 20;
@@ -264,12 +272,91 @@
             this.button5.TabIndex = 23;
             this.button5.Text = "Sacuvaj";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Email});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(758, 267);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(910, 210);
+            this.listView1.TabIndex = 24;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Email
+            // 
+            this.Email.Text = "Email";
+            this.Email.Width = 100;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.BrojTelefona});
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(758, 508);
+            this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(910, 214);
+            this.listView2.TabIndex = 25;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // BrojTelefona
+            // 
+            this.BrojTelefona.Text = "BrojTelefona";
+            this.BrojTelefona.Width = 119;
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(758, 66);
+            this.listView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(910, 171);
+            this.listView3.TabIndex = 26;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Odeljenja";
+            this.columnHeader1.Width = 100;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(920, 767);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(436, 24);
+            this.comboBox2.TabIndex = 27;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label11.Location = new System.Drawing.Point(763, 758);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(121, 32);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Odeljenja:";
             // 
             // DodajAdministrativnoOsoblje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 877);
+            this.ClientSize = new System.Drawing.Size(1712, 877);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.listView3);
+            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -328,5 +415,13 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Email;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader BrojTelefona;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label11;
     }
 }
