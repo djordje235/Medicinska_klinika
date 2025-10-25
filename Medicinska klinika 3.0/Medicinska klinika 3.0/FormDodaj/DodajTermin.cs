@@ -53,18 +53,14 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private void button5_Click(object sender, EventArgs e)
         {
             
-            DateTime datum = dateTimePicker2.Value;
-            DateTime vreme = dateTimePicker1.Value;
+            TerminBasic t = new TerminBasic();
+            t.Pacijent = DTOManager.nadjiPacijenta((int)comboBox1.SelectedValue);
+            t.Datum = dateTimePicker2.Value;
+            t.Vreme = dateTimePicker1.Value;
+            t.Odeljenje = DTOManager.nadjiOdeljenje(comboBox3.SelectedValue.ToString());
+            t.Lekar = DTOManager.nadjiLekara(int.Parse(comboBox2.SelectedValue.ToString()));
 
-            
-            int idKartona = (int)comboBox1.SelectedValue;
-
-            
-            string nazivOdeljenja = comboBox3.SelectedValue.ToString(); 
-            int jmbgLekara = int.Parse(comboBox2.SelectedValue.ToString());
-
-            
-            DTOManager.dodajTermin(datum, vreme, idKartona, nazivOdeljenja, jmbgLekara);
+            DTOManager.dodajTermin(t);
 
             MessageBox.Show("Termin je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

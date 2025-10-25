@@ -123,36 +123,25 @@ namespace MedicinskaKlinika
             return lekari;
         }
 
-        public static void dodajTermin(DateTime datum, DateTime vreme, int idKartona, string nazivOdeljenja, int jmbgLekara)
+        public static void dodajTermin(TerminBasic ter)
         {
             try
             {
                 using (ISession s = DataLayer.GetSession())
                 {
                     
-                    Pacijent p = s.Query<Pacijent>()
-                                  .FirstOrDefault(x => x.IdKartona == idKartona);
-
-                    
-                    Lekar lekar = s.Query<Lekar>()
-                                   .FirstOrDefault(x => x.JMBG == jmbgLekara);
-
-                    
-                    Odeljenje odeljenje = s.Query<Odeljenje>()
-                                           .FirstOrDefault(x => x.Naziv == nazivOdeljenja);
-
-                    
                     Termin termin = new Termin
                     {
-                        Datum = datum,
-                        Vreme = vreme,
-                        Pacijent = p,
-                        Lekar = lekar,
-                        Odeljenje = odeljenje
+                        Datum = ter.Datum,
+                        Vreme = ter.Vreme,
+                        Pacijent = ter.Pacijent,
+                        Lekar = ter.Lekar,
+                        Odeljenje = ter.Odeljenje,
                     };
 
                     s.SaveOrUpdate(termin);
                     s.Flush();
+                    s.Close();
                 }
             }
             catch (Exception ex)
@@ -174,5 +163,28 @@ namespace MedicinskaKlinika
             return lokacije;
         }
 
+        public static Pacijent nadjiPacijenta(int idKartona)
+        {
+            ISession s = DataLayer.GetSession();
+            Pacijent p = s.Query<Pacijent>().FirstOrDefault(x => x.IdKartona == idKartona);
+            s.Close();
+            return p;
+        }
+
+        public static Odeljenje nadjiOdeljenje(string Naziv)
+        {
+            ISession s = DataLayer.GetSession();
+            Odeljenje odeljenje = s.Query<Odeljenje>().FirstOrDefault(x => x.Naziv == Naziv);
+            s.Close();
+            return odeljenje;
+        }
+
+        public static Lekar nadjiLekara(int JMBG)
+        {
+            ISession s = DataLayer.GetSession();
+            Lekar lekar = s.Query<Lekar>().FirstOrDefault(x => x.JMBG == JMBG);
+            s.Close();
+            return lekar;
+        }
     }
 }

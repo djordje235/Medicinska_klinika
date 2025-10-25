@@ -1,4 +1,5 @@
 ﻿using Medicinska_klinika_3._0.PomocneForme;
+using MedicinskaKlinika;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,14 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void DodajAdministrativnoOsoblje_Load(object sender, EventArgs e)
         {
+            comboBox1.Items.Clear();
+
+            List<LokacijaPogled> lokacija = DTOManager.vratiPogledLokacija();
+
+            comboBox1.DataSource = lokacija;
+            comboBox1.DisplayMember = "Adresa";
+            comboBox1.ValueMember = "Adresa";
+
 
         }
 
