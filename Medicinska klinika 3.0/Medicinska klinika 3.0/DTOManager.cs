@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
 using System.Resources;
-=======
->>>>>>> 6705aa9b4da508af441eff00fcd494763cb57693
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Medicinska_klinika_3._0.FormDodaj;
 using MedicinskaKlinika.Entiteti;
 using NHibernate;
 
@@ -168,6 +166,19 @@ namespace MedicinskaKlinika
             return lokacije;
         }
 
+        public static List<TerminPogled> vratiPogledTermin()
+        {
+            List<TerminPogled> termini = new List<TerminPogled>();
+            ISession s = DataLayer.GetSession();
+            var t = s.Query<Termin>().ToList();
+            foreach (Termin termin in t)
+            {
+                termini.Add(new TerminPogled(termin.IdTermina,termin.Datum,termin.Vreme));
+            }
+            s.Close();
+            return termini;
+        }
+
         public static Pacijent nadjiPacijenta(int idKartona)
         {
             ISession s = DataLayer.GetSession();
@@ -192,7 +203,6 @@ namespace MedicinskaKlinika
             return lekar;
         }
 
-<<<<<<< HEAD
         public static Termin nadjiTermin(int idTermina)
         {
             ISession s = DataLayer.GetSession();
@@ -200,9 +210,30 @@ namespace MedicinskaKlinika
             s.Close();
             return termin;
         }
-
         public static void dodajRFZO(RFZOBasic r)
-=======
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+
+
+                    RFZO rfzo = new RFZO
+                    {
+                        IdOsiguranja = r.IdOsiguranja,
+                        Pacijent = r.Pacijent,
+                    };
+                    s.SaveOrUpdate(rfzo);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju RFZO: " + ex.Message);
+            }
+
+        }
         public static Lokacija nadjiLokaciju(string Adresa)
         {
             ISession s = DataLayer.GetSession();
@@ -211,22 +242,13 @@ namespace MedicinskaKlinika
             return lokacija;
         }
         public static void dodajAdministrativnoOsoblje(AdministrativnoOsobljeBasic a)
->>>>>>> 6705aa9b4da508af441eff00fcd494763cb57693
         {
             try
             {
                 using (ISession s = DataLayer.GetSession())
                 {
 
-<<<<<<< HEAD
-                    RFZO rfzo = new RFZO
-                    {
-                        IdOsiguranja = r.IdOsiguranja,
-                        Pacijent = r.Pacijent,
-                    };
-
-                    s.SaveOrUpdate(rfzo);
-=======
+                    
                     AdministrativnoOsoblje admin = new AdministrativnoOsoblje();
 
                     admin.Adresa = a.Adresa;
@@ -244,7 +266,6 @@ namespace MedicinskaKlinika
                     
 
                     s.SaveOrUpdate(admin);
->>>>>>> 6705aa9b4da508af441eff00fcd494763cb57693
                     s.Flush();
                     s.Close();
                 }
@@ -254,8 +275,6 @@ namespace MedicinskaKlinika
                 MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
             }
         }
-
-<<<<<<< HEAD
         public static void dodajRacun(RacunBasic r)
         {
             try
@@ -280,7 +299,7 @@ namespace MedicinskaKlinika
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+                MessageBox.Show("Greška pri dodavanju racuna: " + ex.Message);
             }
         }
 
@@ -297,7 +316,6 @@ namespace MedicinskaKlinika
                         OsiguravajucaKuca = p.OsiguravajucaKuca,
                         Pacijent = p.Pacijent,
                     };
-
                     s.SaveOrUpdate(priv);
                     s.Flush();
                     s.Close();
@@ -309,10 +327,40 @@ namespace MedicinskaKlinika
             }
         }
 
-       
-=======
+        public static void dodajPregled(PregledBasic p)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
 
->>>>>>> 6705aa9b4da508af441eff00fcd494763cb57693
+                    Pregled pr = new Pregled
+                    {
+                        Pacijent = p.Pacijent,
+                        Lekar = p.Lekar,
+                        Termin = p.Termin,
+                        Odeljenje = p.Odeljenje,
+                        Vreme = p.Vreme,
+                        Datum = p.Datum,
+                        OpisTegoba = p.OpisTegoba,
+                        Dijagnoza = p.Dijagnoza,
+                        PreporukaZaLecenje = p.PreporukaZaLecenje,
+                        Terapija = p.Terapija,
+                        VrstaPregleda = p.VrstaPregleda,
+                    };
+                    s.SaveOrUpdate(pr);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+
+        }
+
+
     }
 }
 

@@ -108,6 +108,8 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "\"HH:mm\"";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(20, 510);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -319,6 +321,7 @@
             this.button1.TabIndex = 86;
             this.button1.Text = "Sacuvaj";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -368,6 +371,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DodajPregled";
             this.Text = "DodajPregled";
+            this.Load += new System.EventHandler(this.DodajPregled_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
