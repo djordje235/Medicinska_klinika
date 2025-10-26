@@ -93,5 +93,23 @@ namespace Medicinska_klinika_3._0.FormDodaj
             MessageBox.Show("Zaposlen je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
+
+        private void DodajLekaraForma_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
+
+            List<LokacijaPogled> lokacija = DTOManager.vratiPogledLokacija();
+
+            comboBox1.DataSource = lokacija;
+            comboBox1.DisplayMember = "Adresa";
+            comboBox1.ValueMember = "Adresa";
+
+            odeljenja = DTOManager.vratipogledodaljenja();
+
+            comboBox2.DataSource = odeljenja;
+            comboBox2.DisplayMember = "Naziv";
+            comboBox2.ValueMember = "Naziv";
+        }
     }
 }

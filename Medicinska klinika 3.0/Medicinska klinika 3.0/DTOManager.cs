@@ -734,7 +734,10 @@ namespace MedicinskaKlinika
 
         }
 
-
+        internal static IList<Lokacija> nadjiLokaciju(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
