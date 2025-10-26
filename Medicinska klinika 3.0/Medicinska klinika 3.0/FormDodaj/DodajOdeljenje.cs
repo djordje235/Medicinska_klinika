@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MedicinskaKlinika;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Medicinska_klinika_3._0.FormDodaj
 {
@@ -21,5 +23,30 @@ namespace Medicinska_klinika_3._0.FormDodaj
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DodajOdeljenje_Load(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            comboBox3.Items.Clear();
+
+            List<ZaposlenPogled> lekari = DTOManager.vratipogledlekara();
+
+            comboBox2.DataSource = lekari;
+            comboBox2.DisplayMember = "PunoIme";
+            comboBox2.ValueMember = "JMBG";
+
+            List<LokacijaPogled> lokacija = DTOManager.vratiPogledLokacija();
+
+            comboBox3.DataSource = lokacija;
+            comboBox3.DisplayMember = "Adresa";
+            comboBox3.ValueMember = "Adresa";
+        }
+
+
     }
 }
