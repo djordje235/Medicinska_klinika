@@ -33,5 +33,10 @@ namespace Medicinska_klinika_3._0.PomocneForme
         {
             this.Close();
         }
+
+        private void ZaposleniEmail_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

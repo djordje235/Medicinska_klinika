@@ -636,7 +636,7 @@ namespace MedicinskaKlinika
 
         public virtual Termin Termin { get; set; }
 
-        public virtual Pregled DodatniPregled { get; set; }
+        public virtual PregledBasic DodatniPregled { get; set; }
 
         public virtual IList<LaboratorijskaAnaliza> LaboratorijskaAnaliza { get; set; }
 
@@ -648,7 +648,7 @@ namespace MedicinskaKlinika
         }
 
         public PregledBasic(int IdPregleda, DateTime Datum, DateTime Vreme, String OpisTegoba, String Dijagnoza, String Terapija, String PreporukaZaLecenje,
-            String VrstaPregleda, Pacijent Pacijent, Lekar Lekar, Odeljenje Odeljenje, Termin Termin, Pregled DodatniPregled)
+            String VrstaPregleda, Pacijent Pacijent, Lekar Lekar, Odeljenje Odeljenje, Termin Termin, PregledBasic DodatniPregled)
         {
             this.IdPregleda = IdPregleda;
             this.Datum = Datum;

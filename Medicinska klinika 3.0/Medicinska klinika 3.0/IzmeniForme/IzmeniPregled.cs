@@ -20,14 +20,19 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DodajPregled forma = new DodajPregled();
+            DodajPregled forma = new DodajPregled(false);
             forma.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DodajPregled forma = new DodajPregled();
+            DodajPregled forma = new DodajPregled(false);
             forma.ShowDialog();
+        }
+
+        private void IzmeniPregled_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

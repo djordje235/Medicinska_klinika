@@ -26,5 +26,10 @@ namespace Medicinska_klinika_3._0.FormDodaj
         {
             this.Close();
         }
+
+        private void DodajPlacanje_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
