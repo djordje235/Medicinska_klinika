@@ -179,6 +179,44 @@ namespace MedicinskaKlinika
             return termini;
         }
 
+        public static List<RFZOPogled> vratiPogledRFZO()
+        {
+            List<RFZOPogled> rfzos = new List<RFZOPogled>();
+            ISession s = DataLayer.GetSession();
+            var r = s.Query<RFZO>().ToList();
+            foreach(RFZO rfzo in r)
+            {
+                rfzos.Add(new RFZOPogled(rfzo.IdOsiguranja, rfzo.Pacijent));
+            }
+            s.Close();
+            return rfzos;
+        }
+
+        public static List<RacunPogled> vratiPogledRacun()
+        {
+            List<RacunPogled> racuni = new List<RacunPogled>();
+            ISession s = DataLayer.GetSession();
+            var r = s.Query<Racun>().ToList();
+            foreach (Racun racun in r)
+            {
+                racuni.Add(new RacunPogled(racun.Id, racun.Cena,racun.VrstaUsluge));
+            }
+            s.Close();
+            return racuni;
+        }
+
+        public static List<PrivatnoOsiguranjePogled> vratiPogledPrivatnoOsiguranje()
+        {
+            List<PrivatnoOsiguranjePogled> osiguranja = new List<PrivatnoOsiguranjePogled>();
+            ISession s = DataLayer.GetSession();
+            var o = s.Query<PrivatnoOsiguranje>().ToList();
+            foreach (PrivatnoOsiguranje osiguranje in o)
+            {
+                osiguranja.Add(new PrivatnoOsiguranjePogled(osiguranje.BrPolise, osiguranje.OsiguravajucaKuca));
+            }
+            s.Close();
+            return osiguranja;
+        }
         public static Pacijent nadjiPacijenta(int idKartona)
         {
             ISession s = DataLayer.GetSession();
@@ -210,6 +248,14 @@ namespace MedicinskaKlinika
             s.Close();
             return termin;
         }
+
+        public static RFZO nadjiRFZO(int idOsiguranja)
+        {
+            ISession s = DataLayer.GetSession();
+            RFZO rfzo = s.Query<RFZO>().FirstOrDefault(x => x.IdOsiguranja == idOsiguranja);
+            s.Close();
+            return rfzo;
+        }
         public static void dodajRFZO(RFZOBasic r)
         {
             try
@@ -240,6 +286,22 @@ namespace MedicinskaKlinika
             Lokacija lokacija = s.Query<Lokacija>().FirstOrDefault(x => x.Adresa == Adresa);
             s.Close();
             return lokacija;
+        }
+
+        public static Racun nadjiRacun(int Id)
+        {
+            ISession s = DataLayer.GetSession();
+            Racun racun = s.Query<Racun>().FirstOrDefault(x => x.Id == Id);
+            s.Close();
+            return racun;
+        }
+
+        public static PrivatnoOsiguranje nadjiPrivatnoOsiguranje(int idOsiguranja)
+        {
+            ISession s = DataLayer.GetSession();
+            PrivatnoOsiguranje osiguranje = s.Query<PrivatnoOsiguranje>().FirstOrDefault(x => x.IdOsiguranja == idOsiguranja);
+            s.Close();
+            return osiguranje;
         }
         public static void dodajAdministrativnoOsoblje(AdministrativnoOsobljeBasic a)
         {
@@ -396,6 +458,37 @@ namespace MedicinskaKlinika
                 return null;
             }
         }
+
+        public static void dodajPlacanje(PlacanjeBasic p)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+
+                    Placanje pl = new Placanje
+                    {
+                        ProcenatPacijenta = p.ProcenatPacijenta,
+                        NacinPlacanja = p.NacinPlacanja,
+                        PlatioPacijent = p.PlatioPacijent,
+                        Racun = p.Racun,
+                        PrivatnoOsiguranje = p.PrivatnoOsiguranje,
+                        RFZO = p.RFZO,
+                    };
+                    s.SaveOrUpdate(pl);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+
+
+
 
 
 

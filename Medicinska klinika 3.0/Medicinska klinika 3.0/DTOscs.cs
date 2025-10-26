@@ -549,6 +549,22 @@ namespace MedicinskaKlinika
 
     }
 
+    public class RFZOPogled
+    {
+        public virtual int IdOsiguranja { get; set; }
+
+        public virtual Pacijent Pacijent { get; set; }
+
+        string RFZOPrikaz => IdOsiguranja.ToString() + Pacijent.Ime + Pacijent.Prezime;
+
+        public RFZOPogled(int IdOsiguranja,Pacijent Pacijent)
+        {
+            this.IdOsiguranja = IdOsiguranja;
+            this.Pacijent = Pacijent;
+        }
+
+    }
+
     public class RacunBasic
     {
         public virtual int Id { get; set; }
@@ -581,6 +597,22 @@ namespace MedicinskaKlinika
         }
     }
 
+    public class RacunPogled
+    {
+        public virtual int Id { get; set; }
+        public virtual double Cena { get; set; }
+        public virtual String VrstaUsluge { get; set; }
+
+        public string PunRacun => Id.ToString() + Cena.ToString() + VrstaUsluge;
+
+        public RacunPogled(int id, double cena, string vrstaUsluge)
+        {
+            Id = id;
+            Cena = cena;
+            VrstaUsluge = vrstaUsluge;
+        }
+    }
+
     public class PrivatnoOsiguranjeBasic
     {
         public virtual int IdOsiguranja { get; set; }
@@ -607,6 +639,21 @@ namespace MedicinskaKlinika
             this.BrPolise = brPolise;
             this.OsiguravajucaKuca = osiguravajucaKuca;
             this.Pacijent = pacijent;
+        }
+    }
+
+    public class PrivatnoOsiguranjePogled
+    {
+        public virtual int BrPolise { get; set; }
+
+        public virtual String OsiguravajucaKuca { get;set; }
+
+        public string Osiguranje => BrPolise.ToString() + OsiguravajucaKuca;
+
+        public PrivatnoOsiguranjePogled(int brPolise,String osiguravajucaKuca)
+        {
+            BrPolise = brPolise;
+            OsiguravajucaKuca = osiguravajucaKuca;
         }
     }
 
@@ -696,4 +743,5 @@ namespace MedicinskaKlinika
             this.RFZO = rFZO;
         }
     }
+
 }

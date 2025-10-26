@@ -29,5 +29,10 @@ namespace Medicinska_klinika_3._0.FormDodaj
             ZaposleniEmail forma = new ZaposleniEmail();
             forma.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
