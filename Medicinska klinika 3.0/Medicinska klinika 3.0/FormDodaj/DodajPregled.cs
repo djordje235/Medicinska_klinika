@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MedicinskaKlinika;
+using MedicinskaKlinika.Entiteti;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,16 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MedicinskaKlinika;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Medicinska_klinika_3._0.FormDodaj
 {
     public partial class DodajPregled : Form
     {
-        public DodajPregled()
+        public PregledBasic p { get; private set; }
+        public PregledBasic dodatni { get; private set; }
+
+        public bool f { get; private set; }
+        public DodajPregled(bool flag)
         {
+            f = flag;
             InitializeComponent();
+            p = new PregledBasic();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -26,8 +33,11 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DodajPregled forma = new DodajPregled();
-            forma.ShowDialog();
+            DodajPregled forma = new DodajPregled(true);
+            if (forma.ShowDialog() == DialogResult.OK)
+            {
+                dodatni = forma.p;
+            }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,7 +84,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PregledBasic p = new PregledBasic();
+            
             p.Pacijent = DTOManager.nadjiPacijenta((int)comboBox2.SelectedValue);
             p.Lekar = DTOManager.nadjiLekara((int)comboBox3.SelectedValue);
             p.Termin = DTOManager.nadjiTermin((int)comboBox4.SelectedValue);
@@ -86,9 +96,20 @@ namespace Medicinska_klinika_3._0.FormDodaj
             p.PreporukaZaLecenje = textBox3.Text;
             p.Terapija = textBox4.Text;
             p.VrstaPregleda = textBox5.Text;
+<<<<<<< HEAD
+            p.DodatniPregled = dodatni;
+            if (!f)
+            {
+                DTOManager.dodajPregled(p);
+            }
+            MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+=======
 
             DTOManager.dodajPregled(p);
             MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+>>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
         }
 
         //ako zatreba

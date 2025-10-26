@@ -13,7 +13,7 @@ namespace MedicinskaKlinika.Mapiranja
         public RFZOMaper() {
             Table("RFZO");
 
-            Id(x => x.IdOsiguranja).Column("ID_OSIGURANJA").GeneratedBy.Sequence("RFZO_ID_SEQ");
+            Id(x => x.IdOsiguranja).Column("ID_OSIGURANJA").GeneratedBy.Assigned();
 
             HasMany(x => x.Placanja).KeyColumn("ID_OSIGURANJA").LazyLoad().Cascade.All().Inverse();
             References(x => x.Pacijent, "ID_KARTONA").Unique();

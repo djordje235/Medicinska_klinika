@@ -170,6 +170,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IzmeniPregled";
             this.Text = "IzmeniPregled";
+            this.Load += new System.EventHandler(this.IzmeniPregled_Load);
             this.ResumeLayout(false);
 
         }

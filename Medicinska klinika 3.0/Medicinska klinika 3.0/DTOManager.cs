@@ -285,11 +285,11 @@ namespace MedicinskaKlinika
                 {
 
 
-                    RFZO rfzo = new RFZO
-                    {
-                        IdOsiguranja = r.IdOsiguranja,
-                        Pacijent = r.Pacijent,
-                    };
+                    RFZO rfzo = new RFZO();
+
+                    rfzo.IdOsiguranja = r.IdOsiguranja;
+                    rfzo.Pacijent = r.Pacijent;
+                    
                     s.SaveOrUpdate(rfzo);
                     s.Flush();
                     s.Close();
@@ -419,13 +419,14 @@ namespace MedicinskaKlinika
             }
         }
 
-        public static void dodajPregled(PregledBasic p)
+
+
+        public static Pregled dodajPregled(PregledBasic p)
         {
             try
             {
                 using (ISession s = DataLayer.GetSession())
                 {
-
                     Pregled pr = new Pregled
                     {
                         Pacijent = p.Pacijent,
@@ -439,15 +440,43 @@ namespace MedicinskaKlinika
                         PreporukaZaLecenje = p.PreporukaZaLecenje,
                         Terapija = p.Terapija,
                         VrstaPregleda = p.VrstaPregleda,
+                        
                     };
-                    s.SaveOrUpdate(pr);
+                    if(p.DodatniPregled != null)
+                    {
+                        Pregled dodatni = new Pregled
+                        {
+                            Pacijent = p.DodatniPregled.Pacijent,
+                            Lekar = p.DodatniPregled.Lekar,
+                            Termin = p.DodatniPregled.Termin,
+                            Odeljenje = p.DodatniPregled.Odeljenje,
+                            Vreme = p.DodatniPregled.Vreme,
+                            Datum = p.DodatniPregled.Datum,
+                            OpisTegoba = p.DodatniPregled.OpisTegoba,
+                            Dijagnoza = p.DodatniPregled.Dijagnoza,
+                            PreporukaZaLecenje = p.DodatniPregled.PreporukaZaLecenje,
+                            Terapija = p.DodatniPregled.Terapija,
+                            VrstaPregleda = p.DodatniPregled.VrstaPregleda,
+                            DodatniPregled = null,
+
+                        };
+                        pr.DodatniPregled = dodatni;
+                    }
+                    else
+                    {
+                        pr.DodatniPregled = null;
+                    }
+
+
+                        s.Save(pr);
                     s.Flush();
-                    s.Close();
+                    return pr;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+                MessageBox.Show("Greška pri dodavanju pregleda: " + ex.Message);
+                return null;
             }
         }
 
@@ -704,6 +733,7 @@ namespace MedicinskaKlinika
             }
 
         }
+
 
     }
 }
