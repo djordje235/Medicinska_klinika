@@ -126,6 +126,19 @@ namespace MedicinskaKlinika
             return lekari;
         }
 
+        public static List<ZaposlenPogled> vratipogledlaboranti()
+        {
+            List<ZaposlenPogled> laboranti = new List<ZaposlenPogled>();
+            ISession s = DataLayer.GetSession();
+            var p = s.Query<Laborant>().ToList();
+            foreach (Laborant laborant in p)
+            {
+                laboranti.Add(new ZaposlenPogled(laborant.JMBG, laborant.Ime, laborant.Prezime));
+            }
+            s.Close();
+            return laboranti;
+        }
+
         public static void dodajTermin(TerminBasic ter)
         {
             try
@@ -239,6 +252,14 @@ namespace MedicinskaKlinika
             Lekar lekar = s.Query<Lekar>().FirstOrDefault(x => x.JMBG == JMBG);
             s.Close();
             return lekar;
+        }
+
+        public static Laborant nadjiLaboranta(int JMBG)
+        {
+            ISession s = DataLayer.GetSession();
+            Laborant laborant = s.Query<Laborant>().FirstOrDefault(x => x.JMBG == JMBG);
+            s.Close();
+            return laborant;
         }
 
         public static Termin nadjiTermin(int idTermina)
@@ -486,10 +507,232 @@ namespace MedicinskaKlinika
             }
         }
 
+        public static void dodajLaboranta(LaborantBasic a)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    Laborant admin = new Laborant();
 
+                    admin.Adresa = a.Adresa;
+                    admin.Pozicija = a.Pozicija;
+                    admin.DatumZaposlenja = a.DatumZaposlenja;
+                    admin.AdresaLokacije = a.AdresaLokacije;
+                    admin.Emails = a.Emails;
+                    admin.DatumRodjenja = a.DatumRodjenja;
+                    admin.Odeljenja = a.Odeljenja;
+                    admin.Ime = a.Ime;
+                    admin.Prezime = a.Prezime;
+                    admin.JMBG = a.JMBG;
+                    admin.Smena = a.Smena;
+                    admin.Telefons = a.Telefons;
+                    admin.OblastRada = a.OblastRada;
+                    admin.Sertifikat = a.Sertifikat;
 
+                    foreach (var email in admin.Emails)
+                    {
+                        email.Zaposlen = admin;
+                    }
 
+                    foreach (var broj in admin.Telefons)
+                    {
+                        broj.Zaposlen = admin;
+                    }
 
+                    s.SaveOrUpdate(admin);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+        public static void dodajMedicinskuSestru(MedicinskaSestraBasic a)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    MedicinskaSestra admin = new MedicinskaSestra();
+
+                    admin.Adresa = a.Adresa;
+                    admin.Pozicija = a.Pozicija;
+                    admin.DatumZaposlenja = a.DatumZaposlenja;
+                    admin.AdresaLokacije = a.AdresaLokacije;
+                    admin.Emails = a.Emails;
+                    admin.DatumRodjenja = a.DatumRodjenja;
+                    admin.Odeljenja = a.Odeljenja;
+                    admin.Ime = a.Ime;
+                    admin.Prezime = a.Prezime;
+                    admin.JMBG = a.JMBG;
+                    admin.Smena = a.Smena;
+                    admin.Telefons = a.Telefons;
+                    admin.OblastRada = a.OblastRada;
+                    admin.Sertifikat = a.Sertifikat;
+
+                    foreach (var email in admin.Emails)
+                    {
+                        email.Zaposlen = admin;
+                    }
+
+                    foreach (var broj in admin.Telefons)
+                    {
+                        broj.Zaposlen = admin;
+                    }
+
+                    s.SaveOrUpdate(admin);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+        public static void dodajLekara(LekarBasic a)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    Lekar admin = new Lekar();
+
+                    admin.Adresa = a.Adresa;
+                    admin.Pozicija = a.Pozicija;
+                    admin.DatumZaposlenja = a.DatumZaposlenja;
+                    admin.AdresaLokacije = a.AdresaLokacije;
+                    admin.Emails = a.Emails;
+                    admin.DatumRodjenja = a.DatumRodjenja;
+                    admin.Odeljenja = a.Odeljenja;
+                    admin.Ime = a.Ime;
+                    admin.Prezime = a.Prezime;
+                    admin.JMBG = a.JMBG;
+                    admin.Smena = a.Smena;
+                    admin.Telefons = a.Telefons;
+                    admin.Specijalizacija = a.Specijalizacija;
+                    admin.BrLicence = a.BrLicence;
+
+                    foreach (var email in admin.Emails)
+                    {
+                        email.Zaposlen = admin;
+                    }
+
+                    foreach (var broj in admin.Telefons)
+                    {
+                        broj.Zaposlen = admin;
+                    }
+
+                    s.SaveOrUpdate(admin);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+        public static void dodajPacijenta(PacijentBasic a)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+                    Pacijent admin = new Pacijent();
+
+                    admin.Adresa = a.Adresa;
+                    admin.IdKartona = a.IdKartona;
+                    admin.Ime = a.Ime;
+                    admin.Prezime = a.Prezime;
+                    admin.DatumRodjenja = a.DatumRodjenja;
+                    admin.Pol = a.Pol;
+                    admin.Lekar = a.Lekar;
+                    admin.Emails = a.Emails;
+                    admin.Telefons = a.Telefons;
+
+                    foreach (var email in admin.Emails)
+                    {
+                        email.Pacijent = admin;
+                    }
+
+                    foreach (var broj in admin.Telefons)
+                    {
+                        broj.Pacijent = admin;
+                    }
+
+                    s.SaveOrUpdate(admin);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+        public static void dodajLaboratorijskuAnalizu(LaboratorijskaAnalizaBasic l)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+
+                    LaboratorijskaAnaliza la = new LaboratorijskaAnaliza
+                    {
+                        Pacijent = l.Pacijent,
+                        VrstaAnalize = l.VrstaAnalize,
+                        DatumUzorkovanja = l.DatumUzorkovanja,
+                        Vreme = l.Vreme,
+                        Rezultat = l.Rezultat,
+                        ReferentnaVrednost = l.ReferentnaVrednost,
+                        Komentar = l.Komentar,
+                        Laborant = l.Laborant
+                    }; 
+                    s.SaveOrUpdate(la);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+        }
+
+        public static void dodajOdeljenje(OdeljenjeBasic o)
+        {
+            try
+            {
+                using (ISession s = DataLayer.GetSession())
+                {
+
+                    Odeljenje od = new Odeljenje
+                    {
+                        Naziv = o.Naziv,
+                        BrProstorije = o.BrProstorije,
+                        RadnoVreme = o.RadnoVreme,
+                        GlavniLekar = o.GlavniLekar,
+                        Lokacije = o.Lokacije
+                    };
+                    s.SaveOrUpdate(od);
+                    s.Flush();
+                    s.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
+            }
+
+        }
 
 
     }

@@ -455,6 +455,11 @@ namespace MedicinskaKlinika
             this.Emails = Emails;
             this.Termini = Termini;
         }
+
+        public PacijentBasic()
+        {
+
+        }
     }
 
     public class PacijentPogled
@@ -743,5 +748,7 @@ namespace MedicinskaKlinika
             this.RFZO = rFZO;
         }
     }
+
+
 
 }
