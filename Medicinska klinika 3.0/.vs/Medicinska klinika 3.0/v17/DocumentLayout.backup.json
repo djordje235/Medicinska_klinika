@@ -1,23 +1,19 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pc\\Desktop\\Medicinska_Klinka\\Medicinska_klinika\\Medicinska klinika 3.0\\",
+  "WorkspaceRootPath": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\",
   "Documents": [
     {
 <<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|c:\\users\\milan\\fax\\medicinska klinika\\medicinska_klinika\\medicinska klinika 3.0\\medicinska klinika 3.0\\formdodaj\\dodajpregled.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|solutionrelative:medicinska klinika 3.0\\formdodaj\\dodajpregled.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|c:\\users\\milan\\fax\\medicinska klinika\\medicinska_klinika\\medicinska klinika 3.0\\medicinska klinika 3.0\\izmeniforme\\izmenitermin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|solutionrelative:medicinska klinika 3.0\\izmeniforme\\izmenitermin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\medicinska klinika 3.0\\formdodaj\\dodajpregled.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|solutionrelative:medicinska klinika 3.0\\formdodaj\\dodajpregled.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|c:\\users\\milan\\fax\\medicinska klinika\\medicinska_klinika\\medicinska klinika 3.0\\medicinska klinika 3.0\\formdodaj\\dodajplacanje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|solutionrelative:medicinska klinika 3.0\\formdodaj\\dodajplacanje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\medicinska klinika 3.0\\dtomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|solutionrelative:medicinska klinika 3.0\\dtomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\medicinska klinika 3.0\\dtoscs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|solutionrelative:medicinska klinika 3.0\\dtoscs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|c:\\users\\milan\\fax\\medicinska klinika\\medicinska_klinika\\medicinska klinika 3.0\\medicinska klinika 3.0\\formdodaj\\dodajplacanje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|solutionrelative:medicinska klinika 3.0\\formdodaj\\dodajplacanje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
 =======
       "AbsoluteMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|c:\\users\\pc\\desktop\\medicinska_klinka\\medicinska_klinika\\medicinska klinika 3.0\\medicinska klinika 3.0\\formdodaj\\dodajplacanje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F463B59-C86F-4368-8CF5-8144C6E97D9A}|Medicinska klinika 3.0\\Medicinska klinika 3.0.csproj|solutionrelative:medicinska klinika 3.0\\formdodaj\\dodajplacanje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -59,41 +55,24 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
 <<<<<<< HEAD
               "DocumentIndex": 0,
-              "Title": "DodajPregled.cs",
-              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPregled.cs",
-              "RelativeDocumentMoniker": "Medicinska klinika 3.0\\FormDodaj\\DodajPregled.cs",
-              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPregled.cs",
-              "RelativeToolTip": "Medicinska klinika 3.0\\FormDodaj\\DodajPregled.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAATAAAAAAAAAA==",
+              "Title": "IzmeniTermin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\IzmeniForme\\IzmeniTermin.cs",
+              "RelativeDocumentMoniker": "Medicinska klinika 3.0\\IzmeniForme\\IzmeniTermin.cs",
+              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\IzmeniForme\\IzmeniTermin.cs [Design]",
+              "RelativeToolTip": "Medicinska klinika 3.0\\IzmeniForme\\IzmeniTermin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T22:06:21.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-26T14:24:20.952Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DodajPregled.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPregled.cs",
-              "RelativeDocumentMoniker": "Medicinska klinika 3.0\\FormDodaj\\DodajPregled.cs",
-              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPregled.cs [Design]",
-              "RelativeToolTip": "Medicinska klinika 3.0\\FormDodaj\\DodajPregled.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T22:01:40.286Z",
-              "EditorCaption": " [Design]"
 =======
               "DocumentIndex": 1,
               "Title": "DodajPrivatnoOsiguranje.cs [Design]",
@@ -108,54 +87,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+>>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
               "Title": "DodajPlacanje.cs",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\Medicinska_Klinka\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
+              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
               "RelativeDocumentMoniker": "Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\Medicinska_Klinka\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
+              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
               "RelativeToolTip": "Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAkwCwAAAAAAAAAAAAAAA==",
+<<<<<<< HEAD
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T14:23:57.294Z",
+=======
+              "ViewState": "AgIAAB8AAAAAAAAAAAA5wCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T21:27:22.845Z",
-              "EditorCaption": ""
 >>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-<<<<<<< HEAD
-              "Title": "DTOManager.cs",
-              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\DTOManager.cs",
-              "RelativeDocumentMoniker": "Medicinska klinika 3.0\\DTOManager.cs",
-              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\DTOManager.cs",
-              "RelativeToolTip": "Medicinska klinika 3.0\\DTOManager.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAgwGQBAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T19:29:18.418Z",
-              "EditorCaption": ""
-=======
               "Title": "DodajPlacanje.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pc\\Desktop\\Medicinska_Klinka\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
+              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
               "RelativeDocumentMoniker": "Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs",
-              "ToolTip": "C:\\Users\\pc\\Desktop\\Medicinska_Klinka\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs [Design]",
+              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs [Design]",
               "RelativeToolTip": "Medicinska klinika 3.0\\FormDodaj\\DodajPlacanje.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
+              "WhenOpened": "2025-10-26T14:23:50.158Z",
+              "EditorCaption": " [Design]"
+=======
               "WhenOpened": "2025-10-25T21:27:16.817Z",
               "EditorCaption": " [Design]"
->>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "DTOscs.cs",
-<<<<<<< HEAD
-              "DocumentMoniker": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\DTOscs.cs",
-              "RelativeDocumentMoniker": "Medicinska klinika 3.0\\DTOscs.cs",
-              "ToolTip": "C:\\Users\\milan\\fax\\Medicinska klinika\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\DTOscs.cs",
-              "RelativeToolTip": "Medicinska klinika 3.0\\DTOscs.cs",
-              "ViewState": "AgIAAGsCAAAAAAAAAAAgwH4CAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T22:14:34.807Z",
-=======
               "DocumentMoniker": "C:\\Users\\pc\\Desktop\\Medicinska_Klinka\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\DTOscs.cs",
               "RelativeDocumentMoniker": "Medicinska klinika 3.0\\DTOscs.cs",
               "ToolTip": "C:\\Users\\pc\\Desktop\\Medicinska_Klinka\\Medicinska_klinika\\Medicinska klinika 3.0\\Medicinska klinika 3.0\\DTOscs.cs",
@@ -189,8 +157,8 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T21:42:23.742Z",
->>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
               "EditorCaption": ""
+>>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
             }
           ]
         }
