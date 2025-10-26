@@ -28,11 +28,6 @@ namespace Medicinska_klinika_3._0.FormDodaj
         {
             this.Close();
         }
-
-<<<<<<< HEAD
-        private void DodajPlacanje_Load(object sender, EventArgs e)
-        {
-=======
         private void button5_Click(object sender, EventArgs e)
         {
             PlacanjeBasic p = new PlacanjeBasic();
@@ -66,8 +61,6 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox3.DataSource = osiguranja;
             comboBox3.DisplayMember = "Osiguranje";
             comboBox3.ValueMember = "BrPolise";
->>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
-
         }
     }
 }
