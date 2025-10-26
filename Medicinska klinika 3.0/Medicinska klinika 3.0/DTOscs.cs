@@ -380,7 +380,7 @@ namespace MedicinskaKlinika
             this.RadnoVreme = RadnoVreme;
             this.GlavniLekar = GlavniLekar;
         }
-        OdeljenjeBasic()
+        public OdeljenjeBasic()
         {
 
         }

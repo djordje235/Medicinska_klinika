@@ -47,6 +47,14 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox3.ValueMember = "Adresa";
         }
 
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OdeljenjeBasic o = new OdeljenjeBasic();
+            o.Naziv = textBox1.Text;
+            o.BrProstorije = int.Parse(textBox2.Text);
+            o.RadnoVreme = textBox3.Text;
+            o.GlavniLekar = DTOManager.nadjiLekara(int.Parse(comboBox2.SelectedValue.ToString()));
+            o.Lokacije = DTOManager.nadjiLokaciju(int.Parse(comboBox3.SelectedValue.ToString()));
+        }
     }
 }
