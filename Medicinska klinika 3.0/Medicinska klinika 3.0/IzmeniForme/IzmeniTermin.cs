@@ -29,5 +29,10 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
             DodajTermin forma = new DodajTermin();
             forma.ShowDialog();
         }
+
+        private void IzmeniTermin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

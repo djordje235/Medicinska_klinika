@@ -96,7 +96,11 @@ namespace Medicinska_klinika_3._0.FormDodaj
             p.PreporukaZaLecenje = textBox3.Text;
             p.Terapija = textBox4.Text;
             p.VrstaPregleda = textBox5.Text;
+<<<<<<< HEAD
 
+=======
+//<<<<<<< HEAD
+>>>>>>> 921fbbd87e442ee8a74a8662bc343d144c0d6119
             p.DodatniPregled = dodatni;
             if (!f)
             {
@@ -105,9 +109,17 @@ namespace Medicinska_klinika_3._0.FormDodaj
             MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
             this.Close();
+<<<<<<< HEAD
 
             DTOManager.dodajPregled(p);
             MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+=======
+//=======
+
+            DTOManager.dodajPregled(p);
+            MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+//>>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
+>>>>>>> 921fbbd87e442ee8a74a8662bc343d144c0d6119
         }
 
         //ako zatreba
