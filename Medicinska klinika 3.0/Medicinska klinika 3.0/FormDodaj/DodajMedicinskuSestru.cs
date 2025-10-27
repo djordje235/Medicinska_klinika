@@ -21,8 +21,15 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private List<Odeljenje> od = new List<Odeljenje>();
         private List<OdeljenjePogled> odeljenja;
 
-        public DodajMedicinskuSestru()
+        private MedicinskaSestra _sestra;
+        private bool fleg;
+        public DodajMedicinskuSestru(bool f, MedicinskaSestra t)
         {
+            fleg = f;
+            if (f)
+            {
+                _sestra = t;
+            }
             InitializeComponent();
         }
 
@@ -77,6 +84,59 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox2.DataSource = odeljenja;
             comboBox2.DisplayMember = "Naziv";
             comboBox2.ValueMember = "Naziv";
+
+            if (_sestra != null)
+            {
+                comboBox1.SelectedValue = _sestra.AdresaLokacije.Adresa;
+                textBox1.Text = _sestra.JMBG.ToString();
+                dateTimePicker1.Value = _sestra.DatumZaposlenja;
+                dateTimePicker2.Value = _sestra.DatumRodjenja;
+                textBox2.Text = _sestra.Pozicija;
+                textBox3.Text = _sestra.Ime;
+                textBox4.Text = _sestra.Prezime;
+                textBox5.Text = _sestra.Adresa;
+                textBox6.Text = _sestra.Smena.ToString();
+                textBox8.Text = _sestra.OblastRada;
+                textBox7.Text = _sestra.Sertifikat;
+
+                foreach (var email in _sestra.Emails)
+                {
+                    emailovi.Add(email);
+                }
+                foreach (var br in _sestra.Telefons)
+                {
+                    brojevi.Add(br);
+                }
+
+                foreach (var o in _sestra.Odeljenja)
+                {
+                    od.Add(o);
+                    OdeljenjePogled ode = odeljenja.Where(x => x.Naziv == o.Naziv).FirstOrDefault();
+                    odeljenja.Remove(ode);
+                }
+                comboBox2.DataSource = null;
+                comboBox2.DataSource = odeljenja;
+                comboBox2.DisplayMember = "Naziv";
+                comboBox2.ValueMember = "Naziv";
+            }
+
+
+
+
+            foreach (EmailZaposlenog x in emailovi)
+            {
+                listView1.Items.Add(x.Email);
+            }
+
+            foreach (BrTelefonaZaposlenog x in brojevi)
+            {
+                listView2.Items.Add(x.BrojTelefona);
+            }
+
+            foreach (Odeljenje x in od)
+            {
+                listView3.Items.Add(x.Naziv);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -113,7 +173,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             a.OblastRada = textBox8.Text;
             a.Sertifikat = textBox7.Text;
 
-            DTOManager.dodajMedicinskuSestru(a);
+            DTOManager.dodajMedicinskuSestru(a,fleg);
             MessageBox.Show("Zaposlen je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

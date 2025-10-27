@@ -20,11 +20,17 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private List<EmailZaposlenog> emailovi = new List<EmailZaposlenog>();
         private List<BrTelefonaZaposlenog> brojevi = new List<BrTelefonaZaposlenog>();
         private List<Odeljenje> od = new List<Odeljenje>();
-        private List<OdeljenjePogled> odeljenja;
+        private List<OdeljenjePogled> odeljenja = new List<OdeljenjePogled>();
 
-
-        public DodajAdministrativnoOsoblje()
+        private AdministrativnoOsoblje _admin;
+        private bool fleg;
+        public DodajAdministrativnoOsoblje(bool f, AdministrativnoOsoblje t)
         {
+            fleg = f;
+            if (f)
+            {
+                _admin = t;
+            }
             InitializeComponent();
         }
 
@@ -63,6 +69,56 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox2.DisplayMember = "Naziv";
             comboBox2.ValueMember = "Naziv";
 
+            if (_admin != null)
+            {
+                comboBox1.SelectedValue = _admin.AdresaLokacije.Adresa;
+                textBox1.Text = _admin.JMBG.ToString();
+                dateTimePicker1.Value = _admin.DatumZaposlenja;
+                dateTimePicker2.Value = _admin.DatumRodjenja;
+                textBox2.Text = _admin.Pozicija;
+                textBox3.Text = _admin.Ime;
+                textBox4.Text = _admin.Prezime;
+                textBox5.Text = _admin.Adresa;
+                textBox6.Text = _admin.Smena.ToString();
+
+                foreach (var email in _admin.Emails) {
+                    emailovi.Add(email);
+                }
+                foreach (var br in _admin.Telefons)
+                {
+                    brojevi.Add(br);
+                }
+
+                foreach (var o in _admin.Odeljenja)
+                {
+                    od.Add(o);
+                    OdeljenjePogled ode = odeljenja.Where(x => x.Naziv == o.Naziv).FirstOrDefault();
+                    odeljenja.Remove(ode);
+                }
+                comboBox2.DataSource = null;
+                comboBox2.DataSource = odeljenja;
+                comboBox2.DisplayMember = "Naziv";
+                comboBox2.ValueMember = "Naziv";
+            }
+
+           
+
+
+            foreach(EmailZaposlenog x in emailovi)
+            {
+                listView1.Items.Add(x.Email);
+            }
+
+            foreach(BrTelefonaZaposlenog x in brojevi)
+            {
+                listView2.Items.Add(x.BrojTelefona);
+            }
+
+            foreach(Odeljenje x in od)
+            {
+                listView3.Items.Add(x.Naziv);
+            }
+
 
         }
 
@@ -92,8 +148,9 @@ namespace Medicinska_klinika_3._0.FormDodaj
             a.Emails = emailovi;
             a.Telefons = brojevi;
             a.Odeljenja = od;
-
-            DTOManager.dodajAdministrativnoOsoblje(a);
+            
+            
+            DTOManager.dodajAdministrativnoOsoblje(a,fleg);
             MessageBox.Show("Zaposlen je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

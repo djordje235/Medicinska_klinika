@@ -20,8 +20,15 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private List<Odeljenje> od = new List<Odeljenje>();
         private List<OdeljenjePogled> odeljenja;
 
-        public DodajLaboranta()
+        private Laborant _laborant;
+        private bool fleg;
+        public DodajLaboranta(bool f, Laborant t)
         {
+            fleg = f;
+            if (f)
+            {
+                _laborant = t;
+            }
             InitializeComponent();
         }
 
@@ -71,6 +78,59 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox2.DataSource = odeljenja;
             comboBox2.DisplayMember = "Naziv";
             comboBox2.ValueMember = "Naziv";
+
+            if (_laborant != null)
+            {
+                comboBox1.SelectedValue = _laborant.AdresaLokacije.Adresa;
+                textBox1.Text = _laborant.JMBG.ToString();
+                dateTimePicker1.Value = _laborant.DatumZaposlenja;
+                dateTimePicker2.Value = _laborant.DatumRodjenja;
+                textBox2.Text = _laborant.Pozicija;
+                textBox3.Text = _laborant.Ime;
+                textBox4.Text = _laborant.Prezime;
+                textBox5.Text = _laborant.Adresa;
+                textBox6.Text = _laborant.Smena.ToString();
+                textBox8.Text = _laborant.OblastRada;
+                textBox7.Text = _laborant.Sertifikat;
+
+                foreach (var email in _laborant.Emails)
+                {
+                    emailovi.Add(email);
+                }
+                foreach (var br in _laborant.Telefons)
+                {
+                    brojevi.Add(br);
+                }
+
+                foreach (var o in _laborant.Odeljenja)
+                {
+                    od.Add(o);
+                    OdeljenjePogled ode = odeljenja.Where(x => x.Naziv == o.Naziv).FirstOrDefault();
+                    odeljenja.Remove(ode);
+                }
+                comboBox2.DataSource = null;
+                comboBox2.DataSource = odeljenja;
+                comboBox2.DisplayMember = "Naziv";
+                comboBox2.ValueMember = "Naziv";
+            }
+
+
+
+
+            foreach (EmailZaposlenog x in emailovi)
+            {
+                listView1.Items.Add(x.Email);
+            }
+
+            foreach (BrTelefonaZaposlenog x in brojevi)
+            {
+                listView2.Items.Add(x.BrojTelefona);
+            }
+
+            foreach (Odeljenje x in od)
+            {
+                listView3.Items.Add(x.Naziv);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -107,7 +167,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             a.OblastRada = textBox8.Text;
             a.Sertifikat = textBox7.Text;
 
-            DTOManager.dodajLaboranta(a);
+            DTOManager.dodajLaboranta(a,fleg);
             MessageBox.Show("Zaposlen je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

@@ -81,6 +81,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Obrisi";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listView3
             // 
@@ -198,6 +199,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IzmeniAdministrativnoOsoblje";
             this.Text = "IzmeniAdministrativnoOsoblje";
+            this.Load += new System.EventHandler(this.IzmeniAdministrativnoOsoblje_Load);
             this.ResumeLayout(false);
 
         }

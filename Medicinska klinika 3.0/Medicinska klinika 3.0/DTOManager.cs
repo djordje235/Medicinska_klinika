@@ -287,6 +287,14 @@ namespace MedicinskaKlinika
         {
             ISession s = DataLayer.GetSession();
             Laborant laborant = s.Query<Laborant>().FirstOrDefault(x => x.JMBG == JMBG);
+
+            if (laborant != null)
+            {
+                NHibernateUtil.Initialize(laborant.Emails);
+                NHibernateUtil.Initialize(laborant.Telefons);
+                NHibernateUtil.Initialize(laborant.Odeljenja);
+            }
+
             s.Close();
             return laborant;
         }
@@ -369,15 +377,22 @@ namespace MedicinskaKlinika
             s.Close();
             return osiguranje;
         }
-        public static void dodajAdministrativnoOsoblje(AdministrativnoOsobljeBasic a)
+        public static void dodajAdministrativnoOsoblje(AdministrativnoOsobljeBasic a,bool f)
         {
             try
             {
+                AdministrativnoOsoblje admin;
                 using (ISession s = DataLayer.GetSession())
                 {
+                    if (f)
+                    {
+                        admin = nadjiAdministrativnoOsoblje(a.JMBG);
+                    }
+                    else
+                    {
+                        admin = new AdministrativnoOsoblje();
+                    }
 
-
-                    AdministrativnoOsoblje admin = new AdministrativnoOsoblje();
 
                     admin.Adresa = a.Adresa;
                     admin.Pozicija = a.Pozicija;
@@ -402,6 +417,7 @@ namespace MedicinskaKlinika
                         broj.Zaposlen = admin;
                     }
 
+
                     s.SaveOrUpdate(admin);
                     s.Flush();
                     s.Close();
@@ -411,6 +427,23 @@ namespace MedicinskaKlinika
             {
                 MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
             }
+        }
+
+        public static AdministrativnoOsoblje nadjiAdministrativnoOsoblje(int jmbg)
+        {
+            ISession s = DataLayer.GetSession();
+            AdministrativnoOsoblje osoblje = s.Query<AdministrativnoOsoblje>()
+                .FirstOrDefault(x => x.JMBG == jmbg);
+
+            if (osoblje != null)
+            {
+                NHibernateUtil.Initialize(osoblje.Emails);
+                NHibernateUtil.Initialize(osoblje.Telefons);
+                NHibernateUtil.Initialize(osoblje.Odeljenja);
+            }
+
+            s.Close();
+            return osoblje;
         }
         public static void dodajRacun(RacunBasic r, bool f)
         {
@@ -607,13 +640,23 @@ namespace MedicinskaKlinika
             }
         }
 
-        public static void dodajLaboranta(LaborantBasic a)
+        public static void dodajLaboranta(LaborantBasic a,bool f)
         {
             try
             {
+                Laborant admin;
                 using (ISession s = DataLayer.GetSession())
                 {
-                    Laborant admin = new Laborant();
+                    
+
+                    if (f)
+                    {
+                        admin = nadjiLaboranta(a.JMBG);
+                    }
+                    else
+                    {
+                        admin = new Laborant();
+                    }
 
                     admin.Adresa = a.Adresa;
                     admin.Pozicija = a.Pozicija;
@@ -651,13 +694,24 @@ namespace MedicinskaKlinika
             }
         }
 
-        public static void dodajMedicinskuSestru(MedicinskaSestraBasic a)
+        public static void dodajMedicinskuSestru(MedicinskaSestraBasic a,bool f)
         {
             try
             {
+                MedicinskaSestra admin;
                 using (ISession s = DataLayer.GetSession())
                 {
-                    MedicinskaSestra admin = new MedicinskaSestra();
+
+                    if (f)
+                    {
+                        admin = nadjiMedicinskuSestru(a.JMBG);
+                    }
+                    else
+                    {
+                        admin = new MedicinskaSestra();
+                    }
+
+                    
 
                     admin.Adresa = a.Adresa;
                     admin.Pozicija = a.Pozicija;
@@ -1112,6 +1166,202 @@ namespace MedicinskaKlinika
                 s.Delete(dodatni);
                 }
                 s.Delete(pregled);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+
+            }
+        }
+
+        public static List<AdministrativnoOsobljeBasic> prikazOsoblja()
+        {
+            List<AdministrativnoOsobljeBasic> admini = new List<AdministrativnoOsobljeBasic>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+
+                var t = s.Query<AdministrativnoOsoblje>()
+                    .Fetch(x => x.AdresaLokacije)
+                    .ToList();
+
+                foreach (AdministrativnoOsoblje admin in t)
+                {
+
+                    admini.Add(new AdministrativnoOsobljeBasic
+                    {
+                        JMBG = admin.JMBG,
+                        DatumZaposlenja = admin.DatumZaposlenja,
+                        DatumRodjenja = admin.DatumRodjenja,
+                        Pozicija = admin.Pozicija,
+                        Ime = admin.Ime,
+                        Prezime = admin.Prezime,
+                        Adresa = admin.Adresa,
+                        Smena = admin.Smena,
+                        AdresaLokacije = new Lokacija
+                        {
+                            Adresa = admin.AdresaLokacije.Adresa,
+                        }
+
+                    });
+                }
+            }
+
+            return admini;
+        }
+
+        public static void brisiAdmina(int jmbg)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                AdministrativnoOsoblje admin = s.Load<AdministrativnoOsoblje>(jmbg);
+                s.Delete(admin);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+
+            }
+        }
+
+        public static MedicinskaSestra nadjiMedicinskuSestru(int jmbg)
+        {
+            ISession s = DataLayer.GetSession();
+            MedicinskaSestra osoblje = s.Query<MedicinskaSestra>()
+                .FirstOrDefault(x => x.JMBG == jmbg);
+
+            if (osoblje != null)
+            {
+                NHibernateUtil.Initialize(osoblje.Emails);
+                NHibernateUtil.Initialize(osoblje.Telefons);
+                NHibernateUtil.Initialize(osoblje.Odeljenja);
+            }
+
+            s.Close();
+            return osoblje;
+        }
+
+        public static List<MedicinskaSestraBasic> prikazMedicinskeSestre()
+        {
+            List<MedicinskaSestraBasic> admini = new List<MedicinskaSestraBasic>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+
+                var t = s.Query<MedicinskaSestra>()
+                    .Fetch(x => x.AdresaLokacije)
+                    .ToList();
+
+                foreach (MedicinskaSestra admin in t)
+                {
+
+                    admini.Add(new MedicinskaSestraBasic
+                    {
+                        JMBG = admin.JMBG,
+                        DatumZaposlenja = admin.DatumZaposlenja,
+                        DatumRodjenja = admin.DatumRodjenja,
+                        Pozicija = admin.Pozicija,
+                        Ime = admin.Ime,
+                        Prezime = admin.Prezime,
+                        Adresa = admin.Adresa,
+                        Smena = admin.Smena,
+                        AdresaLokacije = new Lokacija
+                        {
+                            Adresa = admin.AdresaLokacije.Adresa,
+                        },
+                        Sertifikat = admin.Sertifikat,
+                        OblastRada = admin.OblastRada,
+
+                    });
+                }
+            }
+
+            return admini;
+        }
+
+        public static void brisiMedicinskuSestru(int jmbg)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                MedicinskaSestra admin = s.Load<MedicinskaSestra>(jmbg);
+                s.Delete(admin);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+
+            }
+        }
+
+        public static List<LaborantBasic> prikazLaboranta()
+        {
+            List<LaborantBasic> admini = new List<LaborantBasic>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+
+                var t = s.Query<Laborant>()
+                    .Fetch(x => x.AdresaLokacije)
+                    .ToList();
+
+                foreach (Laborant admin in t)
+                {
+
+                    admini.Add(new LaborantBasic
+                    {
+                        JMBG = admin.JMBG,
+                        DatumZaposlenja = admin.DatumZaposlenja,
+                        DatumRodjenja = admin.DatumRodjenja,
+                        Pozicija = admin.Pozicija,
+                        Ime = admin.Ime,
+                        Prezime = admin.Prezime,
+                        Adresa = admin.Adresa,
+                        Smena = admin.Smena,
+                        AdresaLokacije = new Lokacija
+                        {
+                            Adresa = admin.AdresaLokacije.Adresa,
+                        },
+                        Sertifikat = admin.Sertifikat,
+                        OblastRada = admin.OblastRada,
+
+                    });
+                }
+            }
+
+            return admini;
+        }
+
+        public static void brisiLaboranta(int jmbg)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Laborant admin = s.Load<Laborant>(jmbg);
+
+                foreach (var analiza in admin.LaboratorijskeAnalize)
+                {
+                    analiza.Laborant = null;
+                    s.Update(analiza);
+                }
+
+
+                admin.LaboratorijskeAnalize.Clear();
+
+                s.Delete(admin);
                 s.Flush();
 
                 s.Close();
