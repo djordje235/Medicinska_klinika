@@ -403,6 +403,8 @@ namespace MedicinskaKlinika
 
     public class PacijentBasic
     {
+
+        public string PunoIme => Ime + " " + Prezime;
         public virtual String Adresa { get; set; }
 
         public virtual int IdKartona { get; set; }
@@ -527,6 +529,29 @@ namespace MedicinskaKlinika
         }
     }
 
+    public class TerminiPrikaz
+    {
+        public virtual int IdTermina { get; set; }
+        public virtual DateTime Datum { get; set; }
+        public virtual DateTime Vreme { get; set; }
+        public virtual Pacijent Pacijent { get; set; }
+
+        public virtual Lekar Lekar { get; set; }
+
+        public virtual Odeljenje Odeljenje { get; set; }
+
+        public TerminiPrikaz(int idTermina, DateTime datum, DateTime vreme, Pacijent pacijent, Lekar lekar, Odeljenje odeljenje)
+        {
+            IdTermina = idTermina;
+            Datum = datum;
+            Vreme = vreme;
+            Pacijent = pacijent;
+            Lekar = lekar;
+            Odeljenje = odeljenje;
+        }
+        public TerminiPrikaz() { }
+    }
+
     public class RFZOBasic
     {
         public virtual int IdOsiguranja { get; set; }
@@ -570,6 +595,22 @@ namespace MedicinskaKlinika
 
     }
 
+    public class RFZOPrikaz
+    {
+        public virtual int IdOsiguranja { get; set; }
+
+        public virtual Pacijent Pacijent { get; set; }
+
+        public RFZOPrikaz() { }
+
+        public RFZOPrikaz(int id, Pacijent p) {
+            IdOsiguranja = id;
+            this.Pacijent = p;
+        }
+
+
+    }
+
     public class RacunBasic
     {
         public virtual int Id { get; set; }
@@ -601,6 +642,7 @@ namespace MedicinskaKlinika
             this.Placanje = placanje;
         }
     }
+
 
     public class RacunPogled
     {
@@ -645,6 +687,25 @@ namespace MedicinskaKlinika
             this.OsiguravajucaKuca = osiguravajucaKuca;
             this.Pacijent = pacijent;
         }
+    }
+
+    public class PrivatnoOsiguranjePrikaz
+    {
+        public virtual int id { get; set; }
+        public virtual int BrPolise { get; set; }
+
+        public virtual String OsiguravajucaKuca { get; set; }
+
+        public virtual Pacijent Pacijent { get; set; }
+
+        public PrivatnoOsiguranjePrikaz(int id,int brPolise, String osiguravajucaKuca, Pacijent pacijent)
+        {
+            this.id = id;
+            BrPolise = brPolise;
+            OsiguravajucaKuca = osiguravajucaKuca;
+            Pacijent = pacijent;
+        }
+        public PrivatnoOsiguranjePrikaz() { }
     }
 
     public class PrivatnoOsiguranjePogled
@@ -718,6 +779,7 @@ namespace MedicinskaKlinika
         }
 
     }
+
 
     public class PlacanjeBasic
     {

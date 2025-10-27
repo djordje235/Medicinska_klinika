@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using Medicinska_klinika_3._0.FormDodaj;
 using MedicinskaKlinika.Entiteti;
 using NHibernate;
+using NHibernate.Linq;
+using NHibernate.Stat;
 
 namespace MedicinskaKlinika
 {
@@ -20,7 +22,7 @@ namespace MedicinskaKlinika
 
             AdministrativnoOsoblje ad = new AdministrativnoOsoblje();
 
-            
+
             ad.Adresa = a.Adresa;
             ad.DatumRodjenja = a.DatumRodjenja;
             var loc = s.Load<Lokacija>(a.AdresaLokacije);
@@ -100,6 +102,19 @@ namespace MedicinskaKlinika
             }
         }
 
+        public static List<PacijentBasic> vratipacijentebasic()
+        {
+            List<PacijentBasic> pacijenti = new List<PacijentBasic>();
+            ISession s = DataLayer.GetSession();
+            var p = s.Query<Pacijent>().ToList();
+            foreach (Pacijent pacijent in p)
+            {
+                pacijenti.Add(new PacijentBasic(pacijent.Adresa, pacijent.IdKartona, pacijent.Ime, pacijent.Prezime, pacijent.DatumRodjenja, pacijent.Pol, pacijent.Lekar, pacijent.RFZO, pacijent.PrivatnoOsiguranje));
+            }
+            s.Close();
+            return pacijenti;
+        }
+
         public static List<PacijentPogled> vratipogledpacijenta()
         {
             List<PacijentPogled> pacijenti = new List<PacijentPogled>();
@@ -107,7 +122,7 @@ namespace MedicinskaKlinika
             var p = s.Query<Pacijent>().ToList();
             foreach (Pacijent pacijent in p)
             {
-                pacijenti.Add(new PacijentPogled(pacijent.IdKartona,pacijent.Ime, pacijent.Prezime));
+                pacijenti.Add(new PacijentPogled(pacijent.IdKartona, pacijent.Ime, pacijent.Prezime));
             }
             s.Close();
             return pacijenti;
@@ -139,21 +154,35 @@ namespace MedicinskaKlinika
             return laboranti;
         }
 
-        public static void dodajTermin(TerminBasic ter)
+        public static void dodajTermin(TerminBasic ter, bool f)
         {
             try
             {
+                Termin termin = nadjiTermin(ter.IdTermina);
+
                 using (ISession s = DataLayer.GetSession())
                 {
-                    
-                    Termin termin = new Termin
+
+
+                    if (f)
                     {
-                        Datum = ter.Datum,
-                        Vreme = ter.Vreme,
-                        Pacijent = ter.Pacijent,
-                        Lekar = ter.Lekar,
-                        Odeljenje = ter.Odeljenje,
-                    };
+                        termin.Datum = ter.Datum;
+                        termin.Vreme = ter.Vreme;
+                        termin.Pacijent = ter.Pacijent;
+                        termin.Lekar = ter.Lekar;
+                        termin.Odeljenje = ter.Odeljenje;
+                    }
+                    else
+                    {
+                        termin = new Termin
+                        {
+                            Datum = ter.Datum,
+                            Vreme = ter.Vreme,
+                            Pacijent = ter.Pacijent,
+                            Lekar = ter.Lekar,
+                            Odeljenje = ter.Odeljenje,
+                        };
+                    }
 
                     s.SaveOrUpdate(termin);
                     s.Flush();
@@ -186,7 +215,7 @@ namespace MedicinskaKlinika
             var t = s.Query<Termin>().ToList();
             foreach (Termin termin in t)
             {
-                termini.Add(new TerminPogled(termin.IdTermina,termin.Datum,termin.Vreme));
+                termini.Add(new TerminPogled(termin.IdTermina, termin.Datum, termin.Vreme));
             }
             s.Close();
             return termini;
@@ -197,7 +226,7 @@ namespace MedicinskaKlinika
             List<RFZOPogled> rfzos = new List<RFZOPogled>();
             ISession s = DataLayer.GetSession();
             var r = s.Query<RFZO>().ToList();
-            foreach(RFZO rfzo in r)
+            foreach (RFZO rfzo in r)
             {
                 rfzos.Add(new RFZOPogled(rfzo.IdOsiguranja, rfzo.Pacijent));
             }
@@ -212,7 +241,7 @@ namespace MedicinskaKlinika
             var r = s.Query<Racun>().ToList();
             foreach (Racun racun in r)
             {
-                racuni.Add(new RacunPogled(racun.Id, racun.Cena,racun.VrstaUsluge));
+                racuni.Add(new RacunPogled(racun.Id, racun.Cena, racun.VrstaUsluge));
             }
             s.Close();
             return racuni;
@@ -265,7 +294,7 @@ namespace MedicinskaKlinika
         public static Termin nadjiTermin(int idTermina)
         {
             ISession s = DataLayer.GetSession();
-            Termin termin = s.Query<Termin>().FirstOrDefault(x=> x.IdTermina == idTermina);
+            Termin termin = s.Query<Termin>().FirstOrDefault(x => x.IdTermina == idTermina);
             s.Close();
             return termin;
         }
@@ -277,25 +306,33 @@ namespace MedicinskaKlinika
             s.Close();
             return rfzo;
         }
-        public static void dodajRFZO(RFZOBasic r)
+        public static void dodajRFZO(RFZOBasic r, bool f)
         {
             try
             {
+                RFZO rfzo = nadjiRFZO(r.IdOsiguranja);
                 using (ISession s = DataLayer.GetSession())
                 {
 
-
-                    RFZO rfzo = new RFZO();
-
-                    rfzo.IdOsiguranja = r.IdOsiguranja;
-                    rfzo.Pacijent = r.Pacijent;
-                    
+                    if (f)
+                    {
+                        rfzo.IdOsiguranja = r.IdOsiguranja;
+                        rfzo.Pacijent = r.Pacijent;
+                    }
+                    else
+                    {
+                        rfzo = new RFZO
+                        {
+                            IdOsiguranja = r.IdOsiguranja,
+                            Pacijent = r.Pacijent,
+                        };
+                    }
                     s.SaveOrUpdate(rfzo);
                     s.Flush();
                     s.Close();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Greška pri dodavanju RFZO: " + ex.Message);
             }
@@ -307,6 +344,14 @@ namespace MedicinskaKlinika
             Lokacija lokacija = s.Query<Lokacija>().FirstOrDefault(x => x.Adresa == Adresa);
             s.Close();
             return lokacija;
+        }
+
+        public static Pregled nadjiPregled(int id)
+        {
+            ISession s = DataLayer.GetSession();
+            Pregled pregled = s.Query<Pregled>().FirstOrDefault(x => x.IdPregleda == id);
+            s.Close();
+            return pregled;
         }
 
         public static Racun nadjiRacun(int Id)
@@ -331,7 +376,7 @@ namespace MedicinskaKlinika
                 using (ISession s = DataLayer.GetSession())
                 {
 
-                    
+
                     AdministrativnoOsoblje admin = new AdministrativnoOsoblje();
 
                     admin.Adresa = a.Adresa;
@@ -367,22 +412,35 @@ namespace MedicinskaKlinika
                 MessageBox.Show("Greška pri dodavanju termina: " + ex.Message);
             }
         }
-        public static void dodajRacun(RacunBasic r)
+        public static void dodajRacun(RacunBasic r, bool f)
         {
             try
             {
+                Racun racun = nadjiRacun(r.Id);
                 using (ISession s = DataLayer.GetSession())
                 {
-
-                    Racun racun = new Racun
+                    if (f)
                     {
-                        Popust = r.Popust,
-                        VrstaUsluge = r.VrstaUsluge,
-                        Datum = r.Datum,
-                        Cena = r.Cena,
-                        Lekar = r.Lekar,
-                        Pacijent = r.Pacijent
-                    };
+                        racun.Popust = r.Popust;
+                        racun.VrstaUsluge = r.VrstaUsluge;
+                        racun.Datum = r.Datum;
+                        racun.Cena = r.Cena;
+                        racun.Lekar = r.Lekar;
+                        racun.Pacijent = r.Pacijent;
+                    }
+                    else
+                    {
+                        racun = new Racun
+                        {
+                            Popust = r.Popust,
+                            VrstaUsluge = r.VrstaUsluge,
+                            Datum = r.Datum,
+                            Cena = r.Cena,
+                            Lekar = r.Lekar,
+                            Pacijent = r.Pacijent
+                        };
+                    }
+
 
                     s.SaveOrUpdate(racun);
                     s.Flush();
@@ -395,20 +453,30 @@ namespace MedicinskaKlinika
             }
         }
 
-        public static void dodajPrivatnoOsiguranje(PrivatnoOsiguranjeBasic p)
+        public static void dodajPrivatnoOsiguranje(PrivatnoOsiguranjeBasic p, bool f)
         {
             try
             {
+                PrivatnoOsiguranje osiguranje = nadjiPrivatnoOsiguranje(p.IdOsiguranja);
                 using (ISession s = DataLayer.GetSession())
                 {
-
-                    PrivatnoOsiguranje priv = new PrivatnoOsiguranje
+                    if (f)
                     {
-                        BrPolise = p.BrPolise,
-                        OsiguravajucaKuca = p.OsiguravajucaKuca,
-                        Pacijent = p.Pacijent,
-                    };
-                    s.SaveOrUpdate(priv);
+                        osiguranje.BrPolise = p.BrPolise;
+                        osiguranje.OsiguravajucaKuca = p.OsiguravajucaKuca;
+                        osiguranje.Pacijent = p.Pacijent;
+                    }
+                    else
+                    {
+                        osiguranje = new PrivatnoOsiguranje
+                        {
+                            BrPolise = p.BrPolise,
+                            OsiguravajucaKuca = p.OsiguravajucaKuca,
+                            Pacijent = p.Pacijent,
+                        };
+                    }
+
+                    s.SaveOrUpdate(osiguranje);
                     s.Flush();
                     s.Close();
                 }
@@ -421,56 +489,88 @@ namespace MedicinskaKlinika
 
 
 
-        public static Pregled dodajPregled(PregledBasic p)
+        public static Pregled dodajPregled(PregledBasic p, bool f)
         {
             try
             {
+                Pregled dodatni = null;
+                Pregled pregled = nadjiPregled(p.IdPregleda);
+                if (p.DodatniPregled != null)
+                {
+                    dodatni = nadjiPregled(p.DodatniPregled.IdPregleda);
+                }
+
                 using (ISession s = DataLayer.GetSession())
                 {
-                    Pregled pr = new Pregled
-                    {
-                        Pacijent = p.Pacijent,
-                        Lekar = p.Lekar,
-                        Termin = p.Termin,
-                        Odeljenje = p.Odeljenje,
-                        Vreme = p.Vreme,
-                        Datum = p.Datum,
-                        OpisTegoba = p.OpisTegoba,
-                        Dijagnoza = p.Dijagnoza,
-                        PreporukaZaLecenje = p.PreporukaZaLecenje,
-                        Terapija = p.Terapija,
-                        VrstaPregleda = p.VrstaPregleda,
-                        
-                    };
-                    if(p.DodatniPregled != null)
-                    {
-                        Pregled dodatni = new Pregled
-                        {
-                            Pacijent = p.DodatniPregled.Pacijent,
-                            Lekar = p.DodatniPregled.Lekar,
-                            Termin = p.DodatniPregled.Termin,
-                            Odeljenje = p.DodatniPregled.Odeljenje,
-                            Vreme = p.DodatniPregled.Vreme,
-                            Datum = p.DodatniPregled.Datum,
-                            OpisTegoba = p.DodatniPregled.OpisTegoba,
-                            Dijagnoza = p.DodatniPregled.Dijagnoza,
-                            PreporukaZaLecenje = p.DodatniPregled.PreporukaZaLecenje,
-                            Terapija = p.DodatniPregled.Terapija,
-                            VrstaPregleda = p.DodatniPregled.VrstaPregleda,
-                            DodatniPregled = null,
 
-                        };
-                        pr.DodatniPregled = dodatni;
+                    if (f)
+                    {
+
+
+                        pregled.Pacijent = p.Pacijent;
+                        pregled.Lekar = p.Lekar;
+                        pregled.Termin = p.Termin;
+                        pregled.Odeljenje = p.Odeljenje;
+                        pregled.Vreme = p.Vreme;
+                        pregled.Datum = p.Datum;
+                        pregled.OpisTegoba = p.OpisTegoba;
+                        pregled.Dijagnoza = p.Dijagnoza;
+                        pregled.PreporukaZaLecenje = p.PreporukaZaLecenje;
+                        pregled.Terapija = p.Terapija;
+                        pregled.VrstaPregleda = p.VrstaPregleda;
+
+                        pregled.DodatniPregled = dodatni;
+
                     }
                     else
                     {
-                        pr.DodatniPregled = null;
+
+
+                        pregled = new Pregled
+                        {
+                            Pacijent = p.Pacijent,
+                            Lekar = p.Lekar,
+                            Termin = p.Termin,
+                            Odeljenje = p.Odeljenje,
+                            Vreme = p.Vreme,
+                            Datum = p.Datum,
+                            OpisTegoba = p.OpisTegoba,
+                            Dijagnoza = p.Dijagnoza,
+                            PreporukaZaLecenje = p.PreporukaZaLecenje,
+                            Terapija = p.Terapija,
+                            VrstaPregleda = p.VrstaPregleda,
+
+                        };
+                        if (p.DodatniPregled != null)
+                        {
+                            dodatni = new Pregled
+                            {
+                                Pacijent = p.DodatniPregled.Pacijent,
+                                Lekar = p.DodatniPregled.Lekar,
+                                Termin = p.DodatniPregled.Termin,
+                                Odeljenje = p.DodatniPregled.Odeljenje,
+                                Vreme = p.DodatniPregled.Vreme,
+                                Datum = p.DodatniPregled.Datum,
+                                OpisTegoba = p.DodatniPregled.OpisTegoba,
+                                Dijagnoza = p.DodatniPregled.Dijagnoza,
+                                PreporukaZaLecenje = p.DodatniPregled.PreporukaZaLecenje,
+                                Terapija = p.DodatniPregled.Terapija,
+                                VrstaPregleda = p.DodatniPregled.VrstaPregleda,
+                                DodatniPregled = null,
+
+                            };
+                            pregled.DodatniPregled = dodatni;
+                        }
+                        else
+                        {
+                            pregled.DodatniPregled = null;
+                        }
                     }
 
-
-                        s.Save(pr);
+                    s.SaveOrUpdate(pregled);
                     s.Flush();
-                    return pr;
+                    s.Close();
+                    return pregled;
                 }
             }
             catch (Exception ex)
@@ -695,7 +795,7 @@ namespace MedicinskaKlinika
                         ReferentnaVrednost = l.ReferentnaVrednost,
                         Komentar = l.Komentar,
                         Laborant = l.Laborant
-                    }; 
+                    };
                     s.SaveOrUpdate(la);
                     s.Flush();
                     s.Close();
@@ -734,9 +834,293 @@ namespace MedicinskaKlinika
 
         }
 
-        internal static IList<Lokacija> nadjiLokaciju(int v)
+        public static List<TerminiPrikaz> prikazTermina()
         {
-            throw new NotImplementedException();
+            List<TerminiPrikaz> termini = new List<TerminiPrikaz>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+
+                var t = s.Query<Termin>()
+                    .Fetch(x => x.Pacijent)
+                    .Fetch(x => x.Lekar)
+                    .Fetch(x => x.Odeljenje)
+                    .ToList();
+
+                foreach (Termin termin in t)
+                {
+
+                    termini.Add(new TerminiPrikaz
+                    {
+                        IdTermina = termin.IdTermina,
+                        Datum = termin.Datum,
+                        Vreme = termin.Vreme,
+                        Pacijent = new Pacijent
+                        {
+                            IdKartona = termin.Pacijent.IdKartona,
+                            Ime = termin.Pacijent.Ime,
+                            Prezime = termin.Pacijent.Prezime
+                        },
+                        Lekar = new Lekar
+                        {
+                            JMBG = termin.Lekar.JMBG,
+                            Ime = termin.Lekar.Ime,
+                            Prezime = termin.Lekar.Prezime
+                        },
+                        Odeljenje = new Odeljenje
+                        {
+                            Naziv = termin.Odeljenje.Naziv
+                        }
+                    });
+                }
+            }
+
+            return termini;
+        }
+
+        public static void brisiTermin(int id)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Termin t = s.Load<Termin>(id);
+
+                s.Delete(t);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+            }
+        }
+
+        public static List<RFZOPrikaz> prikazRFZO()
+        {
+            List<RFZOPrikaz> rfzos = new List<RFZOPrikaz>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+                var r = s.Query<RFZO>().Fetch(x => x.Pacijent);
+
+                foreach (RFZO rfzo in r)
+                {
+                    rfzos.Add(new RFZOPrikaz
+                    {
+                        IdOsiguranja = rfzo.IdOsiguranja,
+                        Pacijent = new Pacijent
+                        {
+                            IdKartona = rfzo.Pacijent.IdKartona,
+                            Ime = rfzo.Pacijent.Ime,
+                            Prezime = rfzo.Pacijent.Prezime
+                        }
+                    });
+                }
+            }
+            return rfzos;
+        }
+
+        public static void brisiRFZO(int id)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                RFZO t = s.Load<RFZO>(id);
+
+                s.Delete(t);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+            }
+        }
+
+        public static List<RacunBasic> prikazRacuna()
+        {
+            List<RacunBasic> racuni = new List<RacunBasic>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+                var r = s.Query<Racun>().Fetch(x => x.Pacijent).Fetch(x => x.Lekar);
+
+                foreach (Racun racun in r)
+                {
+                    racuni.Add(new RacunBasic
+                    {
+                        Id = racun.Id,
+                        Popust = racun.Popust,
+                        VrstaUsluge = racun.VrstaUsluge,
+                        Datum = racun.Datum,
+                        Cena = racun.Cena,
+
+                        Pacijent = new Pacijent
+                        {
+                            IdKartona = racun.Pacijent.IdKartona,
+                            Ime = racun.Pacijent.Ime,
+                            Prezime = racun.Pacijent.Prezime
+                        },
+
+                        Lekar = new Lekar
+                        {
+                            JMBG = racun.Lekar.JMBG,
+                            Ime = racun.Lekar.Ime,
+                            Prezime = racun.Lekar.Prezime
+                        }
+                    });
+                }
+            }
+            return racuni;
+        }
+
+        public static void brisiRacun(int id)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Racun t = s.Load<Racun>(id);
+
+                s.Delete(t);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+            }
+        }
+
+        public static List<PrivatnoOsiguranjePrikaz> prikazPrivatnogOsiguranja()
+        {
+            List<PrivatnoOsiguranjePrikaz> osiguranja = new List<PrivatnoOsiguranjePrikaz>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+                var r = s.Query<PrivatnoOsiguranje>().Fetch(x => x.Pacijent);
+
+                foreach (PrivatnoOsiguranje osiguranje in r)
+                {
+                    osiguranja.Add(new PrivatnoOsiguranjePrikaz
+                    {
+                        id = osiguranje.IdOsiguranja,
+                        OsiguravajucaKuca = osiguranje.OsiguravajucaKuca,
+                        BrPolise = osiguranje.BrPolise,
+                        Pacijent = new Pacijent
+                        {
+                            IdKartona = osiguranje.Pacijent.IdKartona,
+                            Ime = osiguranje.Pacijent.Ime,
+                            Prezime = osiguranje.Pacijent.Prezime
+                        }
+                    });
+                }
+            }
+            return osiguranja;
+        }
+
+        public static void brisiPrivatnoOsiguranje(int id)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                PrivatnoOsiguranje t = s.Load<PrivatnoOsiguranje>(id);
+
+                s.Delete(t);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+            }
+        }
+
+        public static List<PregledBasic> prikazPregleda()
+        {
+            List<PregledBasic> pregledi = new List<PregledBasic>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+
+                var t = s.Query<Pregled>()
+                    .Fetch(x => x.Pacijent)
+                    .Fetch(x => x.Lekar)
+                    .Fetch(x => x.Odeljenje)
+                    .Fetch(x => x.Termin)
+                    .ToList();
+
+                foreach (Pregled pregled in t)
+                {
+
+                    pregledi.Add(new PregledBasic
+                    {
+                        IdPregleda = pregled.IdPregleda,
+                        Datum = pregled.Datum,
+                        Vreme = pregled.Vreme,
+                        OpisTegoba = pregled.OpisTegoba,
+                        Dijagnoza = pregled.Dijagnoza,
+                        Terapija = pregled.Terapija,
+                        PreporukaZaLecenje = pregled.PreporukaZaLecenje,
+                        VrstaPregleda = pregled.VrstaPregleda,
+                        Pacijent = new Pacijent
+                        {
+                            IdKartona = pregled.Pacijent.IdKartona,
+                            Ime = pregled.Pacijent.Ime,
+                            Prezime = pregled.Pacijent.Prezime
+                        },
+                        Lekar = new Lekar
+                        {
+                            JMBG = pregled.Lekar.JMBG,
+                            Ime = pregled.Lekar.Ime,
+                            Prezime = pregled.Lekar.Prezime
+                        },
+                        Odeljenje = new Odeljenje
+                        {
+                            Naziv = pregled.Odeljenje.Naziv
+                        },
+                        Termin = new Termin
+                        {
+                            Datum = pregled.Termin.Datum,
+                            Vreme = pregled.Termin.Vreme
+                        },
+
+                    });
+                }
+            }
+
+            return pregledi;
+        }
+
+        public static void brisiPregled(int id)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Pregled pregled = s.Load<Pregled>(id);
+                if(pregled.DodatniPregled != null)
+                {
+                Pregled dodatni = s.Load<Pregled>(pregled.DodatniPregled.IdPregleda);
+                s.Delete(dodatni);
+                }
+                s.Delete(pregled);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+
+            }
         }
     }
 }

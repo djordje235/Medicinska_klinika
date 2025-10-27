@@ -61,7 +61,6 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox3.DataSource = osiguranja;
             comboBox3.DisplayMember = "Osiguranje";
             comboBox3.ValueMember = "BrPolise";
-
         }
     }
 }

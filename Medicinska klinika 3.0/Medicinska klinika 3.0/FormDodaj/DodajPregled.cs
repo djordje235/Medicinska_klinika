@@ -15,13 +15,23 @@ namespace Medicinska_klinika_3._0.FormDodaj
 {
     public partial class DodajPregled : Form
     {
+        private Pregled _pregled;
+        private bool fleg;
+
         public PregledBasic p { get; private set; }
         public PregledBasic dodatni { get; private set; }
 
         public bool f { get; private set; }
-        public DodajPregled(bool flag)
+        public DodajPregled(bool flag, bool f, Pregled t)
         {
-            f = flag;
+            this.f = flag;
+
+            fleg = f;
+            if (f)
+            {
+                _pregled = t;
+            }
+
             InitializeComponent();
             p = new PregledBasic();
         }
@@ -33,7 +43,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DodajPregled forma = new DodajPregled(true);
+            DodajPregled forma = new DodajPregled(true,false,null);
             if (forma.ShowDialog() == DialogResult.OK)
             {
                 dodatni = forma.p;
@@ -80,11 +90,33 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox5.DataSource = odeljenja;
             comboBox5.DisplayMember = "Naziv";
             comboBox5.ValueMember = "Naziv";
+
+            if (_pregled != null)
+            {
+                comboBox2.SelectedValue = _pregled.Pacijent.IdKartona;
+                comboBox3.SelectedValue = _pregled.Lekar.JMBG;
+                comboBox5.SelectedValue = _pregled.Odeljenje.Naziv;
+                comboBox4.SelectedValue = _pregled.Termin.IdTermina;
+
+                dateTimePicker1.Value = _pregled.Vreme;
+                dateTimePicker2.Value = _pregled.Datum;
+
+                textBox2.Text = _pregled.OpisTegoba;
+                textBox1.Text = _pregled.Dijagnoza;
+                textBox3.Text = _pregled.PreporukaZaLecenje;
+                textBox4.Text = _pregled.Terapija;
+                textBox5.Text = _pregled.VrstaPregleda;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
+            if (fleg)
+            {
+                p.IdPregleda = _pregled.IdPregleda;
+            }
+
             p.Pacijent = DTOManager.nadjiPacijenta((int)comboBox2.SelectedValue);
             p.Lekar = DTOManager.nadjiLekara((int)comboBox3.SelectedValue);
             p.Termin = DTOManager.nadjiTermin((int)comboBox4.SelectedValue);
@@ -96,30 +128,20 @@ namespace Medicinska_klinika_3._0.FormDodaj
             p.PreporukaZaLecenje = textBox3.Text;
             p.Terapija = textBox4.Text;
             p.VrstaPregleda = textBox5.Text;
-<<<<<<< HEAD
 
-=======
-//<<<<<<< HEAD
->>>>>>> 921fbbd87e442ee8a74a8662bc343d144c0d6119
             p.DodatniPregled = dodatni;
             if (!f)
             {
-                DTOManager.dodajPregled(p);
+                DTOManager.dodajPregled(p,fleg);
             }
+
+
+
             MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
             this.Close();
-<<<<<<< HEAD
 
-            DTOManager.dodajPregled(p);
-            MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
-=======
-//=======
 
-            DTOManager.dodajPregled(p);
-            MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
-//>>>>>>> e8d3338178f9b4ceb43bd41161f5fc375ce93994
->>>>>>> 921fbbd87e442ee8a74a8662bc343d144c0d6119
         }
 
         //ako zatreba
