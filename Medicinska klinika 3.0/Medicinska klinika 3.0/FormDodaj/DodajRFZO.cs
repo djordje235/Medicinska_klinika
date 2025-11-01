@@ -29,6 +29,27 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Unesite ID osiguranja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            int idOsiguranja;
+            if (!int.TryParse(textBox1.Text, out idOsiguranja))
+            {
+                MessageBox.Show("ID osiguranja mora biti broj!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+    
+            if (comboBox1.SelectedValue == null)
+            {
+                MessageBox.Show("Izaberite pacijenta!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             RFZOBasic r = new RFZOBasic();
             r.IdOsiguranja = int.Parse(textBox1.Text);
             r.Pacijent = DTOManager.nadjiPacijenta((int)comboBox1.SelectedValue);

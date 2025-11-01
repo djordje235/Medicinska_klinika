@@ -29,6 +29,44 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Unesite popust!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int popust;
+            if (!int.TryParse(textBox1.Text, out popust))
+            {
+                MessageBox.Show("Popust mora biti broj!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Unesite vrstu usluge!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Unesite cenu!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            double cena;
+            if (!double.TryParse(textBox3.Text, out cena))
+            {
+                MessageBox.Show("Cena mora biti broj (npr. 1500 ili 1500.50)!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (comboBox2.SelectedValue == null)
+            {
+                MessageBox.Show("Izaberite lekara!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (comboBox3.SelectedValue == null)
+            {
+                MessageBox.Show("Izaberite pacijenta!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             RacunBasic r = new RacunBasic();
             r.Popust = int.Parse(textBox1.Text);
             r.VrstaUsluge = textBox2.Text;

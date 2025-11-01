@@ -33,6 +33,32 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Unesite naziv osiguravajuće kuće!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Unesite broj polise!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int brojPolise;
+            if (!int.TryParse(textBox2.Text, out brojPolise))
+            {
+                MessageBox.Show("Broj polise mora biti broj!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if (comboBox1.SelectedValue == null)
+            {
+                MessageBox.Show("Izaberite pacijenta!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             PrivatnoOsiguranjeBasic priv = new PrivatnoOsiguranjeBasic();
             priv.OsiguravajucaKuca = textBox1.Text;
             priv.BrPolise = int.Parse(textBox2.Text);

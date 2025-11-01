@@ -29,12 +29,16 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                return;
+            }
             ListViewItem selektovaniItem = listView1.SelectedItems[0];
             int id = (int)selektovaniItem.Tag;
 
             Racun r = DTOManager.nadjiRacun(id);
 
-            DodajRacun forma = new DodajRacun(true,r);
+            DodajRacun forma = new DodajRacun(true, r);
             forma.ShowDialog();
             IzmeniRacun_Load(sender, e);
         }
@@ -74,6 +78,10 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                return;
+            }
             ListViewItem selektovaniItem = listView1.SelectedItems[0];
             int id = (int)selektovaniItem.Tag;
 

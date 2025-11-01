@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MedicinskaKlinika;
 using MedicinskaKlinika.Entiteti;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Medicinska_klinika_3._0.FormDodaj
 {
@@ -30,6 +31,45 @@ namespace Medicinska_klinika_3._0.FormDodaj
         }
         private void button5_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Unesite procenat koji plaća pacijent!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int procenatPacijenta;
+            if (!int.TryParse(textBox1.Text, out procenatPacijenta))
+            {
+                MessageBox.Show("Procenat mora biti ceo broj!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Unesite način plaćanja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            bool platioPacijent;
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Unesite da li je pacijent platio (true/false)!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!bool.TryParse(textBox3.Text, out platioPacijent))
+            {
+                MessageBox.Show("Polje 'Platio pacijent' mora biti 'true' ili 'false'!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (comboBox2.SelectedValue == null)
+            {
+                MessageBox.Show("Izaberite račun!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (comboBox3.SelectedValue == null)
+            {
+                MessageBox.Show("Izaberite RFZO!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             PlacanjeBasic p = new PlacanjeBasic();
             p.ProcenatPacijenta = int.Parse(textBox1.Text);
             p.NacinPlacanja = textBox2.Text;
