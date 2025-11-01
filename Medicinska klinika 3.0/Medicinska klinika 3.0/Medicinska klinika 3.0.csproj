@@ -349,6 +349,18 @@
     <Compile Include="PomocneForme\FormaZaposleni.Designer.cs">
       <DependentUpon>FormaZaposleni.cs</DependentUpon>
     </Compile>
+    <Compile Include="PomocneForme\PacijentBrTel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\PacijentBrTel.Designer.cs">
+      <DependentUpon>PacijentBrTel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PomocneForme\PacijentEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocneForme\PacijentEmail.Designer.cs">
+      <DependentUpon>PacijentEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="PomocneForme\ZaposleniBrTel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +476,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PomocneForme\FormaZaposleni.resx">
       <DependentUpon>FormaZaposleni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\PacijentBrTel.resx">
+      <DependentUpon>PacijentBrTel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocneForme\PacijentEmail.resx">
+      <DependentUpon>PacijentEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PomocneForme\ZaposleniBrTel.resx">
       <DependentUpon>ZaposleniBrTel.cs</DependentUpon>

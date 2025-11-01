@@ -780,6 +780,23 @@ namespace MedicinskaKlinika
 
     }
 
+/*    public class PregledPogled
+    {
+        public virtual DateTime Datum { get; set; }
+
+        public virtual DateTime Vreme { get; set; }
+
+        public virtual Pacijent Pacijent { get; set; }
+
+        public virtual string pregled { get; set; } = Datum + Vreme + Pacijent.Ime + Pacijent.Prezime;
+
+        public PregledPogled(DateTime Datum, DateTime Vreme, Pacijent Pacijent) {
+            this.Datum = Datum;
+            this.Vreme = Vreme;
+            this.Pacijent = Pacijent;
+        }
+    }*/
+
 
     public class PlacanjeBasic
     {

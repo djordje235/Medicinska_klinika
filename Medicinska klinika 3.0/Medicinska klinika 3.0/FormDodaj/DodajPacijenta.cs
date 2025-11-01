@@ -16,20 +16,29 @@ namespace Medicinska_klinika_3._0.FormDodaj
 {
     public partial class DodajPacijenta : Form
     {
-        private List<EmailZaposlenog> emailovi = new List<EmailZaposlenog>();
-        private List<BrTelefonaZaposlenog> brojevi = new List<BrTelefonaZaposlenog>();
+        private List<EmailPacijenta> emailovi = new List<EmailPacijenta>();
+        private List<BrTelefonaPacijenta> brojevi = new List<BrTelefonaPacijenta>();
 
-        public DodajPacijenta()
+
+        private Pacijent _pacijent;
+        private bool fleg;
+        public DodajPacijenta(bool f, Pacijent t)
         {
+            fleg = f;
+            if (f)
+            {
+                _pacijent = t;
+            }
+            
             InitializeComponent();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ZaposleniBrTel forma = new ZaposleniBrTel();
+            PacijentBrTel forma = new PacijentBrTel();
             if (forma.ShowDialog() == DialogResult.OK)
             {
-                BrTelefonaZaposlenog novi = forma.telefon;
+                BrTelefonaPacijenta novi = forma.telefon;
 
                 brojevi.Add(novi);
 
@@ -39,10 +48,10 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ZaposleniEmail forma = new ZaposleniEmail();
+            PacijentEmail forma = new PacijentEmail();
             if (forma.ShowDialog() == DialogResult.OK)
             {
-                EmailZaposlenog novi = forma.email;
+                EmailPacijenta novi = forma.email;
                 emailovi.Add(novi);
 
                 listView1.Items.Add(novi.Email);
@@ -61,6 +70,46 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox3.DataSource = lekari;
             comboBox3.DisplayMember = "PunoIme";
             comboBox3.ValueMember = "JMBG";
+            textBox1.Enabled = false;
+            if (_pacijent != null)
+            {
+                textBox1.Text = _pacijent.IdKartona.ToString();
+                textBox1.Enabled = false;
+                dateTimePicker1.Value = _pacijent.DatumRodjenja;
+                textBox2.Text = _pacijent.Adresa;
+                textBox3.Text = _pacijent.Ime;
+                textBox4.Text = _pacijent.Prezime;
+                comboBox3.SelectedValue = _pacijent.Lekar.JMBG;
+                if(_pacijent.Pol == "M")
+                {
+                    radioButton2.Checked = false;
+                    radioButton1.Checked = true;
+                }
+                else
+                {
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = true;
+                }
+                    foreach (var email in _pacijent.Emails)
+                    {
+                        emailovi.Add(email);
+                    }
+                foreach (var br in _pacijent.Telefons)
+                {
+                    brojevi.Add(br);
+                }
+
+            }
+
+            foreach (EmailPacijenta x in emailovi)
+            {
+                listView1.Items.Add(x.Email);
+            }
+
+            foreach (BrTelefonaPacijenta x in brojevi)
+            {
+                listView2.Items.Add(x.BrojTelefona);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -72,12 +121,14 @@ namespace Medicinska_klinika_3._0.FormDodaj
             p.Prezime = textBox4.Text;
             p.DatumRodjenja = dateTimePicker1.Value;
             if (radioButton1.Checked)
-                p.Pol = radioButton1.Text;
+                p.Pol = "M";
             else if(radioButton2.Checked)
-                p.Pol = radioButton2.Text;
+                p.Pol = "Z";
             p.Lekar = DTOManager.nadjiLekara(int.Parse(comboBox3.SelectedValue.ToString()));
+            p.Emails = emailovi;
+            p.Telefons = brojevi;
 
-            DTOManager.dodajPacijenta(p);
+            DTOManager.dodajPacijenta(p,fleg);
             MessageBox.Show("Pacijent je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

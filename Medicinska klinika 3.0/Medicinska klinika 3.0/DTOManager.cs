@@ -275,6 +275,12 @@ namespace MedicinskaKlinika
         {
             ISession s = DataLayer.GetSession();
             Pacijent p = s.Query<Pacijent>().FirstOrDefault(x => x.IdKartona == idKartona);
+
+            if (p != null)
+            {
+                NHibernateUtil.Initialize(p.Emails);
+                NHibernateUtil.Initialize(p.Telefons);
+            }
             s.Close();
             return p;
         }
@@ -823,16 +829,23 @@ namespace MedicinskaKlinika
             }
         }
 
-        public static void dodajPacijenta(PacijentBasic a)
+        public static void dodajPacijenta(PacijentBasic a,bool f)
         {
             try
             {
+                Pacijent admin;
                 using (ISession s = DataLayer.GetSession())
                 {
-                    Pacijent admin = new Pacijent();
+                    if (f)
+                    {
+                        admin = nadjiPacijenta(a.IdKartona);
+                    }
+                    else
+                    {
+                        admin = new Pacijent();
+                    }
 
                     admin.Adresa = a.Adresa;
-                    admin.IdKartona = a.IdKartona;
                     admin.Ime = a.Ime;
                     admin.Prezime = a.Prezime;
                     admin.DatumRodjenja = a.DatumRodjenja;
@@ -840,7 +853,7 @@ namespace MedicinskaKlinika
                     admin.Lekar = a.Lekar;
                     admin.Emails = a.Emails;
                     admin.Telefons = a.Telefons;
-
+                    
                     foreach (var email in admin.Emails)
                     {
                         email.Pacijent = admin;
@@ -1382,45 +1395,6 @@ namespace MedicinskaKlinika
 
                 Lekar admin = s.Load<Lekar>(jmbg);
 
-                foreach (var odeljenje in admin.Odeljenja)
-                {
-                    odeljenje.GlavniLekar = null;
-                    s.Update(odeljenje);
-                }
-
-                foreach (var termin in admin.Termini)
-                {
-                    termin.Lekar = null;
-                    s.Update(termin);
-                }
-
-                foreach (var racun in admin.Racuni)
-                {
-                    racun.Lekar = null;
-                    s.Update(racun);
-                }
-
-                foreach (var pregled in admin.Pregledi)
-                {
-                    pregled.Lekar = null;
-                    s.Update(pregled);
-                }
-
-                foreach (var pacijent in admin.Pacijenti)
-                {
-                    pacijent.Lekar = null;
-                    s.Update(pacijent);
-                }
-
-
-                admin.Odeljenja.Clear();
-                admin.Termini.Clear();
-                admin.Racuni.Clear();
-                admin.Pregledi.Clear();
-                admin.Pacijenti.Clear();
-
-                
-
                 s.Delete(admin);
                 s.Flush();
 
@@ -1538,6 +1512,61 @@ namespace MedicinskaKlinika
 
             }
         }
+
+        public static List<PacijentBasic> prikazPacijenta()
+        {
+            List<PacijentBasic> admini = new List<PacijentBasic>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+
+                var t = s.Query<Pacijent>()
+                    .Fetch(x => x.Lekar)
+                    .ToList();
+
+                foreach (Pacijent admin in t)
+                {
+
+                    admini.Add(new PacijentBasic
+                    {
+                        IdKartona = admin.IdKartona,
+                        DatumRodjenja = admin.DatumRodjenja,
+                        Ime = admin.Ime,
+                        Prezime = admin.Prezime,
+                        Adresa = admin.Adresa,
+                        Pol = admin.Pol,
+                        Lekar = new Lekar
+                        {
+                            JMBG = admin.Lekar.JMBG,
+                        },
+                    });
+                }
+            }
+
+            return admini;
+        }
+
+        public static void brisiPacijenta(int idKartona)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Pacijent admin = s.Load<Pacijent>(idKartona);
+
+
+                s.Delete(admin);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+
+            }
+        }
+
     }
 }
 

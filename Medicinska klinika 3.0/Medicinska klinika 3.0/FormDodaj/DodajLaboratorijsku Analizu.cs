@@ -33,7 +33,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
         {
             comboBox1.Items.Clear();
             comboBox2.Items.Clear();
-
+            comboBox3.Items.Clear();
             List<ZaposlenPogled> laboranti = DTOManager.vratipogledlaboranti();
 
             comboBox1.DataSource = laboranti;
@@ -45,6 +45,8 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox2.DataSource = pacijenti;
             comboBox2.DisplayMember = "PunoIme";
             comboBox2.ValueMember = "IdKartona";
+
+            //List<PregledBasic>
 
         }
 

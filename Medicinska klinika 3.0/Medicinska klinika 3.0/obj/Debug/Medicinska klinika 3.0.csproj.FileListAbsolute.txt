@@ -212,3 +212,5 @@ C:\Users\pc\Desktop\Medicinska_Klinka\Medicinska_klinika\Medicinska klinika 3.0\
 C:\Users\pc\Desktop\Medicinska_Klinka\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicins.01FF96EC.Up2Date
 C:\Users\pc\Desktop\Medicinska_Klinka\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.exe
 C:\Users\pc\Desktop\Medicinska_Klinka\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.pdb
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.PacijentBrTel.resources
+C:\Users\milan\fax\Medicinska klinika\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.PacijentEmail.resources
