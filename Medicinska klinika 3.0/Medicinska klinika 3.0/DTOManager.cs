@@ -83,15 +83,27 @@ namespace MedicinskaKlinika
             return odeljenja;
         }
 
-        public static void dodajLokaciju(LokacijaBasic l)
+        public static void dodajLokaciju(LokacijaBasic l,bool f)
         {
             try
             {
+                Lokacija lokacija;
                 ISession s = DataLayer.GetSession();
 
-                Lokacija lokacija = new Lokacija();
+                if (f)
+                {
+                    lokacija = nadjiLokaciju(l.Adresa);
+                    lokacija.Adresa = l.Adresa;
+                    lokacija.RadnoVreme = l.RadnoVreme;
+                }
+                else
+                {
+                lokacija = new Lokacija();
                 lokacija.Adresa = l.Adresa;
                 lokacija.RadnoVreme = l.RadnoVreme;
+                }
+
+                
 
                 s.SaveOrUpdate(lokacija);
                 s.Flush();
@@ -279,6 +291,14 @@ namespace MedicinskaKlinika
         {
             ISession s = DataLayer.GetSession();
             Lekar lekar = s.Query<Lekar>().FirstOrDefault(x => x.JMBG == JMBG);
+
+            if (lekar != null)
+            {
+                NHibernateUtil.Initialize(lekar.Emails);
+                NHibernateUtil.Initialize(lekar.Telefons);
+                NHibernateUtil.Initialize(lekar.Odeljenja);
+            }
+
             s.Close();
             return lekar;
         }
@@ -749,13 +769,23 @@ namespace MedicinskaKlinika
             }
         }
 
-        public static void dodajLekara(LekarBasic a)
+        public static void dodajLekara(LekarBasic a,bool f)
         {
             try
             {
+                Lekar admin;
                 using (ISession s = DataLayer.GetSession())
                 {
-                    Lekar admin = new Lekar();
+
+                    if (f)
+                    {
+                        admin = nadjiLekara(a.JMBG);
+                    }
+                    else
+                    {
+                        admin = new Lekar();
+                    }
+
 
                     admin.Adresa = a.Adresa;
                     admin.Pozicija = a.Pozicija;
@@ -1306,6 +1336,103 @@ namespace MedicinskaKlinika
             }
         }
 
+        public static List<LekarBasic> prikazLekara()
+        {
+            List<LekarBasic> admini = new List<LekarBasic>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+
+                var t = s.Query<Lekar>()
+                    .Fetch(x => x.AdresaLokacije)
+                    .ToList();
+
+                foreach (Lekar admin in t)
+                {
+
+                    admini.Add(new LekarBasic
+                    {
+                        JMBG = admin.JMBG,
+                        DatumZaposlenja = admin.DatumZaposlenja,
+                        DatumRodjenja = admin.DatumRodjenja,
+                        Pozicija = admin.Pozicija,
+                        Ime = admin.Ime,
+                        Prezime = admin.Prezime,
+                        Adresa = admin.Adresa,
+                        Smena = admin.Smena,
+                        AdresaLokacije = new Lokacija
+                        {
+                            Adresa = admin.AdresaLokacije.Adresa,
+                        },
+                        Specijalizacija = admin.Specijalizacija,
+                        BrLicence = admin.BrLicence,
+
+                    });
+                }
+            }
+
+            return admini;
+        }
+
+        public static void brisiLekara(int jmbg)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Lekar admin = s.Load<Lekar>(jmbg);
+
+                foreach (var odeljenje in admin.Odeljenja)
+                {
+                    odeljenje.GlavniLekar = null;
+                    s.Update(odeljenje);
+                }
+
+                foreach (var termin in admin.Termini)
+                {
+                    termin.Lekar = null;
+                    s.Update(termin);
+                }
+
+                foreach (var racun in admin.Racuni)
+                {
+                    racun.Lekar = null;
+                    s.Update(racun);
+                }
+
+                foreach (var pregled in admin.Pregledi)
+                {
+                    pregled.Lekar = null;
+                    s.Update(pregled);
+                }
+
+                foreach (var pacijent in admin.Pacijenti)
+                {
+                    pacijent.Lekar = null;
+                    s.Update(pacijent);
+                }
+
+
+                admin.Odeljenja.Clear();
+                admin.Termini.Clear();
+                admin.Racuni.Clear();
+                admin.Pregledi.Clear();
+                admin.Pacijenti.Clear();
+
+                
+
+                s.Delete(admin);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+
+
+            }
+        }
+
         public static List<LaborantBasic> prikazLaboranta()
         {
             List<LaborantBasic> admini = new List<LaborantBasic>();
@@ -1369,6 +1496,45 @@ namespace MedicinskaKlinika
             catch (Exception ec)
             {
 
+
+            }
+        }
+
+        public static List<LokacijaBasic> prikazLokacije()
+        {
+            List<LokacijaBasic> lokacije = new List<LokacijaBasic>();
+
+            using (ISession s = DataLayer.GetSession())
+            {
+                var r = s.Query<Lokacija>();
+
+                foreach (Lokacija lokacija in r)
+                {
+                    lokacije.Add(new LokacijaBasic
+                    {
+                        Adresa = lokacija.Adresa,
+                        RadnoVreme = lokacija.RadnoVreme
+                    });
+                }
+            }
+            return lokacije;
+        }
+
+        public static void brisiLokacija(string adresa) {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Lokacija t = s.Load<Lokacija>(adresa);
+                t.Zaposleni.Clear();
+                t.Odeljenja.Clear();
+                s.Delete(t);
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
 
             }
         }

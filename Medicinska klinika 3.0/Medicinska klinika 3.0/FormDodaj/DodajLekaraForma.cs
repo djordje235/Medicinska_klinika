@@ -20,8 +20,15 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private List<Odeljenje> od = new List<Odeljenje>();
         private List<OdeljenjePogled> odeljenja;
 
-        public DodajLekaraForma()
+        private Lekar _lekar;
+        private bool fleg;
+        public DodajLekaraForma(bool f, Lekar t)
         {
+            fleg = f;
+            if (f)
+            {
+                _lekar = t;
+            }
             InitializeComponent();
         }
 
@@ -89,7 +96,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             a.Specijalizacija = textBox8.Text;
             a.BrLicence = int.Parse(textBox7.Text);
 
-            DTOManager.dodajLekara(a);
+            DTOManager.dodajLekara(a,fleg);
             MessageBox.Show("Zaposlen je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
@@ -110,6 +117,59 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox2.DataSource = odeljenja;
             comboBox2.DisplayMember = "Naziv";
             comboBox2.ValueMember = "Naziv";
+
+            if (_lekar != null)
+            {
+                comboBox1.SelectedValue = _lekar.AdresaLokacije.Adresa;
+                textBox1.Text = _lekar.JMBG.ToString();
+                dateTimePicker1.Value = _lekar.DatumZaposlenja;
+                dateTimePicker2.Value = _lekar.DatumRodjenja;
+                textBox2.Text = _lekar.Pozicija;
+                textBox3.Text = _lekar.Ime;
+                textBox4.Text = _lekar.Prezime;
+                textBox5.Text = _lekar.Adresa;
+                textBox6.Text = _lekar.Smena.ToString();
+                textBox8.Text = _lekar.Specijalizacija;
+                textBox7.Text = _lekar.BrLicence.ToString();
+
+                foreach (var email in _lekar.Emails)
+                {
+                    emailovi.Add(email);
+                }
+                foreach (var br in _lekar.Telefons)
+                {
+                    brojevi.Add(br);
+                }
+
+                foreach (var o in _lekar.Odeljenja)
+                {
+                    od.Add(o);
+                    OdeljenjePogled ode = odeljenja.Where(x => x.Naziv == o.Naziv).FirstOrDefault();
+                    odeljenja.Remove(ode);
+                }
+                comboBox2.DataSource = null;
+                comboBox2.DataSource = odeljenja;
+                comboBox2.DisplayMember = "Naziv";
+                comboBox2.ValueMember = "Naziv";
+            }
+
+
+
+
+            foreach (EmailZaposlenog x in emailovi)
+            {
+                listView1.Items.Add(x.Email);
+            }
+
+            foreach (BrTelefonaZaposlenog x in brojevi)
+            {
+                listView2.Items.Add(x.BrojTelefona);
+            }
+
+            foreach (Odeljenje x in od)
+            {
+                listView3.Items.Add(x.Naziv);
+            }
         }
     }
 }
