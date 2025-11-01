@@ -83,6 +83,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             {
                 comboBox1.SelectedValue = _laborant.AdresaLokacije.Adresa;
                 textBox1.Text = _laborant.JMBG.ToString();
+                textBox1.ReadOnly = true;
                 dateTimePicker1.Value = _laborant.DatumZaposlenja;
                 dateTimePicker2.Value = _laborant.DatumRodjenja;
                 textBox2.Text = _laborant.Pozicija;
@@ -151,6 +152,47 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                string.IsNullOrWhiteSpace(textBox2.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) ||
+                string.IsNullOrWhiteSpace(textBox4.Text) ||
+                string.IsNullOrWhiteSpace(textBox5.Text) ||
+                string.IsNullOrWhiteSpace(textBox6.Text) ||
+                string.IsNullOrWhiteSpace(textBox7.Text) ||
+                string.IsNullOrWhiteSpace(textBox8.Text) ||
+                comboBox1.SelectedValue == null)
+            {
+                MessageBox.Show("Sva polja moraju biti popunjena!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int jmbg;
+            if (!int.TryParse(textBox1.Text, out jmbg))
+            {
+                MessageBox.Show("JMBG mora biti broj!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int smena;
+            if (!int.TryParse(textBox6.Text, out smena))
+            {
+                MessageBox.Show("Smena mora biti broj!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (emailovi == null || emailovi.Count == 0)
+            {
+                MessageBox.Show("Unesite bar jedan email!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (brojevi == null || brojevi.Count == 0)
+            {
+                MessageBox.Show("Unesite bar jedan broj telefona!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (od == null || od.Count == 0)
+            {
+                MessageBox.Show("Morate izabrati bar jedno odeljenje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             LaborantBasic a = new LaborantBasic();
             a.JMBG = int.Parse(textBox1.Text);
             a.DatumZaposlenja = dateTimePicker1.Value;

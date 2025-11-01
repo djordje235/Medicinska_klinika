@@ -111,6 +111,21 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (comboBox2.SelectedValue == null || comboBox3.SelectedValue == null || comboBox4.SelectedValue == null || comboBox5.SelectedValue == null)
+            {
+                MessageBox.Show("Sva polja moraju biti popunjena!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                string.IsNullOrWhiteSpace(textBox2.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) ||
+                string.IsNullOrWhiteSpace(textBox4.Text) ||
+                string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                MessageBox.Show("Sva tekstualna polja moraju biti popunjena!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (fleg)
             {
@@ -135,13 +150,9 @@ namespace Medicinska_klinika_3._0.FormDodaj
                 DTOManager.dodajPregled(p,fleg);
             }
 
-
-
             MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
             this.Close();
-
-
         }
 
         //ako zatreba

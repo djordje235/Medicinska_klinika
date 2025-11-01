@@ -29,6 +29,12 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("Sva polja moraju biti popunjena!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             LokacijaBasic lokacija = new LokacijaBasic();
             lokacija.Adresa = textBox1.Text;
             lokacija.RadnoVreme = textBox2.Text;

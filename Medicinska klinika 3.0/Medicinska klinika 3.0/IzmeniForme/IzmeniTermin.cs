@@ -29,6 +29,10 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                return;
+            }
             ListViewItem selektovaniItem = listView1.SelectedItems[0];
             int idTermina = (int)selektovaniItem.Tag;
 
@@ -76,6 +80,10 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                return;
+            }
             ListViewItem selektovaniItem = listView1.SelectedItems[0];
             int idTermina = (int)selektovaniItem.Tag;
 
