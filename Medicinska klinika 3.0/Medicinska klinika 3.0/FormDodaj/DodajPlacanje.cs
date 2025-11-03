@@ -104,9 +104,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
             List<RacunPogled> racuni = DTOManager.vratiPogledRacun();
             List<RacunPogled> filtirani_racuni = racuni.Where(x => x.Placanje == null).ToList();
-            comboBox2.DataSource = filtirani_racuni;
-            comboBox2.DisplayMember = "PunRacun";
-            comboBox2.ValueMember = "Id";
+           
 
             if(radioButton2.Checked == true)
             {
@@ -126,6 +124,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
             if (_placanje != null)
             {
+                filtirani_racuni.Add(new RacunPogled(_placanje.Racun.Id, _placanje.Racun.Cena, _placanje.Racun.VrstaUsluge, _placanje));
                 textBox1.Text = _placanje.ProcenatPacijenta.ToString();
                 textBox2.Text = _placanje.NacinPlacanja;
                 textBox3.Text = _placanje.PlatioPacijent.ToString();
@@ -143,6 +142,9 @@ namespace Medicinska_klinika_3._0.FormDodaj
                 }
 
             }
+            comboBox2.DataSource = filtirani_racuni;
+            comboBox2.DisplayMember = "PunRacun";
+            comboBox2.ValueMember = "Id";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

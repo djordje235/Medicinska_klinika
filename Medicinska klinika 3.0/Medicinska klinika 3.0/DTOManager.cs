@@ -390,7 +390,9 @@ namespace MedicinskaKlinika
         public static Pregled nadjiPregled(int id)
         {
             ISession s = DataLayer.GetSession();
-            Pregled pregled = s.Query<Pregled>().FirstOrDefault(x => x.IdPregleda == id);
+            Pregled pregled = s.Query<Pregled>()
+                .Fetch(x => x.Termin)
+                .FirstOrDefault(x => x.IdPregleda == id);
             s.Close();
             return pregled;
         }
@@ -693,7 +695,9 @@ namespace MedicinskaKlinika
         public static Placanje nadjiPlacanje(int Id)
         {
             ISession s = DataLayer.GetSession();
-            Placanje placanje = s.Query<Placanje>().FirstOrDefault(x => x.IdPlacanja == Id);
+            Placanje placanje = s.Query<Placanje>()
+                .Fetch(x => x.Racun)
+                .FirstOrDefault(x => x.IdPlacanja == Id);
             s.Close();
             return placanje;
         }
