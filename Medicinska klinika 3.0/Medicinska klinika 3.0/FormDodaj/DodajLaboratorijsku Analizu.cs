@@ -14,8 +14,15 @@ namespace Medicinska_klinika_3._0.FormDodaj
 {
     public partial class DodajLaboratorijsku_Analizu : Form
     {
-        public DodajLaboratorijsku_Analizu()
+        private LaboratorijskaAnaliza _lab;
+        private bool fleg;
+        public DodajLaboratorijsku_Analizu(bool f, LaboratorijskaAnaliza t)
         {
+            fleg = f;
+            if (f)
+            {
+                _lab = t;
+            }
             InitializeComponent();
         }
 
@@ -46,8 +53,28 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox2.DisplayMember = "PunoIme";
             comboBox2.ValueMember = "IdKartona";
 
-            //List<PregledBasic>
+            List<PregledPogled> pregledi = DTOManager.vratipogledpregleda();
 
+
+            comboBox3.DataSource = pregledi;
+            comboBox3.DisplayMember = "pregled";
+            comboBox3.ValueMember = "Id";
+
+            if(_lab != null)
+            {
+                comboBox2.SelectedValue = _lab.Pacijent.IdKartona;
+                comboBox1.SelectedValue = _lab.Laborant.JMBG;
+                comboBox3.SelectedValue = _lab.Pregled.IdPregleda;
+
+                dateTimePicker1.Value = _lab.DatumUzorkovanja;
+
+                dateTimePicker2.Value = _lab.Vreme;
+
+                textBox2.Text = _lab.VrstaAnalize;
+                textBox1.Text = _lab.Rezultat;
+                textBox3.Text = _lab.ReferentnaVrednost;
+                textBox4.Text = _lab.Komentar;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,6 +85,10 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private void button5_Click(object sender, EventArgs e)
         {
             LaboratorijskaAnalizaBasic l = new LaboratorijskaAnalizaBasic();
+            if (fleg)
+            {
+                l.IdAnalize = _lab.IdAnalize;
+            }
             l.Pacijent = DTOManager.nadjiPacijenta(int.Parse(comboBox2.SelectedValue.ToString()));
             l.DatumUzorkovanja = dateTimePicker1.Value;
             l.VrstaAnalize = textBox2.Text;
@@ -66,8 +97,8 @@ namespace Medicinska_klinika_3._0.FormDodaj
             l.ReferentnaVrednost = textBox3.Text;
             l.Komentar = textBox4.Text;
             l.Laborant = DTOManager.nadjiLaboranta(int.Parse(comboBox1.SelectedValue.ToString()));
-
-            DTOManager.dodajLaboratorijskuAnalizu(l);
+            l.Pregled = DTOManager.nadjiPregled(int.Parse(comboBox3.SelectedValue.ToString()));
+            DTOManager.dodajLaboratorijskuAnalizu(l,fleg);
             MessageBox.Show("Laboratorijska analiza je uspešno dodata!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

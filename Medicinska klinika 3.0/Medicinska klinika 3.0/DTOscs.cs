@@ -75,6 +75,25 @@ namespace MedicinskaKlinika
         }
     }
 
+    public class LekarPogled
+    {
+        public virtual int JMBG { get; set; }
+        public virtual String Ime { get; set; }
+
+        public virtual String Prezime { get; set; }
+
+        public string PunoIme => Ime + " " + Prezime;
+        public virtual Odeljenje Odeljenje { get; set; }
+
+        public LekarPogled(int jMBG, string ime, string prezime, Odeljenje odeljenje)
+        {
+            JMBG = jMBG;
+            Ime = ime;
+            Prezime = prezime;
+            this.Odeljenje = odeljenje;
+        }
+
+    }
     public class AdministrativnoOsobljeBasic : ZaposlenBasic
     {
         public AdministrativnoOsobljeBasic(IList<Odeljenje> Odeljenja, IList<BrTelefonaZaposlenog> Telefon, IList<EmailZaposlenog> Emails) : base(Odeljenja,Telefon,Emails)
@@ -649,14 +668,15 @@ namespace MedicinskaKlinika
         public virtual int Id { get; set; }
         public virtual double Cena { get; set; }
         public virtual String VrstaUsluge { get; set; }
-
+        public virtual Placanje Placanje { get; set; }
         public string PunRacun => Id.ToString() + Cena.ToString() + VrstaUsluge;
 
-        public RacunPogled(int id, double cena, string vrstaUsluge)
+        public RacunPogled(int id, double cena, string vrstaUsluge, Placanje placanje)
         {
             Id = id;
             Cena = cena;
             VrstaUsluge = vrstaUsluge;
+            Placanje = placanje;
         }
     }
 
@@ -710,16 +730,18 @@ namespace MedicinskaKlinika
 
     public class PrivatnoOsiguranjePogled
     {
+        public virtual int IdOsiguranja { get; set; }
         public virtual int BrPolise { get; set; }
 
         public virtual String OsiguravajucaKuca { get;set; }
 
         public string Osiguranje => BrPolise.ToString() + OsiguravajucaKuca;
 
-        public PrivatnoOsiguranjePogled(int brPolise,String osiguravajucaKuca)
+        public PrivatnoOsiguranjePogled(int brPolise,String osiguravajucaKuca, int idOsiguranja)
         {
             BrPolise = brPolise;
             OsiguravajucaKuca = osiguravajucaKuca;
+            IdOsiguranja = idOsiguranja;
         }
     }
 
@@ -780,22 +802,25 @@ namespace MedicinskaKlinika
 
     }
 
-/*    public class PregledPogled
+    public class PregledPogled
     {
+        public virtual int Id {  get; set; }
         public virtual DateTime Datum { get; set; }
 
         public virtual DateTime Vreme { get; set; }
 
         public virtual Pacijent Pacijent { get; set; }
 
-        public virtual string pregled { get; set; } = Datum + Vreme + Pacijent.Ime + Pacijent.Prezime;
+        public virtual string pregled { get; set; }
 
-        public PregledPogled(DateTime Datum, DateTime Vreme, Pacijent Pacijent) {
+        public PregledPogled(DateTime Datum, DateTime Vreme, Pacijent Pacijent,int id) {
             this.Datum = Datum;
             this.Vreme = Vreme;
             this.Pacijent = Pacijent;
+            this.pregled = Datum + " " + Vreme + " " + Pacijent.Ime + " " + Pacijent.Prezime;
+            this.Id = id;
         }
-    }*/
+    }
 
 
     public class PlacanjeBasic

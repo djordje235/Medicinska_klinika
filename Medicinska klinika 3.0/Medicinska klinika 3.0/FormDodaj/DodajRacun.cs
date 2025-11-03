@@ -94,7 +94,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox3.DisplayMember = "PunoIme";
             comboBox3.ValueMember = "IdKartona";
 
-            List<ZaposlenPogled> lekari = DTOManager.vratipogledlekara();
+            List<LekarPogled> lekari = DTOManager.vratipogledlekara();
             comboBox2.DataSource = lekari;
             comboBox2.DisplayMember = "PunoIme";
             comboBox2.ValueMember = "JMBG";

@@ -65,7 +65,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
         private void DodajPacijenta_Load(object sender, EventArgs e)
         {
-            List<ZaposlenPogled> lekari = DTOManager.vratipogledlekara();
+            List<LekarPogled> lekari = DTOManager.vratipogledlekara();
 
             comboBox3.DataSource = lekari;
             comboBox3.DisplayMember = "PunoIme";
@@ -115,7 +115,11 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private void button5_Click(object sender, EventArgs e)
         {
             PacijentBasic p = new PacijentBasic();
-            p.IdKartona = int.Parse(textBox1.Text);
+            if (fleg)
+            {
+             p.IdKartona = int.Parse(textBox1.Text);
+            }
+            
             p.Adresa = textBox2.Text;
             p.Ime = textBox3.Text;
             p.Prezime = textBox4.Text;

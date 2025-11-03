@@ -15,8 +15,15 @@ namespace Medicinska_klinika_3._0.FormDodaj
 {
     public partial class DodajPlacanje : Form
     {
-        public DodajPlacanje()
+        private Placanje _placanje;
+        private bool fleg;
+        public DodajPlacanje(bool f, Placanje t)
         {
+            fleg = f;
+            if (f)
+            {
+                _placanje = t;
+            }
             InitializeComponent();
         }
 
@@ -71,15 +78,23 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
 
             PlacanjeBasic p = new PlacanjeBasic();
+            if (fleg)
+            {
+                p.IdPlacanja = _placanje.IdPlacanja;
+            }
             p.ProcenatPacijenta = int.Parse(textBox1.Text);
             p.NacinPlacanja = textBox2.Text;
             p.PlatioPacijent = Boolean.Parse(textBox3.Text);
             p.Racun = DTOManager.nadjiRacun((int)comboBox2.SelectedValue);
-            p.RFZO = DTOManager.nadjiRFZO((int)comboBox3.SelectedValue);
+            if (radioButton1.Checked == true) {
             p.PrivatnoOsiguranje = DTOManager.nadjiPrivatnoOsiguranje((int)comboBox3.SelectedValue);
-
-            DTOManager.dodajPlacanje(p);
+            }
+            if (radioButton2.Checked == true) {
+            p.RFZO = DTOManager.nadjiRFZO((int)comboBox3.SelectedValue);
+            }
+            DTOManager.dodajPlacanje(p, fleg);
             MessageBox.Show("Placanje je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void DodajPlacanje_Load(object sender, EventArgs e)
@@ -88,19 +103,68 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox3.Items.Clear();
 
             List<RacunPogled> racuni = DTOManager.vratiPogledRacun();
-            comboBox2.DataSource = racuni;
+            List<RacunPogled> filtirani_racuni = racuni.Where(x => x.Placanje == null).ToList();
+            comboBox2.DataSource = filtirani_racuni;
             comboBox2.DisplayMember = "PunRacun";
             comboBox2.ValueMember = "Id";
 
+            if(radioButton2.Checked == true)
+            {
             List<RFZOPogled> rfzos = DTOManager.vratiPogledRFZO();
             comboBox3.DataSource = rfzos;
             comboBox3.DisplayMember = "RFZOPrikaz";
             comboBox3.ValueMember = "IdOsiguranja";
+            }
 
-            List<PrivatnoOsiguranjePogled> osiguranja = DTOManager.vratiPogledPrivatnoOsiguranje();
-            comboBox3.DataSource = osiguranja;
-            comboBox3.DisplayMember = "Osiguranje";
-            comboBox3.ValueMember = "BrPolise";
+            if (radioButton1.Checked == true)
+            {
+                List<PrivatnoOsiguranjePogled> osiguranja = DTOManager.vratiPogledPrivatnoOsiguranje();
+                comboBox3.DataSource = osiguranja;
+                comboBox3.DisplayMember = "Osiguranje";
+                comboBox3.ValueMember = "BrPolise";
+            }
+
+            if (_placanje != null)
+            {
+                textBox1.Text = _placanje.ProcenatPacijenta.ToString();
+                textBox2.Text = _placanje.NacinPlacanja;
+                textBox3.Text = _placanje.PlatioPacijent.ToString();
+
+                comboBox2.SelectedValue = _placanje.Racun.Id;
+
+                if (_placanje.PrivatnoOsiguranje != null)
+                {
+                    radioButton1.Checked = true;
+                comboBox3.SelectedValue = _placanje.PrivatnoOsiguranje.IdOsiguranja;
+                }
+                if (_placanje.RFZO !=null) {
+                    radioButton2.Checked = true;
+                    comboBox3.SelectedValue = _placanje.RFZO.IdOsiguranja;
+                }
+
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true)
+            {
+                List<PrivatnoOsiguranjePogled> osiguranja = DTOManager.vratiPogledPrivatnoOsiguranje();
+                comboBox3.DataSource = osiguranja;
+                comboBox3.DisplayMember = "Osiguranje";
+                comboBox3.ValueMember = "IdOsiguranja";
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                List<RFZOPogled> rfzos = DTOManager.vratiPogledRFZO();
+                comboBox3.DataSource = rfzos;
+                comboBox3.DisplayMember = "RFZOPrikaz";
+                comboBox3.ValueMember = "IdOsiguranja";
+            }
         }
     }
 }

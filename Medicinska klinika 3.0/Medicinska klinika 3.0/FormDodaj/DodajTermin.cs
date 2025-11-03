@@ -51,7 +51,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox3.ValueMember = "Naziv";
 
             //Za lekara
-            List<ZaposlenPogled> lekari = DTOManager.vratipogledlekara();
+            List<LekarPogled> lekari = DTOManager.vratipogledlekara();
 
             comboBox2.DataSource = lekari;
             comboBox2.DisplayMember = "PunoIme";
