@@ -226,7 +226,7 @@ namespace MedicinskaKlinika
             var t = s.Query<Termin>().ToList();
             foreach (Termin termin in t)
             {
-                termini.Add(new TerminPogled(termin.IdTermina, termin.Datum, termin.Vreme));
+                termini.Add(new TerminPogled(termin.IdTermina, termin.Datum, termin.Vreme,termin.Pregled));
             }
             s.Close();
             return termini;
@@ -333,7 +333,9 @@ namespace MedicinskaKlinika
         public static Termin nadjiTermin(int idTermina)
         {
             ISession s = DataLayer.GetSession();
-            Termin termin = s.Query<Termin>().FirstOrDefault(x => x.IdTermina == idTermina);
+            Termin termin = s.Query<Termin>()
+                        .Fetch(t => t.Pregled)
+                        .FirstOrDefault(x => x.IdTermina == idTermina);
             s.Close();
             return termin;
         }

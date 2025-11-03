@@ -80,10 +80,9 @@ namespace Medicinska_klinika_3._0.FormDodaj
             comboBox3.ValueMember = "JMBG";
 
             List<TerminPogled> termini = DTOManager.vratiPogledTermin();
+            List<TerminPogled> filt_termini = termini.Where(x => x.Pregled == null).ToList();
+            
 
-            comboBox4.DataSource = termini;
-            comboBox4.DisplayMember = "PunDatum";
-            comboBox4.ValueMember = "IdTermina";
 
             List<OdeljenjePogled> odeljenja = DTOManager.vratipogledodaljenja();
 
@@ -93,9 +92,11 @@ namespace Medicinska_klinika_3._0.FormDodaj
 
             if (_pregled != null)
             {
+                filt_termini.Add(new TerminPogled(_pregled.Termin.IdTermina, _pregled.Termin.Datum, _pregled.Termin.Vreme,_pregled));
                 comboBox2.SelectedValue = _pregled.Pacijent.IdKartona;
                 comboBox3.SelectedValue = _pregled.Lekar.JMBG;
                 comboBox5.SelectedValue = _pregled.Odeljenje.Naziv;
+
                 comboBox4.SelectedValue = _pregled.Termin.IdTermina;
 
                 dateTimePicker1.Value = _pregled.Vreme;
@@ -107,6 +108,9 @@ namespace Medicinska_klinika_3._0.FormDodaj
                 textBox4.Text = _pregled.Terapija;
                 textBox5.Text = _pregled.VrstaPregleda;
             }
+            comboBox4.DataSource = filt_termini;
+            comboBox4.DisplayMember = "PunDatum";
+            comboBox4.ValueMember = "IdTermina";
         }
 
         private void button1_Click(object sender, EventArgs e)

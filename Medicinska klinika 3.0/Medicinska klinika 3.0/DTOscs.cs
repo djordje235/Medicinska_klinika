@@ -538,13 +538,16 @@ namespace MedicinskaKlinika
         public virtual DateTime Datum { get; set; }
         public virtual DateTime Vreme { get; set; }
 
+        public virtual Pregled Pregled { get; set; }
+
         public DateTime PunDatum => Datum.Date + Vreme.TimeOfDay;
 
-        public TerminPogled(int IdTermina, DateTime Datum, DateTime Vreme)
+        public TerminPogled(int IdTermina, DateTime Datum, DateTime Vreme,Pregled Pregled)
         {
             this.IdTermina = IdTermina;
             this.Datum = Datum;
             this.Vreme = Vreme;
+            this.Pregled = Pregled;
         }
     }
 

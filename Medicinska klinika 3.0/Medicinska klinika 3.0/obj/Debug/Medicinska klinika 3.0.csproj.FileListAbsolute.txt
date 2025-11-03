@@ -300,3 +300,5 @@ C:\Users\pc\Desktop\ProjekatBaze\Medicinska_klinika\Medicinska klinika 3.0\Medic
 C:\Users\pc\Desktop\ProjekatBaze\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.exe
 C:\Users\pc\Desktop\ProjekatBaze\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska klinika 3.0.pdb
 >>>>>>> 512b411f1b6bec8e635db57112c272006aec70d0
+C:\Users\pc\Desktop\ProjekatBaze\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.PacijentBrTel.resources
+C:\Users\pc\Desktop\ProjekatBaze\Medicinska_klinika\Medicinska klinika 3.0\Medicinska klinika 3.0\obj\Debug\Medicinska_klinika_3._0.PomocneForme.PacijentEmail.resources
