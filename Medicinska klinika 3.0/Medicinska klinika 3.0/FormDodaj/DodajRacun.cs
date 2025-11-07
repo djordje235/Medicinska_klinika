@@ -72,7 +72,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             r.VrstaUsluge = textBox2.Text;
             r.Datum = dateTimePicker1.Value;
             r.Cena = double.Parse(textBox3.Text);
-            r.Lekar = DTOManager.nadjiLekara((int)comboBox2.SelectedValue);
+            r.Lekar = DTOManager.nadjiLekara((long)comboBox2.SelectedValue);
             r.Pacijent = DTOManager.nadjiPacijenta((int)comboBox3.SelectedValue);
             if (fleg)
             {

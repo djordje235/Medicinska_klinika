@@ -137,7 +137,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             }
 
             p.Pacijent = DTOManager.nadjiPacijenta((int)comboBox2.SelectedValue);
-            p.Lekar = DTOManager.nadjiLekara((int)comboBox3.SelectedValue);
+            p.Lekar = DTOManager.nadjiLekara((long)comboBox3.SelectedValue);
             p.Termin = DTOManager.nadjiTermin((int)comboBox4.SelectedValue);
             p.Odeljenje = DTOManager.nadjiOdeljenje(comboBox5.SelectedValue.ToString());
             p.Vreme = dateTimePicker1.Value;
@@ -157,6 +157,11 @@ namespace Medicinska_klinika_3._0.FormDodaj
             MessageBox.Show("Pregled je uspešno dodat!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         //ako zatreba

@@ -35,7 +35,7 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
         private void button1_Click(object sender, EventArgs e)
         {
             ListViewItem selektovaniItem = listView1.SelectedItems[0];
-            int id = (int)selektovaniItem.Tag;
+            long id = (long)selektovaniItem.Tag;
 
             Lekar admin = DTOManager.nadjiLekara(id);
 
@@ -91,7 +91,7 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
         private void button2_Click(object sender, EventArgs e)
         {
             ListViewItem selektovaniItem = listView1.SelectedItems[0];
-            int id = (int)selektovaniItem.Tag;
+            long id = (long)selektovaniItem.Tag;
 
             DTOManager.brisiLekara(id);
 

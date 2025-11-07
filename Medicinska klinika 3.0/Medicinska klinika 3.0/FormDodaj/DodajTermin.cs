@@ -81,7 +81,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             t.Datum = dateTimePicker2.Value;
             t.Vreme = dateTimePicker1.Value;
             t.Odeljenje = DTOManager.nadjiOdeljenje(comboBox3.SelectedValue.ToString());
-            t.Lekar = DTOManager.nadjiLekara(int.Parse(comboBox2.SelectedValue.ToString()));
+            t.Lekar = DTOManager.nadjiLekara(long.Parse(comboBox2.SelectedValue.ToString()));
 
             DTOManager.dodajTermin(t,fleg);
 

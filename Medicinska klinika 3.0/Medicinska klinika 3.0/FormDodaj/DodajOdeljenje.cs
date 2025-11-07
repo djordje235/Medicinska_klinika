@@ -91,7 +91,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             o.Naziv = textBox1.Text;
             o.BrProstorije = int.Parse(textBox2.Text);
             o.RadnoVreme = textBox3.Text;
-            o.GlavniLekar = DTOManager.nadjiLekara(int.Parse(comboBox2.SelectedValue.ToString()));
+            o.GlavniLekar = DTOManager.nadjiLekara(long.Parse(comboBox2.SelectedValue.ToString()));
             o.Lokacije = loc;
 
             DTOManager.dodajOdeljenje(o,fleg);

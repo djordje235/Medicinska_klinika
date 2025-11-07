@@ -81,7 +81,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
         private void button5_Click(object sender, EventArgs e)
         {
             LekarBasic a = new LekarBasic();
-            a.JMBG = int.Parse(textBox1.Text);
+            a.JMBG = long.Parse(textBox1.Text);
             a.DatumZaposlenja = dateTimePicker1.Value;
             a.Pozicija = textBox2.Text;
             a.DatumRodjenja = dateTimePicker2.Value;

@@ -96,7 +96,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             l.Rezultat = textBox1.Text;
             l.ReferentnaVrednost = textBox3.Text;
             l.Komentar = textBox4.Text;
-            l.Laborant = DTOManager.nadjiLaboranta(int.Parse(comboBox1.SelectedValue.ToString()));
+            l.Laborant = DTOManager.nadjiLaboranta(long.Parse(comboBox1.SelectedValue.ToString()));
             l.Pregled = DTOManager.nadjiPregled(int.Parse(comboBox3.SelectedValue.ToString()));
             DTOManager.dodajLaboratorijskuAnalizu(l,fleg);
             MessageBox.Show("Laboratorijska analiza je uspešno dodata!", "Uspeh", MessageBoxButtons.OK, MessageBoxIcon.Information);

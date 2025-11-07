@@ -128,7 +128,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
                 p.Pol = "M";
             else if(radioButton2.Checked)
                 p.Pol = "Z";
-            p.Lekar = DTOManager.nadjiLekara(int.Parse(comboBox3.SelectedValue.ToString()));
+            p.Lekar = DTOManager.nadjiLekara(long.Parse(comboBox3.SelectedValue.ToString()));
             p.Emails = emailovi;
             p.Telefons = brojevi;
 

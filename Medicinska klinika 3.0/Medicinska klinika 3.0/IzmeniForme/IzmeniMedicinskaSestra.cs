@@ -39,7 +39,7 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
                 return;
             }
             ListViewItem selektovaniItem = listView1.SelectedItems[0];
-            int id = (int)selektovaniItem.Tag;
+            long id = (long)selektovaniItem.Tag;
 
             MedicinskaSestra admin = DTOManager.nadjiMedicinskuSestru(id);
 
@@ -99,7 +99,7 @@ namespace Medicinska_klinika_3._0.FormeIzmeni
                 return;
             }
             ListViewItem selektovaniItem = listView1.SelectedItems[0];
-            int id = (int)selektovaniItem.Tag;
+            long id = (long)selektovaniItem.Tag;
 
             DTOManager.brisiMedicinskuSestru(id);
 

@@ -31,10 +31,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.BrojTelefona = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView1 = new System.Windows.Forms.ListView();
             this.JMBG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DatumRodjenja = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,10 +48,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1000, 433);
+            this.button3.Location = new System.Drawing.Point(1125, 541);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(343, 96);
+            this.button3.Size = new System.Drawing.Size(386, 120);
             this.button3.TabIndex = 10;
             this.button3.Text = "Dodaj";
             this.button3.UseVisualStyleBackColor = true;
@@ -64,10 +60,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(489, 433);
+            this.button2.Location = new System.Drawing.Point(550, 541);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(343, 96);
+            this.button2.Size = new System.Drawing.Size(386, 120);
             this.button2.TabIndex = 9;
             this.button2.Text = "Obrisi";
             this.button2.UseVisualStyleBackColor = true;
@@ -76,50 +72,14 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(28, 433);
+            this.button1.Location = new System.Drawing.Point(32, 541);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(343, 96);
+            this.button1.Size = new System.Drawing.Size(386, 120);
             this.button1.TabIndex = 8;
             this.button1.Text = "Izmeni";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listView3
-            // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.BrojTelefona});
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(789, 566);
-            this.listView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(554, 258);
-            this.listView3.TabIndex = 12;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            // 
-            // BrojTelefona
-            // 
-            this.BrojTelefona.Text = "BrojTelefona";
-            this.BrojTelefona.Width = 100;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Email});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(28, 547);
-            this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(554, 258);
-            this.listView2.TabIndex = 13;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // Email
-            // 
-            this.Email.Text = "Email";
-            this.Email.Width = 100;
             // 
             // listView1
             // 
@@ -136,10 +96,10 @@
             this.Specijalizacija,
             this.BrojLicence});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(28, 20);
+            this.listView1.Location = new System.Drawing.Point(32, 25);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1315, 391);
+            this.listView1.Size = new System.Drawing.Size(1479, 488);
             this.listView1.TabIndex = 14;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -202,12 +162,10 @@
             // 
             // IzmeniLekara
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1469, 862);
+            this.ClientSize = new System.Drawing.Size(1653, 725);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.listView3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -223,10 +181,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.ColumnHeader BrojTelefona;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader JMBG;
         private System.Windows.Forms.ColumnHeader DatumRodjenja;

@@ -165,8 +165,8 @@ namespace Medicinska_klinika_3._0.FormDodaj
                 MessageBox.Show("Sva polja moraju biti popunjena!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            int jmbg;
-            if (!int.TryParse(textBox1.Text, out jmbg))
+            long jmbg;
+            if (!long.TryParse(textBox1.Text, out jmbg))
             {
                 MessageBox.Show("JMBG mora biti broj!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -194,7 +194,7 @@ namespace Medicinska_klinika_3._0.FormDodaj
             }
 
             LaborantBasic a = new LaborantBasic();
-            a.JMBG = int.Parse(textBox1.Text);
+            a.JMBG = long.Parse(textBox1.Text);
             a.DatumZaposlenja = dateTimePicker1.Value;
             a.Pozicija = textBox2.Text;
             a.DatumRodjenja = dateTimePicker2.Value;

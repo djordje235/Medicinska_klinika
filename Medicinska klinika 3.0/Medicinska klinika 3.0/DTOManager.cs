@@ -298,7 +298,7 @@ namespace MedicinskaKlinika
             return odeljenje;
         }
 
-        public static Lekar nadjiLekara(int JMBG)
+        public static Lekar nadjiLekara(long JMBG)
         {
             ISession s = DataLayer.GetSession();
             Lekar lekar = s.Query<Lekar>().FirstOrDefault(x => x.JMBG == JMBG);
@@ -314,7 +314,7 @@ namespace MedicinskaKlinika
             return lekar;
         }
 
-        public static Laborant nadjiLaboranta(int JMBG)
+        public static Laborant nadjiLaboranta(long JMBG)
         {
             ISession s = DataLayer.GetSession();
             Laborant laborant = s.Query<Laborant>().FirstOrDefault(x => x.JMBG == JMBG);
@@ -464,7 +464,7 @@ namespace MedicinskaKlinika
             }
         }
 
-        public static AdministrativnoOsoblje nadjiAdministrativnoOsoblje(int jmbg)
+        public static AdministrativnoOsoblje nadjiAdministrativnoOsoblje(long jmbg)
         {
             ISession s = DataLayer.GetSession();
             AdministrativnoOsoblje osoblje = s.Query<AdministrativnoOsoblje>()
@@ -1319,7 +1319,7 @@ namespace MedicinskaKlinika
             return admini;
         }
 
-        public static void brisiAdmina(int jmbg)
+        public static void brisiAdmina(long jmbg)
         {
             try
             {
@@ -1338,7 +1338,7 @@ namespace MedicinskaKlinika
             }
         }
 
-        public static MedicinskaSestra nadjiMedicinskuSestru(int jmbg)
+        public static MedicinskaSestra nadjiMedicinskuSestru(long jmbg)
         {
             ISession s = DataLayer.GetSession();
             MedicinskaSestra osoblje = s.Query<MedicinskaSestra>()
@@ -1393,7 +1393,7 @@ namespace MedicinskaKlinika
             return admini;
         }
 
-        public static void brisiMedicinskuSestru(int jmbg)
+        public static void brisiMedicinskuSestru(long jmbg)
         {
             try
             {
@@ -1450,7 +1450,7 @@ namespace MedicinskaKlinika
             return admini;
         }
 
-        public static void brisiLekara(int jmbg)
+        public static void brisiLekara(long jmbg)
         {
             try
             {
@@ -1508,7 +1508,7 @@ namespace MedicinskaKlinika
             return admini;
         }
 
-        public static void brisiLaboranta(int jmbg)
+        public static void brisiLaboranta(long jmbg)
         {
             try
             {
